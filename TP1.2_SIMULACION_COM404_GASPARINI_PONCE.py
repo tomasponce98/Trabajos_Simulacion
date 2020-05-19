@@ -9,17 +9,13 @@ import numpy
 # Mientras que el jugador tendra una probabilidad de 18/37
 #Los resultados que ocurren cuando existe una apuesta maxima y cuando no  , son mas que notables.
 
-	  #Apuesta base
-  #Apuesta maxima , en este caso infinita
-			  # Racha de perdidas
-			#Arreglo con todos los resultados de las jugadas
 
 
 def Apuestas(apuestaBase,dineroInicial,infinito):
 	listaFr=[]
 	rachaPerdidas=0 			  # Racha de perdidas
 	contador=0
-	resultados=[]	#Arreglo con todos los resultados de las jugadas
+	resultados=[]	#Arreglo con todos los resultados de las jugadas[dinero total acumulado]
 	frcrelativa=0
 	rachaPerdidas=0
 	dineroTotal=dineroInicial
@@ -57,6 +53,15 @@ plt.xlabel("n (Numero de tiradas)")
 plt.ylabel("Beneficio acumulado")
 plt.savefig("LineaInfinitaMG.png")
 
+plt.figure("Frecuencia Relativa infinita")
+plt.plot(listaFr, label="frsa (Frecuencia relativa de obtener la apuesta favorable segun n)")
+plt.legend()
+plt.title("Martin Gala sin limite de presupuesto")
+plt.xlabel("n (Numero de tiradas)")
+plt.ylabel("fr (Frecuencia relativa)")
+
+plt.savefig("FRINFINITA_MG.png")
+
 plt.figure("LineasInfinitasMG")
 for j in range (5):
 	resultados,listaFr,dineroInicial=Apuestas(1,0,True)
@@ -68,14 +73,7 @@ for j in range (5):
 plt.savefig("LineasInfinitasMG.png")
 
 
-plt.figure("Frecuencia Relativa infinita")
-plt.plot(listaFr,label="frsa (Frecuencia relativa de obtener la apuesta favorable segun n)")
-plt.legend()
-plt.title("Martin Gala sin limite de presupuesto")   
-plt.xlabel("n (Numero de tiradas)")   
-plt.ylabel("fr (Frecuencia relativa)")
 
-plt.savefig("FRINFINITA_MG.png")
 
 resultados,listaFr,dineroInicial=Apuestas(1,1000,False)
 listaDineroInicial=[]
@@ -90,6 +88,15 @@ plt.ylabel("Cantidad de capital")
 plt.plot(listaDineroInicial,label="Flujo de caja inicial")
 plt.legend()
 plt.savefig("LineafinitaMG.png")
+
+plt.figure("Frecuencia Relativa Finita")
+plt.plot(listaFr, label="frsa (Frecuencia relativa de obtener la apuesta favorable segun n)")
+plt.legend()
+plt.title("Martin Gala con limite de presupuesto")
+plt.xlabel("n (Numero de tiradas)")
+plt.ylabel("fr (Frecuencia relativa)")
+
+plt.savefig("FRFINITA_MG.png")
 
 plt.figure("LineasfinitasMG")
 listaDineroInicial=[]
@@ -107,14 +114,7 @@ plt.legend()
 plt.savefig("LineasfinitasDL.png")
 plt.savefig("LineasfinitasMG.png")
 
-plt.figure("Frecuencia Relativa Finita")
-plt.plot(listaFr,label="frsa (Frecuencia relativa de obtener la apuesta favorable segun n)")
-plt.legend()
-plt.title("Martin Gala con limite de presupuesto")   
-plt.xlabel("n (Numero de tiradas)")   
-plt.ylabel("fr (Frecuencia relativa)")
 
-plt.savefig("FRFINITA_MG.png")
 
 def Apuestas2(apuestaBase,dineroInicial,infinito):
 	listaFr=[]
@@ -160,6 +160,14 @@ plt.xlabel("n (Numero de tiradas)")
 plt.ylabel("Beneficio acumulado")
 plt.savefig("LineaInfinitaDL.png")
 
+plt.figure("Frecuencia Relativa infinita2")
+plt.plot(listaFr, label="frsa (Frecuencia relativa de obtener la apuesta favorable segun n)")
+plt.legend()
+plt.title("d'ALembert sin limite de presupuesto")
+plt.xlabel("n (Numero de tiradas)")
+plt.ylabel("fr (Frecuencia relativa)")
+plt.savefig("FRINFINITA_DL.png")
+
 plt.figure("LineasInfinitasDL")
 for j in range (5):
 	resultados,listaFr,dineroInicial=Apuestas2(5,0,True)
@@ -171,13 +179,7 @@ for j in range (5):
 	plt.ylabel("Beneficio acumulado")
 plt.savefig("LineasInfinitasDL.png")
 
-plt.figure("Frecuencia Relativa infinita2")
-plt.plot(listaFr,label="frsa (Frecuencia relativa de obtener la apuesta favorable segun n)")
-plt.legend()
-plt.title("d'ALembert sin limite de presupuesto")   
-plt.xlabel("n (Numero de tiradas)")   
-plt.ylabel("fr (Frecuencia relativa)")
-plt.savefig("FRINFINITA_DL.png")
+
 
 
 resultados,listaFr,dineroInicial=Apuestas2(5,1000,False)
@@ -194,6 +196,14 @@ plt.plot(listaDineroInicial,label="Flujo de caja inicial")
 plt.legend()
 plt.savefig("LineafinitaDL.png")
 
+plt.figure("Frecuencia Relativa Finita2")
+plt.plot(listaFr, label="frsa (Frecuencia relativa de obtener la apuesta favorable segun n)")
+plt.legend()
+plt.title("d'ALembert con limite de presupuesto")
+plt.xlabel("n (Numero de tiradas)")
+plt.ylabel("fr (Frecuencia relativa)")
+plt.savefig("FRFINITA_DL.png")
+
 plt.figure("LineasfinitasDL")
 listaDineroInicial=[]
 for j in range (5):
@@ -209,13 +219,7 @@ plt.plot(listaDineroInicial,label="Flujo de caja inicial")
 plt.legend()
 plt.savefig("LineasfinitasDL.png")
 
-plt.figure("Frecuencia Relativa Finita2")
-plt.plot(listaFr,label="frsa (Frecuencia relativa de obtener la apuesta favorable segun n)")
-plt.legend()
-plt.title("d'ALembert con limite de presupuesto")   
-plt.xlabel("n (Numero de tiradas)")   
-plt.ylabel("fr (Frecuencia relativa)")
-plt.savefig("FRFINITA_DL.png")
+
 
 
 plt.show()
