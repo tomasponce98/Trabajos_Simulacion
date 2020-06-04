@@ -303,6 +303,10 @@ while True:
 		graficarDispersion(u,"cuadrado")
 		for i in range(len(u)):
 			print(u[i])
+		TestChiCuad(u)
+		testPoker(u, "cuadrado")
+		testCorridas(u)
+		testArribaAbajo(u)
 		input("Pulsa una tecla para continuar")
 	elif opcionMenu == "5":
 		u = ArregloRandom()

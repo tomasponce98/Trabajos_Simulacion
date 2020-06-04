@@ -36,7 +36,7 @@ for i in range(5):
 			varianzaTemp=numpy.var(lista)
 			desvioTemp=numpy.std(lista)
 			contador=contador+1
-			frecrelativa=contador/j
+			frecrelativa=contador/(j+1)
 			listaVarianza.append(varianzaTemp)
 			listaDesvio.append(desvioTemp)
 			listaFR.append(frecrelativa)

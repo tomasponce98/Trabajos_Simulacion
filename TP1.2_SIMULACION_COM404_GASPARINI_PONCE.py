@@ -11,7 +11,7 @@ import numpy
 
 
 
-def Apuestas(apuestaBase,dineroInicial,infinito):
+def MartinGala(apuestaBase,dineroInicial,infinito):
 	listaFr=[]
 	rachaPerdidas=0 			  # Racha de perdidas
 	contador=0
@@ -41,7 +41,8 @@ def Apuestas(apuestaBase,dineroInicial,infinito):
 
 	return resultados,listaFr,dineroInicial
 
-resultados,listaFr,dineroInicial=Apuestas(1,0,True)
+
+resultados, listaFr, dineroInicial = MartinGala(1, 0, True)
 listaDineroInicial=[]
 for i in range(len(resultados)):
 	listaDineroInicial.append(dineroInicial)
@@ -64,7 +65,7 @@ plt.savefig("FRINFINITA_MG.png")
 
 plt.figure("LineasInfinitasMG")
 for j in range (5):
-	resultados,listaFr,dineroInicial=Apuestas(1,0,True)
+	resultados, listaFr, dineroInicial = MartinGala(1, 0, True)
 	plt.plot(resultados,label="Flujo de caja de la curva "+ str(j+1))
 	plt.legend()
 	plt.title("Martin Gala sin limite de presupuesto")   
@@ -72,10 +73,7 @@ for j in range (5):
 	plt.ylabel("Beneficio acumulado")
 plt.savefig("LineasInfinitasMG.png")
 
-
-
-
-resultados,listaFr,dineroInicial=Apuestas(1,1000,False)
+resultados, listaFr, dineroInicial = MartinGala(1, 1000, False)
 listaDineroInicial=[]
 for i in range(len(resultados)):
 	listaDineroInicial.append(dineroInicial)
@@ -101,7 +99,7 @@ plt.savefig("FRFINITA_MG.png")
 plt.figure("LineasfinitasMG")
 listaDineroInicial=[]
 for j in range (5):
-	resultados,listaFr,dineroInicial=Apuestas(1,1000,False)
+	resultados, listaFr, dineroInicial = MartinGala(1, 1000, False)
 	plt.plot(resultados,label="Flujo de caja de la curva "+ str(j+1))
 	plt.legend()
 	plt.title("Martin Gala con limite de presupuesto")   
@@ -116,7 +114,7 @@ plt.savefig("LineasfinitasMG.png")
 
 
 
-def Apuestas2(apuestaBase,dineroInicial,infinito):
+def DAlembert(apuestaBase,dineroInicial,infinito):
 	listaFr=[]
 	rachaPerdidas=0 			  # Racha de perdidas
 	contador=0
@@ -148,7 +146,8 @@ def Apuestas2(apuestaBase,dineroInicial,infinito):
 
 	return resultados,listaFr,dineroInicial
 
-resultados,listaFr,dineroInicial=Apuestas2(5,0,True)
+
+resultados, listaFr, dineroInicial = DAlembert(5, 0, True)
 listaDineroInicial=[]
 for i in range(len(resultados)):
 	listaDineroInicial.append(dineroInicial)
@@ -170,7 +169,7 @@ plt.savefig("FRINFINITA_DL.png")
 
 plt.figure("LineasInfinitasDL")
 for j in range (5):
-	resultados,listaFr,dineroInicial=Apuestas2(5,0,True)
+	resultados, listaFr, dineroInicial = DAlembert(5, 0, True)
 	listaDineroInicial=[]
 	plt.plot(resultados,label="Flujo de caja de la curva "+ str(j+1))
 	plt.legend()
@@ -179,10 +178,7 @@ for j in range (5):
 	plt.ylabel("Beneficio acumulado")
 plt.savefig("LineasInfinitasDL.png")
 
-
-
-
-resultados,listaFr,dineroInicial=Apuestas2(5,1000,False)
+resultados, listaFr, dineroInicial = DAlembert(5, 1000, False)
 listaDineroInicial=[]
 for i in range(len(resultados)):
 	listaDineroInicial.append(dineroInicial)
@@ -207,7 +203,7 @@ plt.savefig("FRFINITA_DL.png")
 plt.figure("LineasfinitasDL")
 listaDineroInicial=[]
 for j in range (5):
-	resultados,listaFr,dineroInicial=Apuestas2(5,1000,False)
+	resultados, listaFr, dineroInicial = DAlembert(5, 1000, False)
 	plt.plot(resultados,label="Flujo de caja de la curva "+ str(j+1))
 	plt.legend()
 	plt.title("d'ALembert con limite de presupuesto")   
