@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import  math
 import numpy as np
 from scipy.stats import norm
+import scipy.stats
 
 
 def generadorRandu():
@@ -149,6 +150,7 @@ def poison (lamb):
     return x
 poi=poison(50)
 
+
 def binomial (n,p):
     x=[]
     for i in range(1000):
@@ -162,6 +164,35 @@ def binomial (n,p):
 
 
 bino=binomial(1000,0.4)
+
+def TestChiCuadBinomial(u):
+    print("Test de bondad Chi Cuadrado")
+    observado = []
+    esperado = []
+    a1=0
+    a2=0
+    c =354
+    l=0
+    for i in range(10):
+        x = 0
+        total=0
+        for j in range(len(u)):
+            if (c-14) <= float(u[j]) < c:
+                x += 1
+        observado.append(x)
+        for j in range(14):
+            total+=1000*scipy.stats.binom.pmf(c-j,480,0.4)
+        esperado.append(total)
+        c +=14   
+    x2 = 0
+    for i in range(len(observado)):
+        x2 += (((observado[i]-esperado[i])**2)/esperado[i])
+    print(sum(esperado))
+    print(sum(observado))
+    print(esperado)
+    print(observado)
+    print(x2)
+
 
 def empirica():
     x=[]
@@ -244,4 +275,5 @@ def graficar(u,g,e,n,p,b,em,pas,hipergeo):
 #graficar(uni,gam,expo,nor,poi,bino,empi,pas,hipergeo)
 #TestChiCuadUni(uni)
 #TestChiCuadExp(expo)
-TestChiCuadNormal(nor)
+#TestChiCuadNormal(nor)
+TestChiCuadBinomial(bino)
