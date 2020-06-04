@@ -150,6 +150,31 @@ def poison (lamb):
     return x
 poi=poison(50)
 
+def TestChiCuadPoisson(u):
+    print("Test de bondad Chi Cuadrado")
+    observado = []
+    esperado = []
+    X=scipy.stats.poisson(50)
+    c =26
+    for i in range(10):
+        x = 0
+        for j in range(len(u)):
+            if (c-6) <= float(u[j]) < c:
+                x += 1
+        observado.append(x)
+        total=sum(X.pmf(k) for k in range (c)) -sum(X.pmf(m) for m in range (c-6))
+        #print(total)
+        #print(total)
+        esperado.append(1000*total)
+        c +=6 
+    x2 = 0
+    for i in range(len(observado)):
+        x2 += (((observado[i]-esperado[i])**2)/esperado[i])
+    #print(sum(esperado))
+    #print(sum(observado))
+    #print(esperado)
+    #print(observado)
+    print(x2)
 
 def binomial (n,p):
     x=[]
@@ -165,32 +190,30 @@ def binomial (n,p):
 
 bino=binomial(1000,0.4)
 
+#Test chi cuad para binomial x2<16.92
 def TestChiCuadBinomial(u):
     print("Test de bondad Chi Cuadrado")
     observado = []
     esperado = []
-    a1=0
-    a2=0
+    X=scipy.stats.binom(1000,0.4)
     c =354
-    l=0
     for i in range(10):
         x = 0
-        total=0
         for j in range(len(u)):
             if (c-14) <= float(u[j]) < c:
                 x += 1
         observado.append(x)
-        for j in range(14):
-            total+=1000*scipy.stats.binom.pmf(c-j,480,0.4)
-        esperado.append(total)
+        total=sum(X.pmf(k) for k in range (c)) -sum(X.pmf(m) for m in range (c-14))
+        #print(total)
+        esperado.append(1000*total)
         c +=14   
     x2 = 0
     for i in range(len(observado)):
         x2 += (((observado[i]-esperado[i])**2)/esperado[i])
-    print(sum(esperado))
-    print(sum(observado))
-    print(esperado)
-    print(observado)
+    #print(sum(esperado))
+    #print(sum(observado))
+    #print(esperado)
+    #print(observado)
     print(x2)
 
 
@@ -208,6 +231,31 @@ def empirica():
     return x
 
 empi=empirica()
+
+def TestChiCuadEmpirica(u):
+    print("Test de bondad Chi Cuadrado")
+    observado = []
+    esperado = []
+    X=scipy.stats.binom(1000,0.4)
+    c =354
+    for i in range(10):
+        x = 0
+        for j in range(len(u)):
+            if (c-14) <= float(u[j]) < c:
+                x += 1
+        observado.append(x)
+        total=sum(X.pmf(k) for k in range (c)) -sum(X.pmf(m) for m in range (c-14))
+        #print(total)
+        esperado.append(1000*total)
+        c +=14   
+    x2 = 0
+    for i in range(len(observado)):
+        x2 += (((observado[i]-esperado[i])**2)/esperado[i])
+    #print(sum(esperado))
+    #print(sum(observado))
+    #print(esperado)
+    #print(observado)
+    print(x2)
 
 def pascal(k,q):
     nx = []
@@ -272,8 +320,9 @@ def graficar(u,g,e,n,p,b,em,pas,hipergeo):
  plt.show()
 
 
-#graficar(uni,gam,expo,nor,poi,bino,empi,pas,hipergeo)
+graficar(uni,gam,expo,nor,poi,bino,empi,pas,hipergeo)
 #TestChiCuadUni(uni)
 #TestChiCuadExp(expo)
 #TestChiCuadNormal(nor)
-TestChiCuadBinomial(bino)
+#TestChiCuadBinomial(bino)
+#TestChiCuadPoisson(poi)
