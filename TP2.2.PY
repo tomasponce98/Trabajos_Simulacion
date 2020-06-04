@@ -27,21 +27,28 @@ uni=(uniforme(1,3))
 
 # X2 Menor a 16.92
 def TestChiCuadUni(u):
-	print("Test de bondad Chi Cuadrado")
-	observado=[]
-	esperado=100
-	c=1.2
-	for i in range (10):
-		x =0
-		for j in range (len(u)):
-			if  (c-0.2)<=float(u[j])<=c:
-				x+=1
-		observado.append(x)
-		c+=0.2
-	x2=0
-	for i in range(len(observado)):
-		x2+=(((observado[i]-esperado)**2)/esperado)
-	print("X2 = "+ str(x2))
+    print("Test de bondad Chi Cuadrado para distribucion uniforme")
+    observado=[]
+    esperado=100
+    c=1.2
+    for i in range (10):
+        x =0
+        for j in range (len(u)):
+            if  (c-0.2)<=float(u[j])<=c:
+                x+=1
+        observado.append(x)
+        c+=0.2
+    x2=0
+    for i in range(len(observado)):
+        x2+=(((observado[i]-esperado)**2)/esperado)
+    print("Valor de X2 obtenido = "+ str(x2))
+    print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
+    print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
+    if (x2 <16.92):
+        print("El valor de chi cuadrado obtenido: "+str(x2)+" es menor que 16.92, por lo tanto Paso el test")
+    else:
+        print("No paso el test")
+    
 
 def gamma(k,a):
     x=[]
@@ -67,7 +74,7 @@ def exponencial(ex):
 expo=(exponencial(5))
 #Menor a 16.92
 def TestChiCuadExp(u):
-    print("Test de bondad Chi Cuadrado")
+    print("Test de bondad Chi Cuadrado para distribucion exponencial:")
     observado=[]
     esperado=[]
     c=0.3
@@ -84,11 +91,13 @@ def TestChiCuadExp(u):
     x2=0
     for i in range(len(observado)):
         x2+=(((observado[i]-esperado[i])**2)/esperado[i])
-    print(sum(observado))
-    print(sum(esperado))
-    print(observado)
-    print(esperado)
-    print(x2)
+    print("Valor de X2 obtenido = "+ str(x2))
+    print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
+    print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
+    if (x2 <16.92):
+        print("El valor de chi cuadrado obtenido: "+str(x2)+" es menor que 16.92, por lo tanto Paso el test")
+    else:
+        print("No paso el test")
 
 def normal(ex,stdx):
     x=[]
@@ -103,7 +112,7 @@ nor=normal(2.35,30)
 
 #X2 menor a 16.92
 def TestChiCuadNormal(u):
-    print("Test de bondad Chi Cuadrado")
+    print("Test de bondad Chi Cuadrado para distribucion Normal")
     observado = []
     esperado = []
     a1=0
@@ -120,8 +129,6 @@ def TestChiCuadNormal(u):
         c +=20
     a1=a1/1000
     a2=a2/1000
-    print(a2)
-    print(a1)
     desviacion=math.sqrt(a2-a1**2)
     media=a1
     c=-80
@@ -132,8 +139,13 @@ def TestChiCuadNormal(u):
     x2 = 0
     for i in range(len(observado)):
         x2 += (((observado[i]-esperado[i])**2)/esperado[i])
-    print(x2)
-
+    print("Valor de X2 obtenido = " + str(x2))
+    print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
+    print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
+    if (x2 < 16.92):
+        print("El valor de chi cuadrado obtenido: "+str(x2) +" es menor que 16.92, por lo tanto Paso el test")
+    else:
+        print("No paso el test")
 def poison (lamb):
     x = []
     for i in range(1000):
@@ -151,7 +163,7 @@ def poison (lamb):
 poi=poison(50)
 
 def TestChiCuadPoisson(u):
-    print("Test de bondad Chi Cuadrado")
+    print("Test de bondad Chi Cuadrado para distribucion Poisson")
     observado = []
     esperado = []
     X=scipy.stats.poisson(50)
@@ -174,7 +186,13 @@ def TestChiCuadPoisson(u):
     #print(sum(observado))
     #print(esperado)
     #print(observado)
-    print(x2)
+    print("Valor de X2 obtenido = " + str(x2))
+    print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
+    print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
+    if (x2 < 16.92):
+        print("El valor de chi cuadrado obtenido: "+str(x2) +" es menor que 16.92, por lo tanto Paso el test")
+    else:
+        print("No paso el test")
 
 def binomial (n,p):
     x=[]
@@ -192,7 +210,7 @@ bino=binomial(1000,0.4)
 
 #Test chi cuad para binomial x2<16.92
 def TestChiCuadBinomial(u):
-    print("Test de bondad Chi Cuadrado")
+    print("Test de bondad Chi Cuadrado para distribucion Binomial")
     observado = []
     esperado = []
     X=scipy.stats.binom(1000,0.4)
@@ -214,8 +232,13 @@ def TestChiCuadBinomial(u):
     #print(sum(observado))
     #print(esperado)
     #print(observado)
-    print(x2)
-
+    print("Valor de X2 obtenido = " + str(x2))
+    print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
+    print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
+    if (x2 < 16.92):
+        print("El valor de chi cuadrado obtenido: "+str(x2) + " es menor que 16.92, por lo tanto Paso el test")
+    else:
+        print("No paso el test")
 
 def empirica():
     x=[]
@@ -232,30 +255,34 @@ def empirica():
 
 empi=empirica()
 
+#Menor a 16.92
 def TestChiCuadEmpirica(u):
-    print("Test de bondad Chi Cuadrado")
+    print("Test de bondad Chi Cuadrado para distribucion Empirica")
     observado = []
     esperado = []
-    X=scipy.stats.binom(1000,0.4)
-    c =354
+    p = [0.000,0.273, 0.037, 0.195, 0.009, 0.124, 0.058, 0.062, 0.151, 0.047, 0.044]
+    d = np.cumsum(p)
     for i in range(10):
         x = 0
         for j in range(len(u)):
-            if (c-14) <= float(u[j]) < c:
+            if (d[i]) < float(u[j]) <=d[i+1]:
                 x += 1
         observado.append(x)
-        total=sum(X.pmf(k) for k in range (c)) -sum(X.pmf(m) for m in range (c-14))
-        #print(total)
-        esperado.append(1000*total)
-        c +=14   
+        esperado.append(1000 * (d[i+1]-d[i])) 
     x2 = 0
     for i in range(len(observado)):
         x2 += (((observado[i]-esperado[i])**2)/esperado[i])
     #print(sum(esperado))
     #print(sum(observado))
     #print(esperado)
-    #print(observado)
-    print(x2)
+   # print(observado)
+    print("Valor de X2 obtenido = " + str(x2))
+    print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
+    print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
+    if (x2 < 16.92):
+        print("El valor de chi cuadrado obtenido: "+str(x2) + " es menor que 16.92, por lo tanto Paso el test")
+    else:
+        print("No paso el test")
 
 def pascal(k,q):
     nx = []
@@ -321,8 +348,14 @@ def graficar(u,g,e,n,p,b,em,pas,hipergeo):
 
 
 graficar(uni,gam,expo,nor,poi,bino,empi,pas,hipergeo)
-#TestChiCuadUni(uni)
-#TestChiCuadExp(expo)
-#TestChiCuadNormal(nor)
-#TestChiCuadBinomial(bino)
-#TestChiCuadPoisson(poi)
+TestChiCuadUni(uni)
+print()
+TestChiCuadExp(expo)
+print()
+TestChiCuadNormal(nor)
+print()
+TestChiCuadBinomial(bino)
+print()
+TestChiCuadPoisson(poi)
+print()
+TestChiCuadEmpirica(empi)
