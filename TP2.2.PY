@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import  math
 import numpy as np
 from scipy.stats import norm
-import scipy.stats
+import scipy.stats 
 
 
 def generadorRandu():
@@ -31,6 +31,7 @@ def TestChiCuadUni(u):
     observado=[]
     esperado=100
     c=1.2
+    chiquadesperado = round(scipy.stats.chi2.ppf(1-0.05, 9), 2)
     for i in range (10):
         x =0
         for j in range (len(u)):
@@ -41,16 +42,14 @@ def TestChiCuadUni(u):
     x2=0
     for i in range(len(observado)):
         x1 = (((observado[i]-esperado)**2)/esperado)
-     #   print(x1)
         x2+=x1
-    
-    #print(observado)
-    #print(esperado)
+
     print("Valor de X2 obtenido = "+ str(x2))
     print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
     print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
-    if (x2 <16.92):
-        print("El valor de chi cuadrado obtenido: "+str(x2)+" es menor que 16.92, por lo tanto Paso el test")
+    if (x2 < chiquadesperado):
+        print("El valor de chi cuadrado obtenido: "+str(x2) +
+              " es menor que "+str(chiquadesperado)+" ,por lo tanto Paso el test")
     else:
         print("No paso el test")
     
@@ -77,12 +76,13 @@ def exponencial(ex):
 
 
 expo=(exponencial(5))
-#Menor a 16.92
+
 def TestChiCuadExp(u):
     print("Test de bondad Chi Cuadrado para distribucion exponencial:")
     observado=[]
     esperado=[]
     c=0.3
+    chiquadesperado = round(scipy.stats.chi2.ppf(1-0.05, 9), 2)
     for i in range (9):
         x =0
         for j in range (len(u)):
@@ -90,23 +90,19 @@ def TestChiCuadExp(u):
                 x+=1
         observado.append(x)
         esperado.append(1000*((1-(math.e)**(-(1/5)*c))-(1-(math.e)**(-(1/5)*(c-0.3)))))
-        #print(esperado[i])
         c+=0.3
     observado.append(1000-sum(observado))
     esperado.append(1000*((math.e)**(-(1/5)*(c-0.3))))
-    #print(esperado[9])
     x2=0
     for i in range(len(observado)):
         x1 = (((observado[i]-esperado[i])**2)/esperado[i])
-    #    print(x1)
         x2+=x1
-    #print(observado)
-    #print(esperado)
     print("Valor de X2 obtenido = "+ str(x2))
     print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
     print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
-    if (x2 <16.92):
-        print("El valor de chi cuadrado obtenido: "+str(x2)+" es menor que 16.92, por lo tanto Paso el test")
+    if (x2 < chiquadesperado):
+        print("El valor de chi cuadrado obtenido: "+str(x2) +
+              " es menor que "+str(chiquadesperado)+" ,por lo tanto Paso el test")
     else:
         print("No paso el test")
 
@@ -128,6 +124,7 @@ def TestChiCuadNormal(u):
     esperado = []
     a1=0
     a2=0
+    chiquadesperado = round(scipy.stats.chi2.ppf(1-0.05, 9), 2)
     c =-80
     for i in range(10):
         x = 0
@@ -150,15 +147,13 @@ def TestChiCuadNormal(u):
     x2 = 0
     for i in range(len(observado)):
         x1 = (((observado[i]-esperado[i])**2)/esperado[i])
-     #   print(x1)
         x2 += x1
-    #print(observado)
-    #print(esperado)
     print("Valor de X2 obtenido = " + str(x2))
     print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
     print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
-    if (x2 < 16.92):
-        print("El valor de chi cuadrado obtenido: "+str(x2) +" es menor que 16.92, por lo tanto Paso el test")
+    if (x2 < chiquadesperado):
+            print("El valor de chi cuadrado obtenido: "+str(x2) +
+              " es menor que "+str(chiquadesperado)+" ,por lo tanto Paso el test")
     else:
         print("No paso el test")
 def poisson (lamb):
@@ -183,6 +178,7 @@ def TestChiCuadPoisson(u):
     observado = []
     esperado = []
     X=scipy.stats.poisson(50)
+    chiquadesperado = round(scipy.stats.chi2.ppf(1-0.05, 9), 2)
     c =26
     for i in range(10):
         x = 0
@@ -191,24 +187,18 @@ def TestChiCuadPoisson(u):
                 x += 1
         observado.append(x)
         total=sum(X.pmf(k) for k in range (c)) -sum(X.pmf(m) for m in range (c-6))
-        #print(total)
-        #print(total)
         esperado.append(1000*total)
         c +=6 
     x2 = 0
     for i in range(len(observado)):
         x1 = (((observado[i]-esperado[i])**2)/esperado[i])
-        #print(x1)
         x2 += x1
-    #print(sum(esperado))
-    #print(sum(observado))
-    #print(observado)
-    #print(esperado)
     print("Valor de X2 obtenido = " + str(x2))
     print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
     print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
-    if (x2 < 16.92):
-        print("El valor de chi cuadrado obtenido: "+str(x2) +" es menor que 16.92, por lo tanto Paso el test")
+    if (x2 < chiquadesperado):
+        print("El valor de chi cuadrado obtenido: "+str(x2) +
+              " es menor que "+str(chiquadesperado)+" ,por lo tanto Paso el test")
     else:
         print("No paso el test")
 
@@ -226,13 +216,13 @@ def binomial (n,p):
 
 bino=binomial(1000,0.4)
 
-#Test chi cuad para binomial x2<16.92
 def TestChiCuadBinomial(u):
     print("Test de bondad Chi Cuadrado para distribucion Binomial")
     observado = []
     esperado = []
     X=scipy.stats.binom(1000,0.4)
     c =354
+    chiquadesperado = round(scipy.stats.chi2.ppf(1-0.05, 9), 2)
     for i in range(10):
         x = 0
         for j in range(len(u)):
@@ -240,23 +230,19 @@ def TestChiCuadBinomial(u):
                 x += 1
         observado.append(x)
         total=sum(X.pmf(k) for k in range (c)) -sum(X.pmf(m) for m in range (c-14))
-        #print(total)
         esperado.append(1000*total)
         c +=14   
     x2 = 0
     for i in range(len(observado)):
         x1=(((observado[i]-esperado[i])**2)/esperado[i])
-        #print(x1)
         x2 += x1
-    #print(sum(esperado))
-    #print(sum(observado))
-    #print(observado)
-    #print(esperado)
+
     print("Valor de X2 obtenido = " + str(x2))
     print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
     print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
-    if (x2 < 16.92):
-        print("El valor de chi cuadrado obtenido: "+str(x2) + " es menor que 16.92, por lo tanto Paso el test")
+    if (x2 < chiquadesperado):
+        print("El valor de chi cuadrado obtenido: "+str(x2) +
+              " es menor que "+str(chiquadesperado)+" ,por lo tanto Paso el test")
     else:
         print("No paso el test")
 
@@ -278,13 +264,12 @@ def empirica():
 
 empi=empirica()
 
-#Menor a 16.92
 def TestChiCuadEmpirica(u):
     print("Test de bondad Chi Cuadrado para distribucion Empirica")
     observado = []
     esperado = []
+    chiquadesperado = round(scipy.stats.chi2.ppf(1-0.05, 9),2)
     p = [0.273, 0.037, 0.195, 0.009, 0.124, 0.058, 0.062, 0.151, 0.047, 0.044]
-    #d = np.cumsum(p)
     for i in range(10):
         x = 0
         for j in range(len(u)):
@@ -296,15 +281,13 @@ def TestChiCuadEmpirica(u):
     for i in range(len(observado)):
         x1 = (((observado[i]-esperado[i])**2)/esperado[i])
         x2 += x1
-    #print(sum(esperado))
-    #print(sum(observado))
-    #print(esperado)
-    #print(observado)
+
     print("Valor de X2 obtenido = " + str(x2))
     print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
     print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
-    if (x2 < 16.92):
-        print("El valor de chi cuadrado obtenido: "+str(x2) + " es menor que 16.92, por lo tanto Paso el test")
+    if (x2 < chiquadesperado):
+        print("El valor de chi cuadrado obtenido: "+str(x2) +
+              " es menor que "+str(chiquadesperado)+" ,por lo tanto Paso el test")
     else:
         print("No paso el test")
 
@@ -409,3 +392,4 @@ print()
 TestChiCuadPoisson(poi)
 print()
 TestChiCuadEmpirica(empi)
+
