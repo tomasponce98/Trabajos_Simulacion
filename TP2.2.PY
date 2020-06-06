@@ -40,7 +40,12 @@ def TestChiCuadUni(u):
         c+=0.2
     x2=0
     for i in range(len(observado)):
-        x2+=(((observado[i]-esperado)**2)/esperado)
+        x1 = (((observado[i]-esperado)**2)/esperado)
+     #   print(x1)
+        x2+=x1
+    
+    #print(observado)
+    #print(esperado)
     print("Valor de X2 obtenido = "+ str(x2))
     print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
     print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
@@ -85,12 +90,18 @@ def TestChiCuadExp(u):
                 x+=1
         observado.append(x)
         esperado.append(1000*((1-(math.e)**(-(1/5)*c))-(1-(math.e)**(-(1/5)*(c-0.3)))))
+        #print(esperado[i])
         c+=0.3
     observado.append(1000-sum(observado))
     esperado.append(1000*((math.e)**(-(1/5)*(c-0.3))))
+    #print(esperado[9])
     x2=0
     for i in range(len(observado)):
-        x2+=(((observado[i]-esperado[i])**2)/esperado[i])
+        x1 = (((observado[i]-esperado[i])**2)/esperado[i])
+    #    print(x1)
+        x2+=x1
+    #print(observado)
+    #print(esperado)
     print("Valor de X2 obtenido = "+ str(x2))
     print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
     print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
@@ -138,7 +149,11 @@ def TestChiCuadNormal(u):
         c+=20
     x2 = 0
     for i in range(len(observado)):
-        x2 += (((observado[i]-esperado[i])**2)/esperado[i])
+        x1 = (((observado[i]-esperado[i])**2)/esperado[i])
+     #   print(x1)
+        x2 += x1
+    #print(observado)
+    #print(esperado)
     print("Valor de X2 obtenido = " + str(x2))
     print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
     print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
@@ -146,7 +161,7 @@ def TestChiCuadNormal(u):
         print("El valor de chi cuadrado obtenido: "+str(x2) +" es menor que 16.92, por lo tanto Paso el test")
     else:
         print("No paso el test")
-def poison (lamb):
+def poisson (lamb):
     x = []
     for i in range(1000):
         cont=0
@@ -160,7 +175,8 @@ def poison (lamb):
                 cont+=1
         x.append(cont)
     return x
-poi=poison(50)
+
+poi=poisson(50)
 
 def TestChiCuadPoisson(u):
     print("Test de bondad Chi Cuadrado para distribucion Poisson")
@@ -181,11 +197,13 @@ def TestChiCuadPoisson(u):
         c +=6 
     x2 = 0
     for i in range(len(observado)):
-        x2 += (((observado[i]-esperado[i])**2)/esperado[i])
+        x1 = (((observado[i]-esperado[i])**2)/esperado[i])
+        #print(x1)
+        x2 += x1
     #print(sum(esperado))
     #print(sum(observado))
-    #print(esperado)
     #print(observado)
+    #print(esperado)
     print("Valor de X2 obtenido = " + str(x2))
     print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
     print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
@@ -227,11 +245,13 @@ def TestChiCuadBinomial(u):
         c +=14   
     x2 = 0
     for i in range(len(observado)):
-        x2 += (((observado[i]-esperado[i])**2)/esperado[i])
+        x1=(((observado[i]-esperado[i])**2)/esperado[i])
+        #print(x1)
+        x2 += x1
     #print(sum(esperado))
     #print(sum(observado))
-    #print(esperado)
     #print(observado)
+    #print(esperado)
     print("Valor de X2 obtenido = " + str(x2))
     print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
     print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
@@ -246,11 +266,14 @@ def empirica():
     for i in range(1000):
         r=random.random()
         a=0
-        for i in p:
-          a+=i
-          if (r<=a):
-            break
-        x.append(a)
+        z=1
+        for j in p:
+            a+=j
+            if (r<=a):
+                break
+            else:
+                z+=1
+        x.append(z)
     return x
 
 empi=empirica()
@@ -260,22 +283,23 @@ def TestChiCuadEmpirica(u):
     print("Test de bondad Chi Cuadrado para distribucion Empirica")
     observado = []
     esperado = []
-    p = [0.000,0.273, 0.037, 0.195, 0.009, 0.124, 0.058, 0.062, 0.151, 0.047, 0.044]
-    d = np.cumsum(p)
+    p = [0.273, 0.037, 0.195, 0.009, 0.124, 0.058, 0.062, 0.151, 0.047, 0.044]
+    #d = np.cumsum(p)
     for i in range(10):
         x = 0
         for j in range(len(u)):
-            if (d[i]) < float(u[j]) <=d[i+1]:
+            if u[j]==i+1:
                 x += 1
         observado.append(x)
-        esperado.append(1000 * (d[i+1]-d[i])) 
+        esperado.append(1000 * p[i]) 
     x2 = 0
     for i in range(len(observado)):
-        x2 += (((observado[i]-esperado[i])**2)/esperado[i])
+        x1 = (((observado[i]-esperado[i])**2)/esperado[i])
+        x2 += x1
     #print(sum(esperado))
     #print(sum(observado))
     #print(esperado)
-   # print(observado)
+    #print(observado)
     print("Valor de X2 obtenido = " + str(x2))
     print("Se poseen 10 intervalos, por lo tantos tendremos 9 grados de libertad.")
     print("Con 9 grados de libertad y con un 95 porciento de confianza se obtiene un valor de Chi cuadrado de 16.92")
@@ -293,11 +317,11 @@ def pascal(k,q):
         for j in range(k):
             r = random.random()
             tr *= u[j]
-        x = math.log10(tr)/qr
-        nx += [x]
+        x = int(math.log10(tr)//qr)
+        nx.append(x)
     return nx
     
-pas=pascal(5,200)
+pas=pascal(5,0.4)
 
 def hipergeometrica(tn,ns,p):
     x=[]
@@ -318,32 +342,58 @@ def hipergeometrica(tn,ns,p):
 hipergeo=hipergeometrica(5000000,500,0.4)
 
 def graficar(u,g,e,n,p,b,em,pas,hipergeo):
+ plt.figure(1)
  plt.title("uniforme")
  plt.hist(u)
+ plt.savefig("Uniforme4.png")
  plt.show()
+ 
+ plt.figure(2)
  plt.title("gamma")
  plt.hist(g,25,histtype="stepfilled", alpha=.7,linewidth=5, color='r')
+ plt.savefig("Gamma4.png")
  plt.show()
+ 
+ plt.figure(3)
  plt.title("exponencial")
  plt.hist(e, 25, histtype="stepfilled", alpha=.7, linewidth=5, color='g')
+ plt.savefig("Exponencial4.png")
  plt.show()
+ 
+ plt.figure(4)
  plt.title("normal")
  plt.hist(n, 25, histtype="stepfilled", alpha=.7, linewidth=5, color='y')
+ plt.savefig("Normal4.png")
  plt.show()
+ 
+ plt.figure(5)
  plt.title("poisson")
  plt.hist(p, 25, histtype="stepfilled", alpha=.7, linewidth=5, color='orange')
+ plt.savefig("Poisson4.png")
  plt.show()
+ 
+ plt.figure(6)
  plt.title("binomial")
  plt.hist(b, 25, histtype="stepfilled", alpha=.7, linewidth=5, color='black')
+ plt.savefig("Binomial4.png")
  plt.show()
+
+ plt.figure(7)
  plt.title("empirica")
- plt.hist(em, 25, histtype="stepfilled", alpha=.7, linewidth=5,color='violet')
+ plt.hist(em,color='violet')
+ plt.savefig("Empirica4.png")
  plt.show()
+ 
+ plt.figure(8)
  plt.title("pascal")
- plt.hist(pas, 25, histtype="stepfilled", alpha=.7, linewidth=5,   color='cyan')
+ plt.hist(pas,   color='cyan')
+ plt.savefig("Pascal4.png")
  plt.show()
+ 
+ plt.figure(9)
  plt.title("hipergeometrica")
  plt.hist(hipergeo, 25, histtype="stepfilled", alpha=.7, linewidth=5, color='chocolate')
+ plt.savefig("HiperGeometrica4.png")
  plt.show()
 
 
