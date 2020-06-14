@@ -6,16 +6,6 @@ from scipy.stats import norm
 import scipy.stats 
 
 
-def generadorRandu():
-    x = []
-    u = []
-    x.append(random.randint(0, 2**31-1))
-    u.append(x[0]/(2**31-1))
-    for i in range(1, 1000):
-        x.append(((2**16+3)*x[i-1]) % (2**31))
-        u.append(x[i]/(2**31))
-    return u
-
 def uniforme (a,b):
     x=[]
     for i in range(1000):
@@ -296,10 +286,9 @@ def pascal(k,q):
     for i in range(1000):
         tr = 1
         qr = math.log10(q)
-        u = generadorRandu()
         for j in range(k):
             r = random.random()
-            tr *= u[j]
+            tr *= r
         x = int(math.log10(tr)//qr)
         nx.append(x)
     return nx
@@ -309,25 +298,31 @@ pas=pascal(5,0.4)
 def hipergeometrica(tn,ns,p):
     x=[]
     for i in range(1000):
+        tn1=tn
+        ns1=ns
+        p1=p
         y=0.0
-        for j in range(1,ns):
+        for j in range(1, ns1):
             r = random.random()
-            if(r-p)>0:
+            if(r-p1) > 0:
                 s=0.0
             else:
                 s=1.0
                 y+=1.0
-            p=(tn*p-s)/(tn-1.0)
-            tn-=1.0
+            p1 = (tn1*p1-s)/(tn1-1.0)
+            tn1 -= 1.0
         x.append(y)
     return x
-
 hipergeo=hipergeometrica(5000000,500,0.4)
+
+
+
 
 def graficar(u,g,e,n,p,b,em,pas,hipergeo):
  plt.figure(1)
  plt.title("uniforme")
  plt.hist(u)
+ 
  plt.savefig("Uniforme4.png")
  plt.show()
  
@@ -346,6 +341,8 @@ def graficar(u,g,e,n,p,b,em,pas,hipergeo):
  plt.figure(4)
  plt.title("normal")
  plt.hist(n, 25, histtype="stepfilled", alpha=.7, linewidth=5, color='y')
+
+
  plt.savefig("Normal4.png")
  plt.show()
  
