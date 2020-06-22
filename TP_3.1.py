@@ -105,7 +105,8 @@ def depart():
     if(num_in_q==0):
 
         server_status=0
-        time_next_event[1]=1*10**30
+        #time_next_event[1]=1*10**30
+        time_next_event[1] =float(math.inf)
     else:
         
         num_in_q-=1
@@ -123,8 +124,9 @@ def report():
     global area_num_in_q
     global time
     global area_server_status
+    global num_delays_required
 
-    print("Average delay in queue: "+ str(total_of_delays/num_custs_delayed))
+    print("Average delay in queue: "+ str(total_of_delays/num_delays_required))
     print("Average number in queue: "+str(area_num_in_q/time))
     print("Server utilization: "+str(area_server_status/time))
     print("Time simulation ended"+ str(time))
@@ -178,8 +180,8 @@ def inicializar():
 
     time_next_event = []
     time_next_event.insert(0, float(time+expon(mean_interarrival)))
-    time_next_event.insert(1, float(1*10**(30)))
-
+   # time_next_event.insert(1, float(1*10**(30)))
+    time_next_event.insert(1,float(math.inf))
     time_arrival=[]
 
 #Ingresa media, media de servicio, tiempo de finalizacion
@@ -195,8 +197,8 @@ num_delays_required = float(input("num delays requiered: "))
 inicializar()
 #continua 
 #while(num_custs_delayed<num_delays_required):
-arribos=0
-departos=0
+#arribos=0
+#departos=0
 
 while(num_custs_delayed < num_delays_required):
     timing()
@@ -204,20 +206,20 @@ while(num_custs_delayed < num_delays_required):
 
     if(next_event_type==1):
         arrive()
-        arribos+=1
+        #arribos+=1
 
         
     elif(next_event_type==2):
         depart()
-        departos+=1
+        #departos+=1
 report()
 #print(arribos)
 #print(departos)
-#print(total_of_delays)
 #print(num_custs_delayed)
 #print(len(time_next_event))
-    
-   
+
+
+#IMPORTANTE, EN LA CALCULADORA UTILIZAR LA INVERSA DE LAS MEDIAS.
 
 
     
