@@ -78,7 +78,7 @@ def arrive():
     global mean_service
     global num_clientes_sistema
     global tiempo_2
-
+    global area_num_in_q_total
 
     #time_next_event.pop(0)
     time_next_event[0] = time+expon(mean_interarrival)
@@ -91,6 +91,9 @@ def arrive():
         num_in_q += 1
         
         num_clientes_sistema.append(num_in_q+1)
+
+        area_num_in_q_total.append(num_in_q)
+
         
     else:
         delay=0
@@ -98,11 +101,15 @@ def arrive():
         num_custs_delayed+=1
 
         num_clientes_sistema.append(num_in_q)
-
+        
+        area_num_in_q_total.append(0)
+        
         server_status=1
         time_next_event[1]=time+expon(mean_service)
 
         tiempo_2.append(time_next_event[1]-time)
+
+
 
     time_global.append(time)
 
@@ -121,6 +128,7 @@ def depart():
     global time
     global num_clientes_sistema
     global tiempo_2
+    global area_num_in_q_total
 
     if(num_in_q==0):
 
@@ -131,6 +139,8 @@ def depart():
         #Media demoras
         #EstadisticosDemoras(0)
         num_clientes_sistema.append(num_in_q)
+        area_num_in_q_total.append(0)
+
         
         
 
@@ -156,7 +166,12 @@ def depart():
         for i in range(num_in_q):
             time_arrival[i]=time_arrival[i+1]
 
-    time_global.append(time)
+        area_num_in_q_total.append(num_in_q-1)
+
+
+    time_global.append(time)     
+    
+
 
 
     #num_clientes_sistema.append(num_in_q)
@@ -198,11 +213,13 @@ def update_time_avg_state():
     global time_since_last_event
     global area_server_status
     global server_status
+    
 
     time_since_last_event=time-time_last_event
     time_last_event=time
 
     area_num_in_q +=num_in_q*time_since_last_event
+
     #print(time_since_last_event)
     #Creo que lo que pasa es que me multiplica por 0 siempre que no haya otro numero
     area_server_status+=server_status*time_since_last_event
@@ -228,11 +245,14 @@ def inicializar():
     global tiempo_llegada 
     global tiempo_2
     global time_global
+    global area_num_in_q_total
 
     time_global=[]
 
     time = 0
     
+    area_num_in_q_total = []
+
     num_clientes_sistema=[]
 
     tiempo_llegada=0
@@ -310,16 +330,16 @@ def GraficasDemoras():
     plt.plot(listaDemoraTotal)
     plt.show()
 
-def GraficasPromClientesSistema():
-    global num_clientes_sistema
+def GraficasPromClientesSistema(arreglo):
+    #global num_clientes_sistema
     global numero_clientes_cola
     
     listaClientes = []
 
-    acum_clientes_sistema = np.cumsum(num_clientes_sistema)
+    acum_clientes_sistema = np.cumsum(arreglo)
 
     num_clientes_sistema_media = []
-    for i in range(len(num_clientes_sistema)):
+    for i in range(len(arreglo)):
         num_clientes_sistema_media.append(acum_clientes_sistema[i]/(i+1))
         
 
@@ -329,8 +349,8 @@ def GraficasPromClientesSistema():
     contador=0
     k=0
 
-    for i in range(len(num_clientes_sistema)):
-        listaClientes.append(num_clientes_sistema[i])
+    for i in range(len(arreglo)):
+        listaClientes.append(arreglo[i])
         num_clientes_sistema_varianza.append(np.var(listaClientes))
         num_clientes_sistema_desviacion.append(np.std(listaClientes))
         if(int(listaClientes[i]) == int(numero_clientes_cola)):
@@ -341,18 +361,16 @@ def GraficasPromClientesSistema():
             num_clientes_sistema_fr.append(contador/(k+1))
 
     media_cli_sistema=[]
-    for i in range (len(num_clientes_sistema)):
-        media_cli_sistema.append(np.mean(num_clientes_sistema))
+    for i in range(len(arreglo)):
+        media_cli_sistema.append(np.mean(arreglo))
 
     varianza_cli_sistema=[]
-    for i in range(len(num_clientes_sistema)):
-        varianza_cli_sistema.append(np.var(num_clientes_sistema))
+    for i in range(len(arreglo)):
+        varianza_cli_sistema.append(np.var(arreglo))
 
     desviacion_cli_sistema = []
-    for i in range(len(num_clientes_sistema)):
-        desviacion_cli_sistema.append(np.std(num_clientes_sistema))
-    
-
+    for i in range(len(arreglo)):
+        desviacion_cli_sistema.append(np.std(arreglo))
     
     
    
@@ -370,9 +388,10 @@ def GraficasPromClientesSistema():
 
 
 
-    
+#GraficasPromClientesSistema(num_clientes_sistema) #Graficas clientes-sistema
+GraficasPromClientesSistema(area_num_in_q_total) # Grafica clientes -Cola
 
-GraficasPromClientesSistema()
+print(np.mean(area_num_in_q_total))
 
 
 #print(arribos)
