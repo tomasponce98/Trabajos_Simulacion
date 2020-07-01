@@ -61,6 +61,7 @@ def timing():
             next_event_type=i+1
     #if(next_event_type==1):
      #   print("la lista de eventos esta vacia"+str(time))
+
     time=min_time_next_event
 
 def arrive():
@@ -101,7 +102,7 @@ def arrive():
         server_status=1
         time_next_event[1]=time+expon(mean_service)
 
-        tiempo_2.append(time_next_event[1]-time_next_event[0])
+        tiempo_2.append(time_next_event[1]-time)
 
         #tiempo_llegada=time
     #   time_next_event.insert(1,float(time+expon(mean_service)))
@@ -172,7 +173,7 @@ def report():
 
     print("Promedio de clientes en cola: "+str(area_num_in_q/time))
 
-    print("Tiempo Promedio en el sistema: "+str(sum(tiempo_2)/time))
+    print("Tiempo Promedio en el sistema: "+str(sum(tiempo_2)/num_delays_required))
 
     print("Tiempo promedio en cola : "+ str(total_of_delays/num_delays_required))
 
