@@ -1,6 +1,7 @@
 import math
 import random
 import matplotlib.pyplot as plt
+import numpy as np
 
 # def mm1(numero_clientes):
 #     clientes=[]
@@ -74,6 +75,9 @@ def arrive():
     global time_arrival
     global time
     global mean_service
+    global num_clientes_sistema
+    global tiempo_2
+
 
     #time_next_event.pop(0)
     time_next_event[0] = time+expon(mean_interarrival)
@@ -84,13 +88,24 @@ def arrive():
             
         time_arrival.insert(num_in_q,time)
         num_in_q += 1
+        
+        num_clientes_sistema.append(num_in_q+1)
+        
     else:
         delay=0
         total_of_delays+=delay
         num_custs_delayed+=1
+
+        num_clientes_sistema.append(num_in_q)
+
         server_status=1
         time_next_event[1]=time+expon(mean_service)
-#        time_next_event.insert(1,float(time+expon(mean_service)))
+
+        tiempo_2.append(time_next_event[1]-time_next_event[0])
+
+        #tiempo_llegada=time
+    #   time_next_event.insert(1,float(time+expon(mean_service)))
+    #num_clientes_sistema.append(num_in_q)
 
 def depart():
     global delay
@@ -101,22 +116,46 @@ def depart():
     global total_of_delays
     global time_arrival
     global time
-    
+    global num_clientes_sistema
+    global tiempo_2
+
     if(num_in_q==0):
 
         server_status=0
         #time_next_event[1]=1*10**30
         time_next_event[1] =float(math.inf)
-    else:
+
+        #Media demoras
+        #EstadisticosDemoras(0)
+        num_clientes_sistema.append(num_in_q)
         
+        
+
+    else:
+
         num_in_q-=1
         delay=time - time_arrival[0]
-        #print(delay)
+        
+        #media de demoras
+        #EstadisticosDemoras(delay)
+        
+        num_clientes_sistema.append(num_in_q)
+
         total_of_delays+=delay
         num_custs_delayed+=1
+
+
+
         time_next_event[1]=float(time+expon(mean_service))
+        
+        tiempo_2.append(time_next_event[1]-time_arrival[0])
+
         for i in range(num_in_q):
             time_arrival[i]=time_arrival[i+1]
+
+        
+
+    #num_clientes_sistema.append(num_in_q)
 
 def report():
     global total_of_delays
@@ -125,11 +164,22 @@ def report():
     global time
     global area_server_status
     global num_delays_required
+    global mean_service
+    global num_clientes_sistema
+    global tiempo_2
 
-    print("Average delay in queue: "+ str(total_of_delays/num_delays_required))
-    print("Average number in queue: "+str(area_num_in_q/time))
-    print("Server utilization: "+str(area_server_status/time))
-    print("Time simulation ended"+ str(time))
+    print("Promedio de clientes en el sistema: "+str((sum(num_clientes_sistema))/len(num_clientes_sistema)))
+
+    print("Promedio de clientes en cola: "+str(area_num_in_q/time))
+
+    print("Tiempo Promedio en el sistema: "+str(sum(tiempo_2)/time))
+
+    print("Tiempo promedio en cola : "+ str(total_of_delays/num_delays_required))
+
+    print("Utilizacion del servidor: "+str(area_server_status/time))
+
+    print("Tiempo de fin de simulacion"+ str(time))
+
 
 def update_time_avg_state():
 
@@ -166,9 +216,17 @@ def inicializar():
     global time_next_event
     global area_num_in_q
     global time_arrival
+    global num_clientes_sistema
+    global tiempo_llegada 
+    global tiempo_2
 
     time = 0
     
+    num_clientes_sistema=[]
+
+    tiempo_llegada=0
+    tiempo_2=[]
+
     server_status = 0
     num_in_q = 0
     time_last_event = 0
@@ -184,6 +242,11 @@ def inicializar():
     time_next_event.insert(1,float(math.inf))
     time_arrival=[]
 
+def EstadisticosDemoras(delay):
+    ListaDemoras.append(delay)
+    ListaMediaDemoras.append(np.mean(ListaDemoras))
+
+
 #Ingresa media, media de servicio, tiempo de finalizacion
 Q_limit=100
 num_events=2
@@ -195,6 +258,11 @@ num_delays_required = float(input("num delays requiered: "))
 #Inicializa
 
 inicializar()
+
+# Estadisticos que utilizaremos
+ListaDemoras=[]
+ListaMediaDemoras=[]
+
 #continua 
 #while(num_custs_delayed<num_delays_required):
 #arribos=0
@@ -213,6 +281,23 @@ while(num_custs_delayed < num_delays_required):
         depart()
         #departos+=1
 report()
+
+
+def GraficasDemoras():
+    global total_of_delays
+    global num_delays_required
+    plt.figure(1)
+    plt.plot(ListaMediaDemoras)
+    listaDemoraTotal=[]
+    for i in range(len(ListaMediaDemoras)):
+        listaDemoraTotal.append(total_of_delays/num_delays_required)
+    plt.plot(ListaMediaDemoras)
+    plt.plot(listaDemoraTotal)
+    plt.show()
+
+
+
+
 #print(arribos)
 #print(departos)
 #print(num_custs_delayed)
