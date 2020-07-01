@@ -104,6 +104,8 @@ def arrive():
 
         tiempo_2.append(time_next_event[1]-time)
 
+    time_global.append(time)
+
         #tiempo_llegada=time
     #   time_next_event.insert(1,float(time+expon(mean_service)))
     #num_clientes_sistema.append(num_in_q)
@@ -154,7 +156,8 @@ def depart():
         for i in range(num_in_q):
             time_arrival[i]=time_arrival[i+1]
 
-        
+    time_global.append(time)
+
 
     #num_clientes_sistema.append(num_in_q)
 
@@ -168,6 +171,7 @@ def report():
     global mean_service
     global num_clientes_sistema
     global tiempo_2
+    global prob_n_clientes_cola
 
     print("Promedio de clientes en el sistema: "+str((sum(num_clientes_sistema))/len(num_clientes_sistema)))
 
@@ -181,8 +185,8 @@ def report():
 
     print("Tiempo de fin de simulacion"+ str(time))
 
-    print("La probabilidad de que haya: " + str(numero_clientes_cola)+" clientes en cola es de:"+ 
-    str((1-(1/mean_interarrival)/(1/mean_service))*((1/mean_interarrival)/(1/mean_service))**int(numero_clientes_cola)))
+    prob_n_clientes_cola = ((1-(1/mean_interarrival)/(1/mean_service))*((1/mean_interarrival)/(1/mean_service))**int(numero_clientes_cola))
+    print("La probabilidad de que haya: " + str(numero_clientes_cola)+" clientes en cola es de:"+str(prob_n_clientes_cola))
 
 
 def update_time_avg_state():
@@ -223,6 +227,9 @@ def inicializar():
     global num_clientes_sistema
     global tiempo_llegada 
     global tiempo_2
+    global time_global
+
+    time_global=[]
 
     time = 0
     
@@ -246,9 +253,7 @@ def inicializar():
     time_next_event.insert(1,float(math.inf))
     time_arrival=[]
 
-def EstadisticosDemoras(delay):
-    ListaDemoras.append(delay)
-    ListaMediaDemoras.append(np.mean(ListaDemoras))
+
 
 
 #Ingresa media, media de servicio, tiempo de finalizacion
@@ -289,6 +294,10 @@ while(num_custs_delayed < num_delays_required):
 report()
 
 
+def EstadisticosDemoras(delay):
+    ListaDemoras.append(delay)
+    ListaMediaDemoras.append(np.mean(ListaDemoras))
+
 def GraficasDemoras():
     global total_of_delays
     global num_delays_required
@@ -301,7 +310,69 @@ def GraficasDemoras():
     plt.plot(listaDemoraTotal)
     plt.show()
 
+def GraficasPromClientesSistema():
+    global num_clientes_sistema
+    global numero_clientes_cola
+    
+    listaClientes = []
 
+    acum_clientes_sistema = np.cumsum(num_clientes_sistema)
+
+    num_clientes_sistema_media = []
+    for i in range(len(num_clientes_sistema)):
+        num_clientes_sistema_media.append(acum_clientes_sistema[i]/(i+1))
+        
+
+    num_clientes_sistema_varianza=[]
+    num_clientes_sistema_desviacion=[]
+    num_clientes_sistema_fr=[]
+    contador=0
+    k=0
+
+    for i in range(len(num_clientes_sistema)):
+        listaClientes.append(num_clientes_sistema[i])
+        num_clientes_sistema_varianza.append(np.var(listaClientes))
+        num_clientes_sistema_desviacion.append(np.std(listaClientes))
+        if(int(listaClientes[i]) == int(numero_clientes_cola)):
+            contador+=1
+            num_clientes_sistema_fr.append(contador/(i+1))
+            k=i
+        else:
+            num_clientes_sistema_fr.append(contador/(k+1))
+
+    media_cli_sistema=[]
+    for i in range (len(num_clientes_sistema)):
+        media_cli_sistema.append(np.mean(num_clientes_sistema))
+
+    varianza_cli_sistema=[]
+    for i in range(len(num_clientes_sistema)):
+        varianza_cli_sistema.append(np.var(num_clientes_sistema))
+
+    desviacion_cli_sistema = []
+    for i in range(len(num_clientes_sistema)):
+        desviacion_cli_sistema.append(np.std(num_clientes_sistema))
+    
+
+    
+    
+   
+    plt.plot(time_global, num_clientes_sistema_media)
+    plt.plot(time_global,media_cli_sistema)
+    plt.show()
+
+    plt.plot(time_global, num_clientes_sistema_varianza)
+    plt.plot(time_global,varianza_cli_sistema)
+    plt.show()
+
+    plt.plot(time_global, num_clientes_sistema_desviacion)
+    plt.plot(time_global,desviacion_cli_sistema)
+    plt.show()
+
+
+
+    
+
+GraficasPromClientesSistema()
 
 
 #print(arribos)
