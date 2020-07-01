@@ -181,6 +181,9 @@ def report():
 
     print("Tiempo de fin de simulacion"+ str(time))
 
+    print("La probabilidad de que haya: " + str(numero_clientes_cola)+" clientes en cola es de:"+ 
+    str((1-(1/mean_interarrival)/(1/mean_service))*((1/mean_interarrival)/(1/mean_service))**int(numero_clientes_cola)))
+
 
 def update_time_avg_state():
 
@@ -254,6 +257,8 @@ num_events=2
 mean_interarrival = float( input("media del arribo: "))
 mean_service=float(input("media del servicio: "))
 num_delays_required = float(input("num delays requiered: "))
+
+numero_clientes_cola=input("Cuantos clientes en cola habra?")
 
 
 #Inicializa
