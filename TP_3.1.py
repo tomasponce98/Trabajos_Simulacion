@@ -2,45 +2,9 @@ import math
 import random
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
-# def mm1(numero_clientes):
-#     clientes=[]
-#     tll=[]
-#     te=[]
-#     tser=[]
-#     tocio=[]
-#     tsal=[]
-#     num_clientes=numero_clientes
-#     i=0
-#     while(i<num_clientes):
-#         if(i==0):
-#             clientes.append(i)
-#             tll.append(0)
-#             te.append(0)
-#             tser.append(random.random())
-#             tocio.append(0)
-#             tsal.append(tll[0]+te[0]+tser[0]+random.random())
-#         if(i>=1):
-#            clientes.append(i)
-#            tll.append(tll[i-1]+random.random())
-#            te.append(max(tsal[i-1],tll[i])-tll[i])
-#            tser.append(random.random())
-#            tocio.append(max(tsal[i-1], tll[i])-tll[i-1])
-#            tsal.append(tll[i]+te[i]+tser[i])
-#         i+=1
-#     for i in range(len(clientes)):
-#         print("Cliente: "+str(clientes[i])+", Tiempo de llegada: "+str(tll[i])+
-#           ", Tiempo de espera:  "+str(te[i])+", Tiempo de servicio: "+str(tser[i])+
-#           " , Tiempo de salida:  "+str(tsal[i]))
-#     plt.plot(clientes, tll, label="tiempod de de llegada", color="r")
-#     plt.plot(clientes, te, label="tiempo de espera",color="g")
-#     plt.plot(clientes, tser, label="tiempo de servicio", color="b")
-#     plt.plot(clientes, tsal, label="tiempo de salida",color="y")
-#     plt.show()
-# mm1(5)
 
-#next_event_type,num_cust_delayed,num_delays_required,num_events,num_in_q, server_status=0
-#area_num_in_q,area_server_status,mean_interarrival,_mean_service,time,time_arrival,time_last_event,time_next_event,total_of_delays=0
 
 
 
@@ -53,6 +17,7 @@ def timing():
     global time_next_event
     global num_events
 
+
     min_time_next_event=1*10**(29)
     next_event_type=0
     for i in range(num_events):
@@ -63,6 +28,7 @@ def timing():
      #   print("la lista de eventos esta vacia"+str(time))
 
     time=min_time_next_event
+
 
 def arrive():
     global server_status
@@ -79,9 +45,11 @@ def arrive():
     global num_clientes_sistema
     global tiempo_2
     global area_num_in_q_total
+    global utilizacion_servidor_total
 
     #time_next_event.pop(0)
     time_next_event[0] = time+expon(mean_interarrival)
+
     #time_next_event.insert(0,float(time+expon(mean_interarrival)))
     if(server_status==1):
         if(num_in_q>Q_limit):
@@ -109,6 +77,8 @@ def arrive():
 
         tiempo_2.append(time_next_event[1]-time)
 
+    
+
 
 
     time_global.append(time)
@@ -129,15 +99,18 @@ def depart():
     global num_clientes_sistema
     global tiempo_2
     global area_num_in_q_total
+    global ListaDemoras
+    global utilizacion_servidor_total
 
-    if(num_in_q==0):
+
+    if(num_in_q == 0):
 
         server_status=0
         #time_next_event[1]=1*10**30
         time_next_event[1] =float(math.inf)
 
         #Media demoras
-        #EstadisticosDemoras(0)
+        ListaDemoras.append(0)
         num_clientes_sistema.append(num_in_q)
         area_num_in_q_total.append(0)
 
@@ -150,7 +123,7 @@ def depart():
         delay=time - time_arrival[0]
         
         #media de demoras
-        #EstadisticosDemoras(delay)
+        ListaDemoras.append(delay)
         
         num_clientes_sistema.append(num_in_q)
 
@@ -169,7 +142,7 @@ def depart():
         area_num_in_q_total.append(num_in_q-1)
 
 
-    time_global.append(time)     
+    time_global.append(time)
     
 
 
@@ -213,7 +186,7 @@ def update_time_avg_state():
     global time_since_last_event
     global area_server_status
     global server_status
-    
+    global utilizacion_servidor_total
 
     time_since_last_event=time-time_last_event
     time_last_event=time
@@ -223,6 +196,10 @@ def update_time_avg_state():
     #print(time_since_last_event)
     #Creo que lo que pasa es que me multiplica por 0 siempre que no haya otro numero
     area_server_status+=server_status*time_since_last_event
+
+    utilizacion_servidor_total.append(area_server_status/time)
+
+
 
 def expon(mean):
 
@@ -246,6 +223,10 @@ def inicializar():
     global tiempo_2
     global time_global
     global area_num_in_q_total
+    global ListaDemoras
+    global utilizacion_servidor_total
+
+
 
     time_global=[]
 
@@ -254,6 +235,11 @@ def inicializar():
     area_num_in_q_total = []
 
     num_clientes_sistema=[]
+
+    ListaDemoras=[]
+
+    utilizacion_servidor_total=[]
+
 
     tiempo_llegada=0
     tiempo_2=[]
@@ -290,9 +276,7 @@ numero_clientes_cola=input("Cuantos clientes en cola habra?")
 
 inicializar()
 
-# Estadisticos que utilizaremos
-ListaDemoras=[]
-ListaMediaDemoras=[]
+
 
 #continua 
 #while(num_custs_delayed<num_delays_required):
@@ -314,9 +298,7 @@ while(num_custs_delayed < num_delays_required):
 report()
 
 
-def EstadisticosDemoras(delay):
-    ListaDemoras.append(delay)
-    ListaMediaDemoras.append(np.mean(ListaDemoras))
+
 
 def GraficasDemoras():
     global total_of_delays
@@ -387,11 +369,118 @@ def GraficasPromClientesSistema(arreglo):
     plt.show()
 
 
+def GraficasTiempoClientesSistema(arreglo):
+    #global num_clientes_sistema
+
+    listaClientes = []
+
+    acum_clientes_sistema = np.cumsum(arreglo)
+
+    num_clientes_sistema_media = []
+    for i in range(len(arreglo)):
+        num_clientes_sistema_media.append(acum_clientes_sistema[i]/(i+1))
+
+    num_clientes_sistema_varianza = []
+    num_clientes_sistema_desviacion = []
+    num_clientes_sistema_fr = []
+    contador = 0
+    k = 0
+
+    for i in range(len(arreglo)):
+        listaClientes.append(arreglo[i])
+        num_clientes_sistema_varianza.append(np.var(listaClientes))
+        num_clientes_sistema_desviacion.append(np.std(listaClientes))
+        if(int(listaClientes[i]) == int(numero_clientes_cola)):
+            contador += 1
+            num_clientes_sistema_fr.append(contador/(i+1))
+            k = i
+        else:
+            num_clientes_sistema_fr.append(contador/(k+1))
+
+    media_cli_sistema = []
+    for i in range(len(arreglo)):
+        media_cli_sistema.append(np.mean(arreglo))
+
+    varianza_cli_sistema = []
+    for i in range(len(arreglo)):
+        varianza_cli_sistema.append(np.var(arreglo))
+
+    desviacion_cli_sistema = []
+    for i in range(len(arreglo)):
+        desviacion_cli_sistema.append(np.std(arreglo))
+
+    plt.plot(num_clientes_sistema_media)
+    plt.plot(media_cli_sistema)
+    plt.show()
+
+    plt.plot(num_clientes_sistema_varianza)
+    plt.plot(varianza_cli_sistema)
+    plt.show()
+
+    plt.plot(num_clientes_sistema_desviacion)
+    plt.plot(desviacion_cli_sistema)
+    plt.show()
+
+def PastelUtilizacionServidor():
+    global area_server_status
+    global time
+    porcentajes = ((area_server_status/time)*100, (1-area_server_status/time)*100)
+    nombres=("Porcentaje utilizado del servidor","Porcentaje no utilizado del servidor")
+    plt.pie(porcentajes, labels=nombres, autopct="%0.1f %%")
+    plt.show()
+
 
 #GraficasPromClientesSistema(num_clientes_sistema) #Graficas clientes-sistema
-GraficasPromClientesSistema(area_num_in_q_total) # Grafica clientes -Cola
+#GraficasPromClientesSistema(area_num_in_q_total) # Grafica clientes -Cola
+#GraficasTiempoClientesSistema(tiempo_2)     #Grafica tiempo cliente en el sistema , en el x el numero de cliente, en el y los tiempos
+#GraficasTiempoClientesSistema(ListaDemoras) #Grafica tiempo cliente en cola , en el x el numero de cliente, en el y los tiempos
+#GraficasPromClientesSistema(utilizacion_servidor_total) #Grafica utilizacion del servidor
+#PastelUtilizacionServidor() #Grafica pastel servidor
 
-print(np.mean(area_num_in_q_total))
+def menu():
+    print(" ")
+    print("MENÚ PRINCIPAL - Seleccione una opción")
+    print("1 - Promedio de clientes en el sistema")
+    print("2 - Promedio de clientes en cola")
+    print("3 - Tiempo promedio en sistema")
+    print("4 - Tiempo promedio en cola")
+    print("5 - Utilización del servidor")
+    print("0 - Salir")
+
+
+while True:
+    os.system('cls')    
+
+    menu()
+
+    opcionMenu = input("Ingrese su opcion:  ")
+    print(" ")
+    
+    if opcionMenu == "1":
+        GraficasPromClientesSistema(num_clientes_sistema)
+        input("Pulsa una tecla para continuar")
+    elif opcionMenu == "2":
+        GraficasPromClientesSistema(area_num_in_q_total)
+        input("Pulsa una tecla para continuar")
+    elif opcionMenu == "3":
+        GraficasTiempoClientesSistema(tiempo_2)
+        input("Pulsa una tecla para continuar")
+    elif opcionMenu == "4":
+        GraficasTiempoClientesSistema(ListaDemoras)
+        input("Pulsa una tecla para continuar")
+    elif opcionMenu == "5":
+        GraficasPromClientesSistema(utilizacion_servidor_total)
+        PastelUtilizacionServidor()
+
+        input("Pulsa una tecla para continuar")
+    elif opcionMenu == "0":
+        break
+    else:
+        print(" ")
+        input("No has pulsado ninguna opción correcta... \n Pulsa una tecla para continuar")
+
+
+
 
 
 #print(arribos)
