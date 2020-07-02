@@ -52,8 +52,8 @@ def arrive():
 
     #time_next_event.insert(0,float(time+expon(mean_interarrival)))
     if(server_status==1):
-        if(num_in_q>Q_limit):
-            print("se rompio la cola")
+       # if(num_in_q>Q_limit):
+        #    print("se rompio la cola")
             
         time_arrival.insert(num_in_q,time)
         num_in_q += 1
@@ -323,9 +323,10 @@ def GraficaPromClientesSistemaMedia(arreglo):
     global varianza_gral
     global desvio_gral
     global contador_gral
+
+    global media_total_utlizacion_servidor
         
  
-    listaClientes = []
 
     acum_clientes_sistema = np.cumsum(arreglo)
 
@@ -345,12 +346,47 @@ def GraficaPromClientesSistemaMedia(arreglo):
 
     
     plt.figure(1)
-    plt.plot(time_global, num_clientes_sistema_media)
+    plt.plot(time_global, num_clientes_sistema_media, color="orange")
     if (contador_gral == 10):
         media_cli_sistema = []
         for i in range(len(arreglo)):
             media_cli_sistema.append(media_gral/10)
-        plt.plot(time_global, media_cli_sistema,label="Media esperada de clientes en el sistema")
+        media_total_utlizacion_servidor=media_gral/10
+        if (opcionMenu=="5"):
+            plt.plot(time_global, media_cli_sistema,label="Media esperada de utilizacion del servidor en el sistema",color="blue")
+        else:
+            plt.plot(time_global, media_cli_sistema,label="Media esperada de clientes en el sistema",color="blue")
+        plt.legend()
+
+
+def GraficaPromTiempoSistemaMedia(arreglo):
+    #global num_clientes_sistema
+
+    global numero_clientes_cola
+    global media_gral
+    global varianza_gral
+    global desvio_gral
+    global contador_gral
+
+    acum_clientes_sistema = np.cumsum(arreglo)
+
+    num_clientes_sistema_media = []
+    for i in range(len(arreglo)):
+        num_clientes_sistema_media.append(acum_clientes_sistema[i]/(i+1))
+
+    media_cli_sistema = []
+    for i in range(len(arreglo)):
+        media_cli_sistema.append(np.mean(arreglo))
+
+    media_gral += np.mean(arreglo)
+
+    plt.figure(1)
+    plt.plot(num_clientes_sistema_media,color="black")
+    if (contador_gral == 10):
+        media_cli_sistema = []
+        for i in range(len(arreglo)):
+            media_cli_sistema.append(media_gral/10)
+        plt.plot(media_cli_sistema,label="Media esperada de tiempo",color="red")
         plt.legend()
     
 
@@ -385,13 +421,52 @@ def GraficaPromClientesSistemaVarianza(arreglo):
 
     plt.figure(2)
 
-    plt.plot(time_global, num_clientes_sistema_varianza)
+    plt.plot(time_global, num_clientes_sistema_varianza, color="orange")
     if (contador_gral == 10):
         varianza_cli_sistema = []
         for i in range(len(arreglo)):
             varianza_cli_sistema.append(varianza_gral/10)
-        plt.plot(time_global, varianza_cli_sistema,label="Varianza esperada de clientes ")
+        
+        if (opcionMenu=="5"):
+            plt.plot(time_global, varianza_cli_sistema,
+                     label="Varianza esperada de utilización del servidor ", color="blue")
+        else:
+            plt.plot(time_global, varianza_cli_sistema,label="Varianza esperada de clientes ")
         plt.legend()
+
+
+def GraficaPromTiempoSistemaVarianza(arreglo):
+
+    global numero_clientes_cola
+    global media_gral
+    global varianza_gral
+    global desvio_gral
+    global contador_gral
+
+    listaClientes = []
+
+    num_clientes_sistema_varianza = []
+
+    for i in range(len(arreglo)):
+        listaClientes.append(arreglo[i])
+        num_clientes_sistema_varianza.append(np.var(listaClientes))
+
+    varianza_cli_sistema = []
+    for i in range(len(arreglo)):
+        varianza_cli_sistema.append(np.var(arreglo))
+
+    varianza_gral += np.var(arreglo)
+
+    plt.figure(2)
+
+    plt.plot(num_clientes_sistema_varianza,color="black")
+    if (contador_gral == 10):
+        varianza_cli_sistema = []
+        for i in range(len(arreglo)):
+            varianza_cli_sistema.append(varianza_gral/10)
+        plt.plot(varianza_cli_sistema,label="Varianza esperada de tiempo ",color="red")
+        plt.legend()
+
 
 
 def GraficaPromClientesSistemaDesvio(arreglo):
@@ -421,7 +496,7 @@ def GraficaPromClientesSistemaDesvio(arreglo):
     desvio_gral += np.std(arreglo)
 
     plt.figure(3)
-    plt.plot(time_global, num_clientes_sistema_desviacion)
+    plt.plot(time_global, num_clientes_sistema_desviacion,color="orange")
 
     if (contador_gral == 10):
         desviacion_cli_sistema = []
@@ -429,73 +504,76 @@ def GraficaPromClientesSistemaDesvio(arreglo):
             desviacion_cli_sistema.append(desvio_gral/10)
 
         plt.figure(3)
-        plt.plot(time_global, desviacion_cli_sistema,label="Desviacion esperada de clientes")
+        if(opcionMenu=="5"):
+            plt.plot(time_global, desviacion_cli_sistema,label="Desviacion esperada de utilización del servidor",color="blue")
+        else:
+            plt.plot(time_global, desviacion_cli_sistema,label="Desviacion esperada de clientes")
         plt.legend()
+
+
+def GraficaPromTiempoSistemaDesvio(arreglo):
+    global numero_clientes_cola
+    global media_gral
+    global varianza_gral
+    global desvio_gral
+    global contador_gral
+
+    listaClientes = []
+
+    num_clientes_sistema_desviacion = []
+
+    for i in range(len(arreglo)):
+        listaClientes.append(arreglo[i])
+        num_clientes_sistema_desviacion.append(np.std(listaClientes))
+
+    desviacion_cli_sistema = []
+    for i in range(len(arreglo)):
+        desviacion_cli_sistema.append(np.std(arreglo))
+
+    desvio_gral += np.std(arreglo)
+
+    plt.figure(3)
+    plt.plot(num_clientes_sistema_desviacion,color="black")
+
+    if (contador_gral == 10):
+        desviacion_cli_sistema = []
+        for i in range(len(arreglo)):
+            desviacion_cli_sistema.append(desvio_gral/10)
+
+        plt.figure(3)
+        plt.plot(desviacion_cli_sistema,label="Desviacion esperada de tiempos",color="red")
+        plt.legend()
+
+
+
+
+
 
 
 
     
 
 
-def GraficasTiempoClientesSistema(arreglo):
-    #global num_clientes_sistema
-
-    listaClientes = []
-
-    acum_clientes_sistema = np.cumsum(arreglo)
-
-    num_clientes_sistema_media = []
-    for i in range(len(arreglo)):
-        num_clientes_sistema_media.append(acum_clientes_sistema[i]/(i+1))
-
-    num_clientes_sistema_varianza = []
-    num_clientes_sistema_desviacion = []
-    num_clientes_sistema_fr = []
-    contador = 0
-    k = 0
-
-    for i in range(len(arreglo)):
-        listaClientes.append(arreglo[i])
-        num_clientes_sistema_varianza.append(np.var(listaClientes))
-        num_clientes_sistema_desviacion.append(np.std(listaClientes))
-        if(int(listaClientes[i]) == int(numero_clientes_cola)):
-            contador += 1
-            num_clientes_sistema_fr.append(contador/(i+1))
-            k = i
-        else:
-            num_clientes_sistema_fr.append(contador/(k+1))
-
-    media_cli_sistema = []
-    for i in range(len(arreglo)):
-        media_cli_sistema.append(np.mean(arreglo))
-
-    varianza_cli_sistema = []
-    for i in range(len(arreglo)):
-        varianza_cli_sistema.append(np.var(arreglo))
-
-    desviacion_cli_sistema = []
-    for i in range(len(arreglo)):
-        desviacion_cli_sistema.append(np.std(arreglo))
-
-    plt.plot(num_clientes_sistema_media)
-    plt.plot(media_cli_sistema)
-    plt.show()
-
-    plt.plot(num_clientes_sistema_varianza)
-    plt.plot(varianza_cli_sistema)
-    plt.show()
-
-    plt.plot(num_clientes_sistema_desviacion)
-    plt.plot(desviacion_cli_sistema)
-    plt.show()
 
 def PastelUtilizacionServidor():
     global area_server_status
     global time
-    porcentajes = ((area_server_status/time)*100, (1-area_server_status/time)*100)
+    global media_total_utlizacion_servidor
+    porcentajes = ((media_total_utlizacion_servidor)*100, (1-media_total_utlizacion_servidor)*100)
     nombres=("Porcentaje utilizado del servidor","Porcentaje no utilizado del servidor")
     plt.pie(porcentajes, labels=nombres, autopct="%0.1f %%")
-    plt.show()
+
+
+def PastelProbabilidadClienteCola():
+    global area_server_status
+    global time
+    global media_total_utlizacion_servidor
+    global prob_n_clientes_cola
+    global numero_clientes_cola
+    porcentajes = ((prob_n_clientes_cola)*100, (1-prob_n_clientes_cola)*100)
+    nombres = ("Probabilidad que haya: " + str(numero_clientes_cola)+" clientes en cola",
+               "Probabilidad que NO haya: " + str(numero_clientes_cola)+" clientes en cola")
+    plt.pie(porcentajes, labels=nombres, autopct="%0.1f %%")
 
 
 #GraficasPromClientesSistema(num_clientes_sistema) #Graficas clientes-sistema
@@ -518,6 +596,7 @@ def menu():
 
 
 while True:
+    global opcionMenu
     os.system('cls')    
 
     menu()
@@ -536,33 +615,132 @@ while True:
             GraficaPromClientesSistemaMedia(num_clientes_sistema)
             plt.title("Media de clientes en el sistema")
             plt.xlabel("Tiempo(segundos)")  # título del eje x
-            plt.ylabel("Media de clientes")
+            plt.ylabel("Valor de la media de clientes en sistema")
 
             GraficaPromClientesSistemaVarianza(num_clientes_sistema)
             plt.title("Varianza de los clientes en el sistema")
             plt.xlabel("Tiempo(segundos)")  # título del eje x
-            plt.ylabel("Varianza de clientes")
+            plt.ylabel("Valor de la varianza de clientes en sistema")
             
             GraficaPromClientesSistemaDesvio(num_clientes_sistema)
             plt.title("Desviacion de los clientes en el sistema")
             plt.xlabel("Tiempo(segundos)")  # título del eje x
-            plt.ylabel("Desviacion de clientes")
+            plt.ylabel("Valor de la desviacion de clientes en sistema")
         plt.show()
         #plt.show()
         
         input("Pulsa una tecla para continuar")
     elif opcionMenu == "2":
-        GraficaPromClientesSistemaMedia(area_num_in_q_total)
+        contador_gral = 0
+        media_gral = 0
+        varianza_gral = 0
+        desvio_gral = 0
+        for i in range(10):
+
+            contador_gral += 1
+            MainProgram()
+            GraficaPromClientesSistemaMedia(area_num_in_q_total)
+            plt.title("Media de clientes en cola")
+            plt.xlabel("Tiempo(segundos)")  # título del eje x
+            plt.ylabel("Valor de la media de clientes en cola")
+
+            GraficaPromClientesSistemaVarianza(area_num_in_q_total)
+            plt.title("Varianza de los clientes en cola")
+            plt.xlabel("Tiempo(segundos)")  # título del eje x
+            plt.ylabel("Valor de la varianza de clientes en cola")
+
+            GraficaPromClientesSistemaDesvio(area_num_in_q_total)
+            plt.title("Desviacion de los clientes en cola")
+            plt.xlabel("Tiempo(segundos)")  # título del eje x
+            plt.ylabel("Valor de la desviacion de clientes en cola")
+        plt.show()
+
+
         input("Pulsa una tecla para continuar")
+
+
     elif opcionMenu == "3":
-        GraficaPromClientesSistemaMedia(tiempo_2)
+        
+        contador_gral = 0
+        media_gral = 0
+        varianza_gral=0
+        desvio_gral=0
+        for i in range(10):
+            contador_gral+=1
+            MainProgram()
+            GraficaPromTiempoSistemaMedia(tiempo_2)
+            plt.title("Media de los tiempos en el sistema")
+            plt.xlabel("Numero de Cliente")  # título del eje x
+            plt.ylabel("Valor de la media de tiempo en sistema")
+
+            GraficaPromTiempoSistemaVarianza(tiempo_2)
+            plt.title("Varianza de los tiempos en el sistema")
+            plt.xlabel("Numero de Cliente")  # título del eje x
+            plt.ylabel("Valor de la varianza de tiempo en sistema")
+            
+            GraficaPromTiempoSistemaDesvio(tiempo_2)
+            plt.title("Desviacion de los tiempos en el sistema")
+            plt.xlabel("Numero de Cliente")  # título del eje x
+            plt.ylabel("Valor de la desviación de tiempo en sistema")
+        plt.show()
+
+
         input("Pulsa una tecla para continuar")
     elif opcionMenu == "4":
-        GraficaPromClientesSistemaMedia(ListaDemoras)
+
+        contador_gral = 0
+        media_gral = 0
+        varianza_gral = 0
+        desvio_gral = 0
+        for i in range(10):
+            contador_gral += 1
+            MainProgram()
+            GraficaPromTiempoSistemaMedia(ListaDemoras)
+            plt.title("Media de los tiempos en cola")
+            plt.xlabel("Numero de Cliente")  # título del eje x
+            plt.ylabel("Valor de la media de tiempo en cola")
+
+            GraficaPromTiempoSistemaVarianza(ListaDemoras)
+            plt.title("Varianza de los tiempos en cola")
+            plt.xlabel("Numero de Cliente")  # título del eje x
+            plt.ylabel("Valor de la varianza de tiempo en cola")
+
+            GraficaPromTiempoSistemaDesvio(ListaDemoras)
+            plt.title("Desviacion de los tiempos en cola")
+            plt.xlabel("Numero de Cliente")  # título del eje x
+            plt.ylabel("Valor de la desviacion de tiempo en cola")
+        plt.show()
+
+
         input("Pulsa una tecla para continuar")
     elif opcionMenu == "5":
-        GraficaPromClientesSistemaMedia(utilizacion_servidor_total)
+        contador_gral = 0
+        media_gral = 0
+        varianza_gral = 0
+        desvio_gral = 0
+        media_total_utlizacion_servidor=0
+        for i in range(10):
+            contador_gral += 1
+            MainProgram()
+            GraficaPromClientesSistemaMedia(utilizacion_servidor_total)
+            plt.title("Media de utilización del servidor")
+            plt.xlabel("Tiempo(segundos)")  # título del eje x
+            plt.ylabel("Valor de la media de utilización del servidor")
+
+            GraficaPromClientesSistemaVarianza(utilizacion_servidor_total)
+            plt.title("Varianza de utilización del servidor")
+            plt.xlabel("Tiempo(segundos)")  # título del eje x
+            plt.ylabel("Valor de la varianza de utilización del servidor")
+
+            GraficaPromClientesSistemaDesvio(utilizacion_servidor_total)
+            plt.title("Desviacion de utilización del servidor")
+            plt.xlabel("Tiempo(segundos)")  # título del eje x
+            plt.ylabel("Valor de la desviación utilización del servidor")
+        
+        plt.figure(4)
         PastelUtilizacionServidor()
+        plt.title("Porcentaje total del tiempo que el servidor se encuentra ocupado ")
+        plt.show()
 
         input("Pulsa una tecla para continuar")
 
@@ -571,6 +749,10 @@ while True:
 
         prob_n_clientes_cola = ((1-(1/mean_interarrival)/(1/mean_service)) *((1/mean_interarrival)/(1/mean_service))**int(numero_clientes_cola))
         print("La probabilidad de que haya: " + str(numero_clientes_cola) +" clientes en cola es de:"+str(prob_n_clientes_cola))
+        
+        PastelProbabilidadClienteCola()
+
+        plt.show()
         input("Pulsa una tecla para continuar")
     elif opcionMenu == "0":
         break
