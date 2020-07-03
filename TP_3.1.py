@@ -327,6 +327,7 @@ def GraficaPromClientesSistemaMedia(arreglo):
     global contador_gral
     global media_total_utlizacion_servidor
     global media_de_las_medias
+    global tiempo_a_utilizar
 
   
 
@@ -341,23 +342,31 @@ def GraficaPromClientesSistemaMedia(arreglo):
         media_cli_sistema.append(np.mean(arreglo))
 
     if (contador_gral == 1):
+        
         for i in range(len(num_clientes_sistema_media)):
             media_de_las_medias.append(num_clientes_sistema_media[i]/10)
+        tiempo_a_utilizar=time_global
     else:
-        for i in range(len(media_de_las_medias)):
+        if(len(media_de_las_medias) >= len(num_clientes_sistema_media)):
+            longitud = len(num_clientes_sistema_media)
+        else:
+            longitud=len(media_de_las_medias)
+        for i in range(longitud):
             media_de_las_medias[i] = media_de_las_medias[i]+(num_clientes_sistema_media[i])/10
 
     media_gral += np.mean(arreglo)
 
     plt.figure(1)
     plt.plot(time_global, num_clientes_sistema_media, color="orange")
+
+   
     if (contador_gral == 10):
 
         if (opcionMenu == "5"):
             media_gral=media_gral/10
-            plt.plot(time_global, media_de_las_medias,label="Media esperada de utilizacion del servidor en el sistema", color="blue")
+            plt.plot(tiempo_a_utilizar, media_de_las_medias,label="Media esperada de utilizacion del servidor en el sistema", color="blue")
         else:
-            plt.plot(time_global, media_de_las_medias,label="Media esperada de clientes en el sistema", color="blue")
+            plt.plot(tiempo_a_utilizar, media_de_las_medias,label="Media esperada de clientes en el sistema", color="blue")
         plt.legend()
 
 
@@ -406,6 +415,7 @@ def GraficaPromClientesSistemaVarianza(arreglo):
     global desvio_gral
     global contador_gral
     global varianza_de_las_varianzas
+    global tiempo_a_utilizar
 
     listaClientes = []
 
@@ -421,8 +431,14 @@ def GraficaPromClientesSistemaVarianza(arreglo):
     if (contador_gral == 1):
         for i in range(len(num_clientes_sistema_varianza)):
             varianza_de_las_varianzas.append(num_clientes_sistema_varianza[i]/10)
+        tiempo_a_utilizar=time_global
     else:
-        for i in range(len(varianza_de_las_varianzas)):
+
+        if(len(varianza_de_las_varianzas) >= len(num_clientes_sistema_varianza)):
+            longitud = len(num_clientes_sistema_varianza)
+        else:
+            longitud = len(varianza_de_las_varianzas)
+        for i in range(longitud):
             varianza_de_las_varianzas[i] = varianza_de_las_varianzas[i]+(num_clientes_sistema_varianza[i])/10
 
 
@@ -436,9 +452,9 @@ def GraficaPromClientesSistemaVarianza(arreglo):
      
         
         if (opcionMenu=="5"):
-            plt.plot(time_global, varianza_de_las_varianzas,label="Varianza esperada de utilización del servidor ", color="blue")
+            plt.plot(tiempo_a_utilizar, varianza_de_las_varianzas,label="Varianza esperada de utilización del servidor ", color="blue")
         else:
-            plt.plot(time_global, varianza_de_las_varianzas,label="Varianza esperada de clientes ",color="blue")
+            plt.plot(tiempo_a_utilizar, varianza_de_las_varianzas,label="Varianza esperada de clientes ",color="blue")
         plt.legend()
 
 
@@ -487,6 +503,7 @@ def GraficaPromClientesSistemaDesvio(arreglo):
     global desvio_gral
     global contador_gral
     global desvio_de__desvios
+    global tiempo_a_utilizar
     
     listaClientes = []
 
@@ -508,8 +525,15 @@ def GraficaPromClientesSistemaDesvio(arreglo):
     if (contador_gral == 1):
         for i in range(len(num_clientes_sistema_desviacion)):
             desvio_de__desvios.append(num_clientes_sistema_desviacion[i]/10)
+        tiempo_a_utilizar=time_global
     else:
-        for i in range(len(desvio_de__desvios)):
+
+        if(len(desvio_de__desvios) >= len(num_clientes_sistema_desviacion)):
+            longitud = len(num_clientes_sistema_desviacion)
+        else:
+            longitud = len(desvio_de__desvios)
+
+        for i in range(longitud):
             desvio_de__desvios[i] = desvio_de__desvios[i] +(num_clientes_sistema_desviacion[i])/10
 
 
@@ -521,9 +545,9 @@ def GraficaPromClientesSistemaDesvio(arreglo):
 
         plt.figure(3)
         if(opcionMenu=="5"):
-            plt.plot(time_global, desvio_de__desvios,label="Desviacion esperada de utilización del servidor",color="blue")
+            plt.plot(tiempo_a_utilizar, desvio_de__desvios,label="Desviacion esperada de utilización del servidor",color="blue")
         else:
-            plt.plot(time_global, desvio_de__desvios,label="Desviacion esperada de clientes",color="blue")
+            plt.plot(tiempo_a_utilizar, desvio_de__desvios,label="Desviacion esperada de clientes",color="blue")
         plt.legend()
 
 
