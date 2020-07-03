@@ -260,9 +260,9 @@ def inicializar():
     time_arrival=[]
 
 
-mean_interarrival = float( input("media del arribo: "))
-mean_service=float(input("media del servicio: "))
-num_delays_required = float(input("num delays requiered: "))
+mean_interarrival = float( input("Media del arribo: "))
+mean_service=float(input("Media del servicio: "))
+num_delays_required = float(input("Numero de clientes total: "))
 
 def MainProgram():
 #Ingresa media, media de servicio, tiempo de finalizacion
@@ -313,49 +313,51 @@ def MainProgram():
 
 
 
+
+
+
 def GraficaPromClientesSistemaMedia(arreglo):
     #global num_clientes_sistema
-     
-    
+    global media_de_las_medias
 
     global numero_clientes_cola
     global media_gral
     global varianza_gral
     global desvio_gral
     global contador_gral
-
     global media_total_utlizacion_servidor
-        
- 
+    global media_de_las_medias
+
+  
 
     acum_clientes_sistema = np.cumsum(arreglo)
 
     num_clientes_sistema_media = []
     for i in range(len(arreglo)):
         num_clientes_sistema_media.append(acum_clientes_sistema[i]/(i+1))
-            
 
-    
-
-    media_cli_sistema=[]
+    media_cli_sistema = []
     for i in range(len(arreglo)):
         media_cli_sistema.append(np.mean(arreglo))
 
-    
-    media_gral+=np.mean(arreglo)
+    if (contador_gral == 1):
+        for i in range(len(num_clientes_sistema_media)):
+            media_de_las_medias.append(num_clientes_sistema_media[i]/10)
+    else:
+        for i in range(len(media_de_las_medias)):
+            media_de_las_medias[i] = media_de_las_medias[i]+(num_clientes_sistema_media[i])/10
 
-    
+    media_gral += np.mean(arreglo)
+
     plt.figure(1)
     plt.plot(time_global, num_clientes_sistema_media, color="orange")
     if (contador_gral == 10):
-        media_cli_sistema = []
-        for i in range(len(arreglo)):
-            media_cli_sistema.append(media_gral/10)
-        media_total_utlizacion_servidor=media_gral/10
-        if (opcionMenu=="5"):
-            plt.plot(time_global, media_cli_sistema,label="Media esperada de utilizacion del servidor en el sistema",color="blue")
+
+        if (opcionMenu == "5"):
+            media_gral=media_gral/10
+            plt.plot(time_global, media_de_las_medias,label="Media esperada de utilizacion del servidor en el sistema", color="blue")
         else:
-            plt.plot(time_global, media_cli_sistema,label="Media esperada de clientes en el sistema",color="blue")
+            plt.plot(time_global, media_de_las_medias,label="Media esperada de clientes en el sistema", color="blue")
         plt.legend()
 
 
@@ -367,6 +369,7 @@ def GraficaPromTiempoSistemaMedia(arreglo):
     global varianza_gral
     global desvio_gral
     global contador_gral
+    global media_de_las_medias
 
     acum_clientes_sistema = np.cumsum(arreglo)
 
@@ -380,13 +383,17 @@ def GraficaPromTiempoSistemaMedia(arreglo):
 
     media_gral += np.mean(arreglo)
 
+    if (contador_gral == 1):
+        for i in range(len(num_clientes_sistema_media)):
+            media_de_las_medias.append(num_clientes_sistema_media[i]/10)
+    else:
+        for i in range(len(media_de_las_medias)):
+            media_de_las_medias[i] = media_de_las_medias[i] + (num_clientes_sistema_media[i])/10
+
     plt.figure(1)
     plt.plot(num_clientes_sistema_media,color="black")
     if (contador_gral == 10):
-        media_cli_sistema = []
-        for i in range(len(arreglo)):
-            media_cli_sistema.append(media_gral/10)
-        plt.plot(media_cli_sistema,label="Media esperada de tiempo",color="red")
+        plt.plot(media_de_las_medias, label="Media esperada de tiempo", color="red")
         plt.legend()
     
 
@@ -398,6 +405,7 @@ def GraficaPromClientesSistemaVarianza(arreglo):
     global varianza_gral
     global desvio_gral
     global contador_gral
+    global varianza_de_las_varianzas
 
     listaClientes = []
 
@@ -409,29 +417,28 @@ def GraficaPromClientesSistemaVarianza(arreglo):
     for i in range(len(arreglo)):
         listaClientes.append(arreglo[i])
         num_clientes_sistema_varianza.append(np.var(listaClientes))
+    
+    if (contador_gral == 1):
+        for i in range(len(num_clientes_sistema_varianza)):
+            varianza_de_las_varianzas.append(num_clientes_sistema_varianza[i]/10)
+    else:
+        for i in range(len(varianza_de_las_varianzas)):
+            varianza_de_las_varianzas[i] = varianza_de_las_varianzas[i]+(num_clientes_sistema_varianza[i])/10
 
 
 
-    varianza_cli_sistema = []
-    for i in range(len(arreglo)):
-        varianza_cli_sistema.append(np.var(arreglo))
-
-
-    varianza_gral += np.var(arreglo)
+    
 
     plt.figure(2)
 
     plt.plot(time_global, num_clientes_sistema_varianza, color="orange")
     if (contador_gral == 10):
-        varianza_cli_sistema = []
-        for i in range(len(arreglo)):
-            varianza_cli_sistema.append(varianza_gral/10)
+     
         
         if (opcionMenu=="5"):
-            plt.plot(time_global, varianza_cli_sistema,
-                     label="Varianza esperada de utilización del servidor ", color="blue")
+            plt.plot(time_global, varianza_de_las_varianzas,label="Varianza esperada de utilización del servidor ", color="blue")
         else:
-            plt.plot(time_global, varianza_cli_sistema,label="Varianza esperada de clientes ")
+            plt.plot(time_global, varianza_de_las_varianzas,label="Varianza esperada de clientes ",color="blue")
         plt.legend()
 
 
@@ -457,14 +464,18 @@ def GraficaPromTiempoSistemaVarianza(arreglo):
 
     varianza_gral += np.var(arreglo)
 
+    if (contador_gral == 1):
+        for i in range(len(num_clientes_sistema_varianza)):
+            varianza_de_las_varianzas.append(num_clientes_sistema_varianza[i]/10)
+    else:
+        for i in range(len(varianza_de_las_varianzas)):
+            varianza_de_las_varianzas[i] = varianza_de_las_varianzas[i] +(num_clientes_sistema_varianza[i])/10
+
     plt.figure(2)
 
     plt.plot(num_clientes_sistema_varianza,color="black")
     if (contador_gral == 10):
-        varianza_cli_sistema = []
-        for i in range(len(arreglo)):
-            varianza_cli_sistema.append(varianza_gral/10)
-        plt.plot(varianza_cli_sistema,label="Varianza esperada de tiempo ",color="red")
+        plt.plot(varianza_de_las_varianzas,label="Varianza esperada de tiempo ",color="red")
         plt.legend()
 
 
@@ -475,7 +486,8 @@ def GraficaPromClientesSistemaDesvio(arreglo):
     global varianza_gral
     global desvio_gral
     global contador_gral
-
+    global desvio_de__desvios
+    
     listaClientes = []
 
 
@@ -493,21 +505,25 @@ def GraficaPromClientesSistemaDesvio(arreglo):
     for i in range(len(arreglo)):
         desviacion_cli_sistema.append(np.std(arreglo))
 
-    desvio_gral += np.std(arreglo)
+    if (contador_gral == 1):
+        for i in range(len(num_clientes_sistema_desviacion)):
+            desvio_de__desvios.append(num_clientes_sistema_desviacion[i]/10)
+    else:
+        for i in range(len(desvio_de__desvios)):
+            desvio_de__desvios[i] = desvio_de__desvios[i] +(num_clientes_sistema_desviacion[i])/10
+
 
     plt.figure(3)
     plt.plot(time_global, num_clientes_sistema_desviacion,color="orange")
 
     if (contador_gral == 10):
-        desviacion_cli_sistema = []
-        for i in range(len(arreglo)):
-            desviacion_cli_sistema.append(desvio_gral/10)
+        
 
         plt.figure(3)
         if(opcionMenu=="5"):
-            plt.plot(time_global, desviacion_cli_sistema,label="Desviacion esperada de utilización del servidor",color="blue")
+            plt.plot(time_global, desvio_de__desvios,label="Desviacion esperada de utilización del servidor",color="blue")
         else:
-            plt.plot(time_global, desviacion_cli_sistema,label="Desviacion esperada de clientes")
+            plt.plot(time_global, desvio_de__desvios,label="Desviacion esperada de clientes",color="blue")
         plt.legend()
 
 
@@ -530,18 +546,20 @@ def GraficaPromTiempoSistemaDesvio(arreglo):
     for i in range(len(arreglo)):
         desviacion_cli_sistema.append(np.std(arreglo))
 
-    desvio_gral += np.std(arreglo)
+
+    if (contador_gral == 1):
+        for i in range(len(num_clientes_sistema_desviacion)):
+            desvio_de__desvios.append(num_clientes_sistema_desviacion[i]/10)
+    else:
+        for i in range(len(desvio_de__desvios)):
+            desvio_de__desvios[i] = desvio_de__desvios[i] +  (num_clientes_sistema_desviacion[i])/10
 
     plt.figure(3)
     plt.plot(num_clientes_sistema_desviacion,color="black")
 
     if (contador_gral == 10):
-        desviacion_cli_sistema = []
-        for i in range(len(arreglo)):
-            desviacion_cli_sistema.append(desvio_gral/10)
-
         plt.figure(3)
-        plt.plot(desviacion_cli_sistema,label="Desviacion esperada de tiempos",color="red")
+        plt.plot(desvio_de__desvios,label="Desviacion esperada de tiempos",color="red")
         plt.legend()
 
 
@@ -558,8 +576,8 @@ def GraficaPromTiempoSistemaDesvio(arreglo):
 def PastelUtilizacionServidor():
     global area_server_status
     global time
-    global media_total_utlizacion_servidor
-    porcentajes = ((media_total_utlizacion_servidor)*100, (1-media_total_utlizacion_servidor)*100)
+    global media_gral
+    porcentajes = ((media_gral)*100, (1-media_gral)*100)
     nombres=("Porcentaje utilizado del servidor","Porcentaje no utilizado del servidor")
     plt.pie(porcentajes, labels=nombres, autopct="%0.1f %%")
 
@@ -609,6 +627,9 @@ while True:
         media_gral = 0
         varianza_gral=0
         desvio_gral=0
+        media_de_las_medias=[]
+        varianza_de_las_varianzas=[]
+        desvio_de__desvios=[]
         for i in range(10):
             contador_gral+=1
             MainProgram()
@@ -635,6 +656,9 @@ while True:
         media_gral = 0
         varianza_gral = 0
         desvio_gral = 0
+        media_de_las_medias = []
+        varianza_de_las_varianzas = []
+        desvio_de__desvios = []
         for i in range(10):
 
             contador_gral += 1
@@ -665,6 +689,9 @@ while True:
         media_gral = 0
         varianza_gral=0
         desvio_gral=0
+        media_de_las_medias = []
+        varianza_de_las_varianzas = []
+        desvio_de__desvios = []
         for i in range(10):
             contador_gral+=1
             MainProgram()
@@ -692,6 +719,9 @@ while True:
         media_gral = 0
         varianza_gral = 0
         desvio_gral = 0
+        media_de_las_medias = []
+        varianza_de_las_varianzas = []
+        desvio_de__desvios = []
         for i in range(10):
             contador_gral += 1
             MainProgram()
@@ -719,6 +749,9 @@ while True:
         varianza_gral = 0
         desvio_gral = 0
         media_total_utlizacion_servidor=0
+        media_de_las_medias = []
+        varianza_de_las_varianzas = []
+        desvio_de__desvios = []
         for i in range(10):
             contador_gral += 1
             MainProgram()
