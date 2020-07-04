@@ -368,6 +368,8 @@ def GraficaPromClientesSistemaMedia(arreglo):
         else:
             plt.plot(tiempo_a_utilizar, media_de_las_medias,label="Media esperada de clientes en el sistema", color="blue")
         plt.legend()
+    plt.savefig("Utilizacion_Servidor_Media.png")
+
 
 
 def GraficaPromTiempoSistemaMedia(arreglo):
@@ -404,6 +406,8 @@ def GraficaPromTiempoSistemaMedia(arreglo):
     if (contador_gral == 10):
         plt.plot(media_de_las_medias, label="Media esperada de tiempo", color="red")
         plt.legend()
+    plt.savefig("Tiempos_Cola_Media.png")
+
     
 
 
@@ -457,6 +461,9 @@ def GraficaPromClientesSistemaVarianza(arreglo):
             plt.plot(tiempo_a_utilizar, varianza_de_las_varianzas,label="Varianza esperada de clientes ",color="blue")
         plt.legend()
 
+    plt.savefig("Utilizacion_Servidor_Varianza.png")
+
+
 
 def GraficaPromTiempoSistemaVarianza(arreglo):
 
@@ -493,6 +500,9 @@ def GraficaPromTiempoSistemaVarianza(arreglo):
     if (contador_gral == 10):
         plt.plot(varianza_de_las_varianzas,label="Varianza esperada de tiempo ",color="red")
         plt.legend()
+
+    plt.savefig("Tiempos_Cola_Varianza.png")
+
 
 
 
@@ -550,6 +560,9 @@ def GraficaPromClientesSistemaDesvio(arreglo):
             plt.plot(tiempo_a_utilizar, desvio_de__desvios,label="Desviacion esperada de clientes",color="blue")
         plt.legend()
 
+    plt.savefig("Utilizacion_Servidor_Desvio.png")
+
+
 
 def GraficaPromTiempoSistemaDesvio(arreglo):
     global numero_clientes_cola
@@ -586,6 +599,8 @@ def GraficaPromTiempoSistemaDesvio(arreglo):
         plt.plot(desvio_de__desvios,label="Desviacion esperada de tiempos",color="red")
         plt.legend()
 
+    plt.savefig("Tiempos_Cola_Desvio.png")
+
 
 
 
@@ -605,6 +620,9 @@ def PastelUtilizacionServidor():
     nombres=("Porcentaje utilizado del servidor","Porcentaje no utilizado del servidor")
     plt.pie(porcentajes, labels=nombres, autopct="%0.1f %%")
 
+    plt.savefig("Utilizacion_servidor.png")
+
+
 
 def PastelProbabilidadClienteCola():
     global area_server_status
@@ -616,6 +634,8 @@ def PastelProbabilidadClienteCola():
     nombres = ("Probabilidad que haya: " + str(numero_clientes_cola)+" clientes en cola",
                "Probabilidad que NO haya: " + str(numero_clientes_cola)+" clientes en cola")
     plt.pie(porcentajes, labels=nombres, autopct="%0.1f %%")
+
+    plt.savefig("Prob_n_clientes.png")
 
 
 #GraficasPromClientesSistema(num_clientes_sistema) #Graficas clientes-sistema
@@ -829,5 +849,6 @@ while True:
 
 #IMPORTANTE, EN LA CALCULADORA UTILIZAR LA INVERSA DE LAS MEDIAS.
 
+#IMPORTANTE 2: Utilizaremos media de servicio =1
+# media de arribo: 4,2,4/3,1, 0.8 las 
 
-    
