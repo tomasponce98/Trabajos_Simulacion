@@ -24,8 +24,7 @@ def timing():
         if(time_next_event[i]<min_time_next_event):
             min_time_next_event=time_next_event[i]
             next_event_type=i+1
-    #if(next_event_type==1):
-     #   print("la lista de eventos esta vacia"+str(time))
+
 
     time=min_time_next_event
 
@@ -47,13 +46,10 @@ def arrive():
     global area_num_in_q_total
     global utilizacion_servidor_total
 
-    #time_next_event.pop(0)
     time_next_event[0] = time+expon(mean_interarrival)
 
-    #time_next_event.insert(0,float(time+expon(mean_interarrival)))
     if(server_status==1):
-       # if(num_in_q>Q_limit):
-        #    print("se rompio la cola")
+
             
         time_arrival.insert(num_in_q,time)
         num_in_q += 1
@@ -83,9 +79,7 @@ def arrive():
 
     time_global.append(time)
 
-        #tiempo_llegada=time
-    #   time_next_event.insert(1,float(time+expon(mean_service)))
-    #num_clientes_sistema.append(num_in_q)
+
 
 def depart():
     global delay
@@ -106,10 +100,8 @@ def depart():
     if(num_in_q == 0):
 
         server_status=0
-        #time_next_event[1]=1*10**30
         time_next_event[1] =float(math.inf)
 
-        #Media demoras
         ListaDemoras.append(0)
         num_clientes_sistema.append(num_in_q)
         area_num_in_q_total.append(0)
@@ -122,7 +114,6 @@ def depart():
         num_in_q-=1
         delay=time - time_arrival[0]
         
-        #media de demoras
         ListaDemoras.append(delay)
         
         num_clientes_sistema.append(num_in_q)
@@ -147,7 +138,6 @@ def depart():
 
 
 
-    #num_clientes_sistema.append(num_in_q)
 
 def report():
     global total_of_delays
@@ -193,8 +183,7 @@ def update_time_avg_state():
 
     area_num_in_q +=num_in_q*time_since_last_event
 
-    #print(time_since_last_event)
-    #Creo que lo que pasa es que me multiplica por 0 siempre que no haya otro numero
+
     area_server_status+=server_status*time_since_last_event
 
     utilizacion_servidor_total.append(area_server_status/time)
@@ -255,7 +244,6 @@ def inicializar():
 
     time_next_event = []
     time_next_event.insert(0, float(time+expon(mean_interarrival)))
-   # time_next_event.insert(1, float(1*10**(30)))
     time_next_event.insert(1,float(math.inf))
     time_arrival=[]
 
@@ -265,7 +253,6 @@ mean_service=float(input("Media del servicio: "))
 num_delays_required = float(input("Numero de clientes total: "))
 
 def MainProgram():
-#Ingresa media, media de servicio, tiempo de finalizacion
     global Q_limit
     global num_events
     global mean_interarrival
@@ -277,22 +264,13 @@ def MainProgram():
 
     Q_limit=100
     num_events=2
-    #mean_interarrival = float( input("media del arribo: "))
-    #mean_service=float(input("media del servicio: "))
-    #num_delays_required = float(input("num delays requiered: "))
 
-
-
-    #Inicializa
 
     inicializar()
 
 
 
-    #continua 
-    #while(num_custs_delayed<num_delays_required):
-    #arribos=0
-    #departos=0
+
 
     while(num_custs_delayed < num_delays_required):
         timing()
@@ -300,13 +278,11 @@ def MainProgram():
 
         if(next_event_type==1):
             arrive()
-            #arribos+=1
 
             
         elif(next_event_type==2):
             depart()
-            #departos+=1
-    #report()
+
 
 
 
@@ -653,7 +629,7 @@ def menu():
     print("3 - Tiempo promedio en sistema")
     print("4 - Tiempo promedio en cola")
     print("5 - Utilización del servidor")
-    print("6 - Probabilidad de n cliente en cola")
+    print("6 - Probabilidad de n clientes en cola")
     print("0 - Salir")
 
 
@@ -692,7 +668,6 @@ while True:
             plt.xlabel("Tiempo(segundos)")  # título del eje x
             plt.ylabel("Valor de la desviacion de clientes en sistema")
         plt.show()
-        #plt.show()
         
         input("Pulsa una tecla para continuar")
     elif opcionMenu == "2":
@@ -709,17 +684,17 @@ while True:
             MainProgram()
             GraficaPromClientesSistemaMedia(area_num_in_q_total)
             plt.title("Media de clientes en cola")
-            plt.xlabel("Tiempo(segundos)")  # título del eje x
+            plt.xlabel("Tiempo(segundos)") 
             plt.ylabel("Valor de la media de clientes en cola")
 
             GraficaPromClientesSistemaVarianza(area_num_in_q_total)
             plt.title("Varianza de los clientes en cola")
-            plt.xlabel("Tiempo(segundos)")  # título del eje x
+            plt.xlabel("Tiempo(segundos)")  
             plt.ylabel("Valor de la varianza de clientes en cola")
 
             GraficaPromClientesSistemaDesvio(area_num_in_q_total)
             plt.title("Desviacion de los clientes en cola")
-            plt.xlabel("Tiempo(segundos)")  # título del eje x
+            plt.xlabel("Tiempo(segundos)")  
             plt.ylabel("Valor de la desviacion de clientes en cola")
         plt.show()
 
@@ -822,7 +797,7 @@ while True:
         input("Pulsa una tecla para continuar")
 
     elif opcionMenu == "6":
-        numero_clientes_cola = input("Cuantos clientes en cola habra?")
+        numero_clientes_cola = input("Ingresar numero de clientes en cola : ")
 
         prob_n_clientes_cola = ((1-(1/mean_interarrival)/(1/mean_service)) *((1/mean_interarrival)/(1/mean_service))**int(numero_clientes_cola))
         print("La probabilidad de que haya: " + str(numero_clientes_cola) +" clientes en cola es de:"+str(prob_n_clientes_cola))
@@ -841,14 +816,4 @@ while True:
 
 
 
-#print(arribos)
-#print(departos)
-#print(num_custs_delayed)
-#print(len(time_next_event))
-
-
-#IMPORTANTE, EN LA CALCULADORA UTILIZAR LA INVERSA DE LAS MEDIAS.
-
-#IMPORTANTE 2: Utilizaremos media de servicio =1
-# media de arribo: 4,2,4/3,1, 0.8 las 
 

@@ -346,7 +346,7 @@ global total_denegados_gral
 
 total_denegados_gral=0
 
-Q_limit=int(input("Ingrese el tamaño maximo de la cola"))
+Q_limit=int(input("Ingrese el tamaño maximo de la cola: "))
 
 for i in range(1000):
     MainProgram()
