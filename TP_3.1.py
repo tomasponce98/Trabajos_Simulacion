@@ -325,10 +325,17 @@ def GraficaPromClientesSistemaMedia(arreglo):
     else:
         if(len(media_de_las_medias) >= len(num_clientes_sistema_media)):
             longitud = len(num_clientes_sistema_media)
+            diferencia_long=len(media_de_las_medias)-len(num_clientes_sistema_media)
+
         else:
             longitud=len(media_de_las_medias)
-        for i in range(longitud):
-            media_de_las_medias[i] = media_de_las_medias[i]+(num_clientes_sistema_media[i])/10
+            diferencia_long=0
+        for i in range(longitud+diferencia_long):
+            if (i)<longitud:
+                media_de_las_medias[i] = media_de_las_medias[i]+(num_clientes_sistema_media[i])/10
+            else:
+                media_de_las_medias[i]=media_de_las_medias[i]+num_clientes_sistema_media[longitud-1]/10
+  
 
     media_gral += np.mean(arreglo)
 
@@ -416,10 +423,16 @@ def GraficaPromClientesSistemaVarianza(arreglo):
 
         if(len(varianza_de_las_varianzas) >= len(num_clientes_sistema_varianza)):
             longitud = len(num_clientes_sistema_varianza)
+            diferencia_long=len(varianza_de_las_varianzas)-len(num_clientes_sistema_varianza)
         else:
             longitud = len(varianza_de_las_varianzas)
-        for i in range(longitud):
-            varianza_de_las_varianzas[i] = varianza_de_las_varianzas[i]+(num_clientes_sistema_varianza[i])/10
+            diferencia_long=0
+
+        for i in range(longitud+diferencia_long):
+            if (i)<longitud:
+                varianza_de_las_varianzas[i] = varianza_de_las_varianzas[i]+(num_clientes_sistema_varianza[i])/10
+            else:
+                varianza_de_las_varianzas[i]=varianza_de_las_varianzas[i]+num_clientes_sistema_varianza[longitud-1]/10
 
 
 
@@ -516,11 +529,18 @@ def GraficaPromClientesSistemaDesvio(arreglo):
 
         if(len(desvio_de__desvios) >= len(num_clientes_sistema_desviacion)):
             longitud = len(num_clientes_sistema_desviacion)
+            diferencia_long=len(desvio_de__desvios)-len(num_clientes_sistema_desviacion)
+
         else:
             longitud = len(desvio_de__desvios)
+            diferencia_long=0
 
-        for i in range(longitud):
-            desvio_de__desvios[i] = desvio_de__desvios[i] +(num_clientes_sistema_desviacion[i])/10
+        for i in range(longitud+diferencia_long):
+            if i<longitud:
+                desvio_de__desvios[i] = desvio_de__desvios[i] +(num_clientes_sistema_desviacion[i])/10
+            else:
+                desvio_de__desvios[i]=desvio_de__desvios[i]+num_clientes_sistema_desviacion[longitud-1]/10
+
 
 
     plt.figure(3)
@@ -606,7 +626,11 @@ def PastelProbabilidadClienteCola():
     global media_total_utlizacion_servidor
     global prob_n_clientes_cola
     global numero_clientes_cola
-    porcentajes = ((prob_n_clientes_cola)*100, (1-prob_n_clientes_cola)*100)
+    
+    if prob_n_clientes_cola>0:
+        porcentajes = ((prob_n_clientes_cola)*100, (1-prob_n_clientes_cola)*100)
+    else:
+        porcentajes=(0,100)
     nombres = ("Probabilidad que haya: " + str(numero_clientes_cola)+" clientes en cola",
                "Probabilidad que NO haya: " + str(numero_clientes_cola)+" clientes en cola")
     plt.pie(porcentajes, labels=nombres, autopct="%0.1f %%")
@@ -800,7 +824,9 @@ while True:
         numero_clientes_cola = input("Ingresar numero de clientes en cola : ")
 
         prob_n_clientes_cola = ((1-(1/mean_interarrival)/(1/mean_service)) *((1/mean_interarrival)/(1/mean_service))**int(numero_clientes_cola))
-        print("La probabilidad de que haya: " + str(numero_clientes_cola) +" clientes en cola es de:"+str(prob_n_clientes_cola))
+        if prob_n_clientes_cola<0:
+            prob_n_clientes_cola=0
+        print("La probabilidad de que haya: " + str(numero_clientes_cola) +" clientes en cola es de: "+str(prob_n_clientes_cola))
         
         PastelProbabilidadClienteCola()
 
