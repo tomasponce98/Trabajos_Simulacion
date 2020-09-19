@@ -122,7 +122,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1599347665455</Id>
 					<Name><![CDATA[Tasa_Muerte]]></Name>
-					<X>880</X><Y>1380</Y>
+					<X>870</X><Y>1380</Y>
 					<Label><X>-80</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -137,7 +137,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1599777081639</Id>
 					<Name><![CDATA[Promedio_Crias_Fecundadas]]></Name>
-					<X>170.85</X><Y>322.052</Y>
+					<X>310.85</X><Y>462.052</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -149,10 +149,40 @@
 					</Properties>
 
 				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1600518881793</Id>
+					<Name><![CDATA[L_Agua_E]]></Name>
+					<X>1450</X><Y>1450</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[triangular(24,195)]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
+				<Variable Class="AuxVariable">
+					<Id>1600518884245</Id>
+					<Name><![CDATA[L_Agua_M]]></Name>
+					<X>1860</X><Y>1430</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties External="false" Constant="false" Array="false">
+						<Formula><![CDATA[triangular(300,1200)]]></Formula>
+						<Value><![CDATA[0]]></Value>
+						<Color/>
+					</Properties>
+
+				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1599342910581</Id>
 					<Name><![CDATA[Madres]]></Name>
-					<X>1400</X><Y>800</Y>
+					<X>1540</X><Y>940</Y>
 					<Label><X>-30</X><Y>10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -168,7 +198,7 @@
 				<Variable Class="StockVariable">
 					<Id>1599343104369</Id>
 					<Name><![CDATA[Engorde]]></Name>
-					<X>1400</X><Y>420</Y>
+					<X>1540</X><Y>560</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -184,7 +214,7 @@
 				<Variable Class="StockVariable">
 					<Id>1599343420332</Id>
 					<Name><![CDATA[Ventas]]></Name>
-					<X>1400</X><Y>140</Y>
+					<X>1540</X><Y>280</Y>
 					<Label><X>-14.811</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -200,7 +230,7 @@
 				<Variable Class="StockVariable">
 					<Id>1599780028294</Id>
 					<Name><![CDATA[Gestación]]></Name>
-					<X>440</X><Y>420</Y>
+					<X>580</X><Y>560</Y>
 					<Label><X>-30</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -216,7 +246,7 @@
 				<Variable Class="StockVariable">
 					<Id>1599780399068</Id>
 					<Name><![CDATA[Lactante]]></Name>
-					<X>830</X><Y>420</Y>
+					<X>970</X><Y>560</Y>
 					<Label><X>-30</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -232,7 +262,7 @@
 				<Variable Class="StockVariable">
 					<Id>1599782511429</Id>
 					<Name><![CDATA[Contaminación_Metano]]></Name>
-					<X>380</X><Y>710</Y>
+					<X>520</X><Y>850</Y>
 					<Label><X>-80</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -248,7 +278,7 @@
 				<Variable Class="StockVariable">
 					<Id>1600384665864</Id>
 					<Name><![CDATA[Contaminación_Amoniaco]]></Name>
-					<X>380</X><Y>1000</Y>
+					<X>520</X><Y>1140</Y>
 					<Label><X>-80</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -264,7 +294,7 @@
 				<Variable Class="StockVariable">
 					<Id>1600385580627</Id>
 					<Name><![CDATA[Consumo_Maiz]]></Name>
-					<X>1140</X><Y>1380</Y>
+					<X>1150</X><Y>1540</Y>
 					<Label><X>-60</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -277,10 +307,26 @@
 						<Color/>
 					</Properties>
 				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1600517827008</Id>
+					<Name><![CDATA[Consumo_Agua]]></Name>
+					<X>1610</X><Y>1540</Y>
+					<Label><X>-50</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>200</Width>
+					<Height>160</Height>
+						<InitialValue><![CDATA[0]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
 				<Variable Class="Flow">
 					<Id>1599343176862</Id>
 					<Name><![CDATA[Fecundación]]></Name>
-					<X>60</X><Y>420</Y>
+					<X>200</X><Y>560</Y>
 					<Label><X>-30</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -299,7 +345,7 @@
 				<Variable Class="Flow">
 					<Id>1599343445629</Id>
 					<Name><![CDATA[Crecimiento_Cerdo]]></Name>
-					<X>1400</X><Y>420</Y>
+					<X>1540</X><Y>560</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -318,7 +364,7 @@
 				<Variable Class="Flow">
 					<Id>1599344133291</Id>
 					<Name><![CDATA[Crecimiento_Madre]]></Name>
-					<X>1400</X><Y>420</Y>
+					<X>1540</X><Y>560</Y>
 					<Label><X>-75</X><Y>45</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -337,7 +383,7 @@
 				<Variable Class="Flow">
 					<Id>1599344960181</Id>
 					<Name><![CDATA[Muertes_Madres]]></Name>
-					<X>1399.809</X><Y>799.3130000000001</Y>
+					<X>1539.809</X><Y>939.313</Y>
 					<Label><X>-30</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -356,7 +402,7 @@
 				<Variable Class="Flow">
 					<Id>1599780333101</Id>
 					<Name><![CDATA[Nacimientos]]></Name>
-					<X>440</X><Y>420</Y>
+					<X>580</X><Y>560</Y>
 					<Label><X>-20</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -375,7 +421,7 @@
 				<Variable Class="Flow">
 					<Id>1599780505714</Id>
 					<Name><![CDATA[Crecimiento_Engorde]]></Name>
-					<X>830</X><Y>420</Y>
+					<X>970</X><Y>560</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -394,7 +440,7 @@
 				<Variable Class="Flow">
 					<Id>1599781515424</Id>
 					<Name><![CDATA[Muertes_Gestación]]></Name>
-					<X>440</X><Y>420</Y>
+					<X>580</X><Y>560</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -413,7 +459,7 @@
 				<Variable Class="Flow">
 					<Id>1599781737162</Id>
 					<Name><![CDATA[Muertes_Lactante]]></Name>
-					<X>829.329</X><Y>419.66600000000005</Y>
+					<X>969.329</X><Y>559.666</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -425,14 +471,14 @@
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
 							<Point><X>0</X><Y>-140</Y></Point>
-							<Point><X>0</X><Y>-310</Y></Point>
+							<Point><X>10</X><Y>-280</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1599781835587</Id>
 					<Name><![CDATA[Muerte_Engorde]]></Name>
-					<X>1399.205</X><Y>419.56100000000004</Y>
+					<X>1539.205</X><Y>559.561</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -451,7 +497,7 @@
 				<Variable Class="Flow">
 					<Id>1599782850978</Id>
 					<Name><![CDATA[CH4_Lactante]]></Name>
-					<X>620</X><Y>510</Y>
+					<X>760</X><Y>650</Y>
 					<Label><X>0</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -470,7 +516,7 @@
 				<Variable Class="Flow">
 					<Id>1599782868334</Id>
 					<Name><![CDATA[CH4_Engorde]]></Name>
-					<X>790</X><Y>700</Y>
+					<X>930</X><Y>840</Y>
 					<Label><X>-60</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -489,7 +535,7 @@
 				<Variable Class="Flow">
 					<Id>1599782914375</Id>
 					<Name><![CDATA[CH4_Madres]]></Name>
-					<X>710</X><Y>820</Y>
+					<X>850</X><Y>960</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -508,7 +554,7 @@
 				<Variable Class="Flow">
 					<Id>1600384780150</Id>
 					<Name><![CDATA[NH3_Lactante]]></Name>
-					<X>560</X><Y>900</Y>
+					<X>700</X><Y>1040</Y>
 					<Label><X>0</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -527,7 +573,7 @@
 				<Variable Class="Flow">
 					<Id>1600384780160</Id>
 					<Name><![CDATA[NH3_Engorde]]></Name>
-					<X>680</X><Y>960</Y>
+					<X>820</X><Y>1100</Y>
 					<Label><X>-60</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -546,7 +592,7 @@
 				<Variable Class="Flow">
 					<Id>1600384780168</Id>
 					<Name><![CDATA[NH3_Madres]]></Name>
-					<X>600</X><Y>1120</Y>
+					<X>740</X><Y>1260</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -565,7 +611,7 @@
 				<Variable Class="Flow">
 					<Id>1600385704288</Id>
 					<Name><![CDATA[Consumo_Maiz_Engorde]]></Name>
-					<X>1020</X><Y>1200</Y>
+					<X>1140</X><Y>1330</Y>
 					<Label><X>-50</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -576,15 +622,15 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>20</X><Y>40</Y></Point>
-							<Point><X>120</X><Y>180</Y></Point>
+							<Point><X>0</X><Y>40</Y></Point>
+							<Point><X>10</X><Y>210</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1600385716521</Id>
 					<Name><![CDATA[Consumo_Maiz_Madres]]></Name>
-					<X>1200</X><Y>1020</Y>
+					<X>1290</X><Y>1250</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -595,15 +641,53 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>-20</X><Y>100</Y></Point>
-							<Point><X>-60</X><Y>360</Y></Point>
+							<Point><X>-40</X><Y>80</Y></Point>
+							<Point><X>-140</X><Y>290</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1600517922869</Id>
+					<Name><![CDATA[Consumo_Agua_Engorde]]></Name>
+					<X>1560</X><Y>1300</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1600517827008" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Engorde *L_Agua_E]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>20</X><Y>80</Y></Point>
+							<Point><X>50</X><Y>240</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1600517950267</Id>
+					<Name><![CDATA[Consumo_Agua_Madres]]></Name>
+					<X>1700</X><Y>1300</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1600517827008" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[L_Agua_M * Madres]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-20</X><Y>60</Y></Point>
+							<Point><X>-90</X><Y>240</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1599345876281</Id>
 					<Name><![CDATA[Tasa_Fertilidad]]></Name>
-					<X>120</X><Y>1240</Y>
+					<X>260</X><Y>1380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -627,7 +711,7 @@
 				<Variable Class="Parameter">
 					<Id>1599345878118</Id>
 					<Name><![CDATA[Partos_Mes]]></Name>
-					<X>220</X><Y>1260</Y>
+					<X>360</X><Y>1400</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -651,7 +735,7 @@
 				<Variable Class="Parameter">
 					<Id>1599346499616</Id>
 					<Name><![CDATA[Tiempo_Cerdo]]></Name>
-					<X>1095.718</X><Y>346.112</Y>
+					<X>1235.718</X><Y>486.112</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -675,7 +759,7 @@
 				<Variable Class="Parameter">
 					<Id>1599346501083</Id>
 					<Name><![CDATA[Tiempo_Madre]]></Name>
-					<X>1511.172</X><Y>762.717</Y>
+					<X>1651.172</X><Y>902.717</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -699,7 +783,7 @@
 				<Variable Class="Parameter">
 					<Id>1599347704460</Id>
 					<Name><![CDATA[Partos_Para_Morir]]></Name>
-					<X>860</X><Y>1520</Y>
+					<X>830</X><Y>1610</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -723,7 +807,7 @@
 				<Variable Class="Parameter">
 					<Id>1599348084655</Id>
 					<Name><![CDATA[Porcentaje_Madre]]></Name>
-					<X>1160</X><Y>500</Y>
+					<X>1300</X><Y>640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -747,7 +831,7 @@
 				<Variable Class="Parameter">
 					<Id>1599780585216</Id>
 					<Name><![CDATA[Tiempo_Gestación]]></Name>
-					<X>639.169</X><Y>256.149</Y>
+					<X>779.169</X><Y>396.149</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -771,7 +855,7 @@
 				<Variable Class="Parameter">
 					<Id>1599780587099</Id>
 					<Name><![CDATA[Tiempo_Destete]]></Name>
-					<X>1040.585</X><Y>367.956</Y>
+					<X>1180.585</X><Y>507.956</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -795,7 +879,7 @@
 				<Variable Class="Parameter">
 					<Id>1599781598339</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Gestación]]></Name>
-					<X>204.301</X><Y>190.245</Y>
+					<X>344.301</X><Y>330.245</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -819,7 +903,7 @@
 				<Variable Class="Parameter">
 					<Id>1599781761408</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Lactante]]></Name>
-					<X>980</X><Y>180</Y>
+					<X>1120</X><Y>320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -843,7 +927,7 @@
 				<Variable Class="Parameter">
 					<Id>1599781861098</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Engorde]]></Name>
-					<X>1910.322</X><Y>486.811</Y>
+					<X>2050.322</X><Y>626.811</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -867,7 +951,7 @@
 				<Variable Class="Parameter">
 					<Id>1599783082042</Id>
 					<Name><![CDATA[Kg_CH4_L]]></Name>
-					<X>610</X><Y>610</Y>
+					<X>750</X><Y>750</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -891,7 +975,7 @@
 				<Variable Class="Parameter">
 					<Id>1599783084492</Id>
 					<Name><![CDATA[Kg_CH4_E]]></Name>
-					<X>710</X><Y>730</Y>
+					<X>850</X><Y>870</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -915,7 +999,7 @@
 				<Variable Class="Parameter">
 					<Id>1599783086313</Id>
 					<Name><![CDATA[Kg_CH4_M]]></Name>
-					<X>580</X><Y>840</Y>
+					<X>720</X><Y>980</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -939,7 +1023,7 @@
 				<Variable Class="Parameter">
 					<Id>1600086301162</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Natural_Madre]]></Name>
-					<X>1640</X><Y>1000</Y>
+					<X>1780</X><Y>1140</Y>
 					<Label><X>20</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -963,7 +1047,7 @@
 				<Variable Class="Parameter">
 					<Id>1600384908111</Id>
 					<Name><![CDATA[Kg_NH3_L]]></Name>
-					<X>620</X><Y>920</Y>
+					<X>760</X><Y>1060</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -987,7 +1071,7 @@
 				<Variable Class="Parameter">
 					<Id>1600384929638</Id>
 					<Name><![CDATA[Kg_NH3_M]]></Name>
-					<X>560</X><Y>1160</Y>
+					<X>700</X><Y>1300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1011,7 +1095,7 @@
 				<Variable Class="Parameter">
 					<Id>1600384931468</Id>
 					<Name><![CDATA[Kg_NH3_E]]></Name>
-					<X>640</X><Y>1020</Y>
+					<X>780</X><Y>1160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1035,7 +1119,7 @@
 				<Variable Class="Parameter">
 					<Id>1600385795951</Id>
 					<Name><![CDATA[Kg_Maiz_E]]></Name>
-					<X>1040</X><Y>1060</Y>
+					<X>1190</X><Y>1300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1044,6 +1128,9 @@
 						<Type><![CDATA[double]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[69]]></Code>
+						</DefaultValue>
 						<ParameterEditor>
 							<Id>1600385795949</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
@@ -1056,7 +1143,7 @@
 				<Variable Class="Parameter">
 					<Id>1600385799831</Id>
 					<Name><![CDATA[Kg_Maiz_M]]></Name>
-					<X>1220</X><Y>1200</Y>
+					<X>1360</X><Y>1340</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1065,6 +1152,9 @@
 						<Type><![CDATA[double]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[67.5]]></Code>
+						</DefaultValue>
 						<ParameterEditor>
 							<Id>1600385799829</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
@@ -1082,7 +1172,7 @@
 					<Direction><X>-1260</X><Y>-380</Y></Direction>
 					<Id>1599345780373</Id>
 					<Name><![CDATA[Madres - Fecundación]]></Name>
-					<X>1400</X><Y>800</Y>
+					<X>1540</X><Y>940</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1097,7 +1187,7 @@
 					<Direction><X>65</X><Y>296</Y></Direction>
 					<Id>1599346359835</Id>
 					<Name><![CDATA[Promedio_Crias_Fecundadas - Fecundación]]></Name>
-					<X>170.85</X><Y>322.052</Y>
+					<X>310.85</X><Y>462.052</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1112,7 +1202,7 @@
 					<Direction><X>80</X><Y>-820</Y></Direction>
 					<Id>1599346395402</Id>
 					<Name><![CDATA[Tasa_Fertilidad - Fecundación]]></Name>
-					<X>120</X><Y>1240</Y>
+					<X>260</X><Y>1380</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1127,7 +1217,7 @@
 					<Direction><X>-20</X><Y>-840</Y></Direction>
 					<Id>1599346422047</Id>
 					<Name><![CDATA[Partos_Mes - Fecundación]]></Name>
-					<X>220</X><Y>1260</Y>
+					<X>360</X><Y>1400</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1142,7 +1232,7 @@
 					<Direction><X>308</X><Y>121</Y></Direction>
 					<Id>1599346686147</Id>
 					<Name><![CDATA[Tiempo_Cerdo - Crecimiento_Cerdo]]></Name>
-					<X>1095.718</X><Y>346.112</Y>
+					<X>1235.718</X><Y>486.112</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1157,7 +1247,7 @@
 					<Direction><X>-107</X><Y>106</Y></Direction>
 					<Id>1599346693798</Id>
 					<Name><![CDATA[Tiempo_Madre - Crecimiento_Madre]]></Name>
-					<X>1510.559</X><Y>762.717</Y>
+					<X>1650.559</X><Y>902.717</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1169,10 +1259,10 @@
 				<Link SourceId="1599345876281" TargetId="1599347665455" Polarity="null">
 					<Height>-146.613</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>760</X><Y>140</Y></Direction>
+					<Direction><X>610</X><Y>0</Y></Direction>
 					<Id>1599347428285</Id>
 					<Name><![CDATA[Tasa_Fertilidad - Tasa_Muerte]]></Name>
-					<X>120</X><Y>1240</Y>
+					<X>260</X><Y>1380</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1184,10 +1274,10 @@
 				<Link SourceId="1599345878118" TargetId="1599347665455" Polarity="null">
 					<Height>-68.642</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>660</X><Y>120</Y></Direction>
+					<Direction><X>510</X><Y>-20</Y></Direction>
 					<Id>1599347438591</Id>
 					<Name><![CDATA[Partos_Mes - Tasa_Muerte]]></Name>
-					<X>220</X><Y>1260</Y>
+					<X>360</X><Y>1400</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1199,10 +1289,10 @@
 				<Link SourceId="1599347704460" TargetId="1599347665455" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>20</X><Y>-140</Y></Direction>
+					<Direction><X>40</X><Y>-230</Y></Direction>
 					<Id>1599347727529</Id>
 					<Name><![CDATA[Partos_Para_Morir - Tasa_Muerte]]></Name>
-					<X>860</X><Y>1520</Y>
+					<X>830</X><Y>1610</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1214,10 +1304,10 @@
 				<Link SourceId="1599347665455" TargetId="1599344960181" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>799</X><Y>-581</Y></Direction>
+					<Direction><X>949</X><Y>-441</Y></Direction>
 					<Id>1599347746671</Id>
 					<Name><![CDATA[Tasa_Muerte - Muertes_Madres]]></Name>
-					<X>880</X><Y>1380</Y>
+					<X>870</X><Y>1380</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1232,7 +1322,7 @@
 					<Direction><X>345</X><Y>271</Y></Direction>
 					<Id>1599347946393</Id>
 					<Name><![CDATA[Madres - Muertes_Madres]]></Name>
-					<X>1400</X><Y>800</Y>
+					<X>1540</X><Y>940</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1247,7 +1337,7 @@
 					<Direction><X>0</X><Y>-90</Y></Direction>
 					<Id>1599348036864</Id>
 					<Name><![CDATA[Engorde - Crecimiento_Cerdo]]></Name>
-					<X>1400</X><Y>420</Y>
+					<X>1540</X><Y>560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1262,7 +1352,7 @@
 					<Direction><X>240</X><Y>160</Y></Direction>
 					<Id>1599348107859</Id>
 					<Name><![CDATA[Porcentaje_Madre - Crecimiento_Madre]]></Name>
-					<X>1160</X><Y>500</Y>
+					<X>1300</X><Y>640</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1277,7 +1367,7 @@
 					<Direction><X>0</X><Y>240</Y></Direction>
 					<Id>1599348208975</Id>
 					<Name><![CDATA[Engorde - Crecimiento_Madre]]></Name>
-					<X>1400</X><Y>420</Y>
+					<X>1540</X><Y>560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1292,7 +1382,7 @@
 					<Direction><X>240</X><Y>-230</Y></Direction>
 					<Id>1599348295352</Id>
 					<Name><![CDATA[Porcentaje_Madre - Crecimiento_Cerdo]]></Name>
-					<X>1160</X><Y>500</Y>
+					<X>1300</X><Y>640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1307,7 +1397,7 @@
 					<Direction><X>81</X><Y>367</Y></Direction>
 					<Id>1599780629352</Id>
 					<Name><![CDATA[Tiempo_Gestación - Nacimientos]]></Name>
-					<X>639.169</X><Y>256.149</Y>
+					<X>779.169</X><Y>396.149</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1322,7 +1412,7 @@
 					<Direction><X>167</X><Y>256</Y></Direction>
 					<Id>1599781012146</Id>
 					<Name><![CDATA[Tiempo_Destete - Crecimiento_Engorde]]></Name>
-					<X>1040</X><Y>367</Y>
+					<X>1180</X><Y>507</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1337,7 +1427,7 @@
 					<Direction><X>239</X><Y>39</Y></Direction>
 					<Id>1599781149686</Id>
 					<Name><![CDATA[Gestación - Nacimientos]]></Name>
-					<X>440</X><Y>420</Y>
+					<X>580</X><Y>560</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1352,7 +1442,7 @@
 					<Direction><X>377</X><Y>203</Y></Direction>
 					<Id>1599781168589</Id>
 					<Name><![CDATA[Lactante - Crecimiento_Engorde]]></Name>
-					<X>830</X><Y>420</Y>
+					<X>970</X><Y>560</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1367,7 +1457,7 @@
 					<Direction><X>300</X><Y>230</Y></Direction>
 					<Id>1599781639068</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Gestación - Muertes_Gestación]]></Name>
-					<X>204.301</X><Y>190.245</Y>
+					<X>344.301</X><Y>330.245</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1382,7 +1472,7 @@
 					<Direction><X>-1</X><Y>-100</Y></Direction>
 					<Id>1599781716299</Id>
 					<Name><![CDATA[Gestación - Muertes_Gestación]]></Name>
-					<X>440</X><Y>420</Y>
+					<X>580</X><Y>560</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1397,7 +1487,7 @@
 					<Direction><X>-151</X><Y>99</Y></Direction>
 					<Id>1599781764697</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Lactante - Muertes_Lactante]]></Name>
-					<X>980</X><Y>180</Y>
+					<X>1120</X><Y>320</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1412,7 +1502,7 @@
 					<Direction><X>229</X><Y>9</Y></Direction>
 					<Id>1599781891988</Id>
 					<Name><![CDATA[Engorde - Muerte_Engorde]]></Name>
-					<X>1400</X><Y>420</Y>
+					<X>1540</X><Y>560</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1427,7 +1517,7 @@
 					<Direction><X>-236</X><Y>131</Y></Direction>
 					<Id>1599781896080</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Engorde - Muerte_Engorde]]></Name>
-					<X>1910.322</X><Y>486.811</Y>
+					<X>2050.322</X><Y>626.811</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1442,7 +1532,7 @@
 					<Direction><X>75</X><Y>0</Y></Direction>
 					<Id>1599782659917</Id>
 					<Name><![CDATA[Lactante - Muertes_Lactante]]></Name>
-					<X>830</X><Y>420</Y>
+					<X>970</X><Y>560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1457,7 +1547,7 @@
 					<Direction><X>-90</X><Y>-30</Y></Direction>
 					<Id>1599783138191</Id>
 					<Name><![CDATA[Kg_CH4_L - CH4_Lactante]]></Name>
-					<X>610</X><Y>610</Y>
+					<X>750</X><Y>750</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1472,7 +1562,7 @@
 					<Direction><X>-60</X><Y>-20</Y></Direction>
 					<Id>1599783149073</Id>
 					<Name><![CDATA[Kg_CH4_E - CH4_Engorde]]></Name>
-					<X>710</X><Y>730</Y>
+					<X>850</X><Y>870</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1487,7 +1577,7 @@
 					<Direction><X>60</X><Y>-40</Y></Direction>
 					<Id>1599783159056</Id>
 					<Name><![CDATA[Kg_CH4_M - CH4_Madres]]></Name>
-					<X>580</X><Y>840</Y>
+					<X>720</X><Y>980</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1502,7 +1592,7 @@
 					<Direction><X>-290</X><Y>380</Y></Direction>
 					<Id>1599783171233</Id>
 					<Name><![CDATA[Lactante - CH4_Lactante]]></Name>
-					<X>830</X><Y>420</Y>
+					<X>970</X><Y>560</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1517,7 +1607,7 @@
 					<Direction><X>-480</X><Y>520</Y></Direction>
 					<Id>1599783180596</Id>
 					<Name><![CDATA[Engorde - CH4_Engorde]]></Name>
-					<X>1400</X><Y>420</Y>
+					<X>1540</X><Y>560</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1532,7 +1622,7 @@
 					<Direction><X>-285</X><Y>249</Y></Direction>
 					<Id>1599783203671</Id>
 					<Name><![CDATA[Madres - CH4_Madres]]></Name>
-					<X>1400</X><Y>800</Y>
+					<X>1540</X><Y>940</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1547,7 +1637,7 @@
 					<Direction><X>39</X><Y>-201</Y></Direction>
 					<Id>1600086609336</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Natural_Madre - Muertes_Madres]]></Name>
-					<X>1640</X><Y>1000</Y>
+					<X>1780</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1562,7 +1652,7 @@
 					<Direction><X>-40</X><Y>-60</Y></Direction>
 					<Id>1600384975658</Id>
 					<Name><![CDATA[Kg_NH3_M - NH3_Madres]]></Name>
-					<X>560</X><Y>1160</Y>
+					<X>700</X><Y>1300</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1577,7 +1667,7 @@
 					<Direction><X>-40</X><Y>-40</Y></Direction>
 					<Id>1600384983370</Id>
 					<Name><![CDATA[Kg_NH3_E - NH3_Engorde]]></Name>
-					<X>640</X><Y>1020</Y>
+					<X>780</X><Y>1160</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1592,7 +1682,7 @@
 					<Direction><X>-120</X><Y>0</Y></Direction>
 					<Id>1600384989852</Id>
 					<Name><![CDATA[Kg_NH3_L - NH3_Lactante]]></Name>
-					<X>620</X><Y>920</Y>
+					<X>760</X><Y>1060</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1607,7 +1697,7 @@
 					<Direction><X>-880</X><Y>300</Y></Direction>
 					<Id>1600385024591</Id>
 					<Name><![CDATA[Madres - NH3_Madres]]></Name>
-					<X>1400</X><Y>800</Y>
+					<X>1540</X><Y>940</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1622,7 +1712,7 @@
 					<Direction><X>-800</X><Y>560</Y></Direction>
 					<Id>1600385059632</Id>
 					<Name><![CDATA[Engorde - NH3_Engorde]]></Name>
-					<X>1400</X><Y>420</Y>
+					<X>1540</X><Y>560</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1637,7 +1727,7 @@
 					<Direction><X>-330</X><Y>500</Y></Direction>
 					<Id>1600385071180</Id>
 					<Name><![CDATA[Lactante - NH3_Lactante]]></Name>
-					<X>830</X><Y>420</Y>
+					<X>970</X><Y>560</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1649,10 +1739,10 @@
 				<Link SourceId="1600385795951" TargetId="1600385704288" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>80</X><Y>160</Y></Direction>
+					<Direction><X>-50</X><Y>70</Y></Direction>
 					<Id>1600385833440</Id>
 					<Name><![CDATA[Kg_Maiz_E - Consumo_Maiz_Engorde]]></Name>
-					<X>1040</X><Y>1060</Y>
+					<X>1190</X><Y>1300</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1667,7 +1757,7 @@
 					<Direction><X>-40</X><Y>-80</Y></Direction>
 					<Id>1600385838682</Id>
 					<Name><![CDATA[Kg_Maiz_M - Consumo_Maiz_Madres]]></Name>
-					<X>1220</X><Y>1200</Y>
+					<X>1360</X><Y>1340</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1682,7 +1772,7 @@
 					<Direction><X>-140</X><Y>200</Y></Direction>
 					<Id>1600385843196</Id>
 					<Name><![CDATA[Madres - ]]></Name>
-					<X>1400</X><Y>800</Y>
+					<X>1540</X><Y>940</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1697,7 +1787,7 @@
 					<Direction><X>-280</X><Y>800</Y></Direction>
 					<Id>1600385848316</Id>
 					<Name><![CDATA[Engorde - Consumo_Maiz_Engorde]]></Name>
-					<X>1400</X><Y>420</Y>
+					<X>1540</X><Y>560</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1712,7 +1802,67 @@
 					<Direction><X>-140</X><Y>220</Y></Direction>
 					<Id>1600385920949</Id>
 					<Name><![CDATA[Madres - Consumo_Maiz_Madres]]></Name>
-					<X>1400</X><Y>800</Y>
+					<X>1540</X><Y>940</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1600518881793" TargetId="1600517922869" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>130</X><Y>-70</Y></Direction>
+					<Id>1600518026673</Id>
+					<Name><![CDATA[L_Agua_E - Consumo_Agua_Engorde]]></Name>
+					<X>1450</X><Y>1450</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1600518884245" TargetId="1600517950267" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-180</X><Y>-70</Y></Direction>
+					<Id>1600518032307</Id>
+					<Name><![CDATA[L_Agua_M - Consumo_Agua_Madres]]></Name>
+					<X>1860</X><Y>1430</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1599342910581" TargetId="1600517950267" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>140</X><Y>420</Y></Direction>
+					<Id>1600518042612</Id>
+					<Name><![CDATA[Madres - Consumo_Agua_Madres]]></Name>
+					<X>1540</X><Y>940</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1599343104369" TargetId="1600517922869" Polarity="null">
+					<Height>-104.237</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>40</X><Y>820</Y></Direction>
+					<Id>1600518053195</Id>
+					<Name><![CDATA[Engorde - Consumo_Agua_Engorde]]></Name>
+					<X>1540</X><Y>560</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1758,9 +1908,436 @@
 					<Z>0</Z>
 					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
 
+			<Presentation>
+				<Rectangle>
+					<Id>1600519509537</Id>
+					<Name><![CDATA[rectangle]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>2400</Width>
+					<Height>140</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-14774017</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Rectangle>
+					<Id>1600519970738</Id>
+					<Name><![CDATA[rectangle1]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>300</Width>
+					<Height>140</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-16711681</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1600519549145</Id>
+					<Name><![CDATA[text]]></Name>
+					<X>20</X><Y>20</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[_origin_VA.navigateTo();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Modelo]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>72</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1600519611808</Id>
+					<Name><![CDATA[text1]]></Name>
+					<X>360</X><Y>20</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[Animación.navigateTo();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Animación]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>72</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1600519637425</Id>
+					<Name><![CDATA[text2]]></Name>
+					<X>760</X><Y>20</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[Estadisticas.navigateTo();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Estadisticas]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>72</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1600519841866</Id>
+					<Name><![CDATA[Fecha]]></Name>
+					<X>1520</X><Y>20</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[Animación.navigateTo();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Fecha]]></Text>
+					<TextCode><![CDATA[date()]]></TextCode>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>72</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Rectangle>
+					<Id>1600520212426</Id>
+					<Name><![CDATA[rectangle2]]></Name>
+					<X>0</X><Y>2040</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>2400</Width>
+					<Height>140</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-14774017</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Rectangle>
+					<Id>1600520212430</Id>
+					<Name><![CDATA[rectangle3]]></Name>
+					<X>740</X><Y>2040</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>420</Width>
+					<Height>140</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-16711681</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1600520212433</Id>
+					<Name><![CDATA[text3]]></Name>
+					<X>20</X><Y>2060</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[_origin_VA.navigateTo();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Modelo]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>72</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1600520212437</Id>
+					<Name><![CDATA[text4]]></Name>
+					<X>360</X><Y>2060</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[Animación.navigateTo();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Animación]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>72</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1600520212442</Id>
+					<Name><![CDATA[text5]]></Name>
+					<X>760</X><Y>2060</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[Estadisticas.navigateTo();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Estadisticas]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>72</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1600520212447</Id>
+					<Name><![CDATA[Fecha1]]></Name>
+					<X>1520</X><Y>2060</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[Animación.navigateTo();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Fecha]]></Text>
+					<TextCode><![CDATA[date()]]></TextCode>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>72</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Rectangle>
+					<Id>1600520233557</Id>
+					<Name><![CDATA[rectangle4]]></Name>
+					<X>0</X><Y>3680</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>2400</Width>
+					<Height>140</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-14774017</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Rectangle>
+					<Id>1600520233562</Id>
+					<Name><![CDATA[rectangle5]]></Name>
+					<X>340</X><Y>3680</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>380</Width>
+					<Height>140</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-16711681</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Text>
+					<Id>1600520233566</Id>
+					<Name><![CDATA[text6]]></Name>
+					<X>20</X><Y>3700</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[_origin_VA.navigateTo();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Modelo]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>72</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1600520233574</Id>
+					<Name><![CDATA[text7]]></Name>
+					<X>360</X><Y>3700</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[Animación.navigateTo();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Animación]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>72</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1600520233581</Id>
+					<Name><![CDATA[text8]]></Name>
+					<X>760</X><Y>3700</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[Estadisticas.navigateTo();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Estadisticas]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>72</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1600520233588</Id>
+					<Name><![CDATA[Fecha2]]></Name>
+					<X>1520</X><Y>3700</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[Animación.navigateTo();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Fecha]]></Text>
+					<TextCode><![CDATA[date()]]></TextCode>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>72</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+			</Presentation>
 
 				</Level>
 			</Presentation>
+			<Areas>
+				<Area>
+					<Id>1600519172759</Id>
+					<Name><![CDATA[Estadisticas]]></Name>
+					<X>0</X><Y>2040</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[[Estadisticas]]]></Title>
+					<Width>2400</Width>
+					<Height>1640</Height>
+				</Area>
+				<Area>
+					<Id>1600519228704</Id>
+					<Name><![CDATA[Animación]]></Name>
+					<X>0</X><Y>3680</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[[Animación]]]></Title>
+					<Width>2400</Width>
+					<Height>1640</Height>
+				</Area>
+			</Areas>
 
 		</ActiveObjectClass>
 	</ActiveObjectClasses>	
@@ -1773,7 +2350,7 @@
 	<TimeAccuracy>1.0E-5</TimeAccuracy>
 	<Frame>
 		<Width>2400</Width>
-		<Height>1640</Height>
+		<Height>2040</Height>
 	</Frame>
 	<Database>
 		<Logging>false</Logging>
