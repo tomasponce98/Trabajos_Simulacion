@@ -122,7 +122,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1599347665455</Id>
 					<Name><![CDATA[Tasa_Muerte]]></Name>
-					<X>870</X><Y>1380</Y>
+					<X>870</X><Y>1580</Y>
 					<Label><X>-80</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -137,7 +137,7 @@
 				<Variable Class="AuxVariable">
 					<Id>1599777081639</Id>
 					<Name><![CDATA[Promedio_Crias_Fecundadas]]></Name>
-					<X>310.85</X><Y>462.052</Y>
+					<X>100</X><Y>570</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -149,56 +149,11 @@
 					</Properties>
 
 				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1600518881793</Id>
-					<Name><![CDATA[L_Agua_E]]></Name>
-					<X>1450</X><Y>1450</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[uniform(105,195)]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1600518884245</Id>
-					<Name><![CDATA[L_Agua_M]]></Name>
-					<X>1860</X><Y>1430</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[triangular(300,1200)]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
-				<Variable Class="AuxVariable">
-					<Id>1601509761810</Id>
-					<Name><![CDATA[L_Agua_T]]></Name>
-					<X>1470</X><Y>1340</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties External="false" Constant="false" Array="false">
-						<Formula><![CDATA[75]]></Formula>
-						<Value><![CDATA[0]]></Value>
-						<Color/>
-					</Properties>
-
-				</Variable>
 				<Variable Class="StockVariable">
 					<Id>1599342910581</Id>
 					<Name><![CDATA[Madres]]></Name>
-					<X>1540</X><Y>940</Y>
-					<Label><X>-30</X><Y>10</Y></Label>
+					<X>1740</X><Y>1140</Y>
+					<Label><X>-30</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -213,7 +168,7 @@
 				<Variable Class="StockVariable">
 					<Id>1599343104369</Id>
 					<Name><![CDATA[Engorde]]></Name>
-					<X>1540</X><Y>560</Y>
+					<X>1740</X><Y>760</Y>
 					<Label><X>-25</X><Y>-15</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -229,7 +184,7 @@
 				<Variable Class="StockVariable">
 					<Id>1599343420332</Id>
 					<Name><![CDATA[Ventas]]></Name>
-					<X>1540</X><Y>280</Y>
+					<X>1740</X><Y>440</Y>
 					<Label><X>-14.811</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -245,7 +200,7 @@
 				<Variable Class="StockVariable">
 					<Id>1599780028294</Id>
 					<Name><![CDATA[Gestación]]></Name>
-					<X>580</X><Y>560</Y>
+					<X>320</X><Y>760</Y>
 					<Label><X>-30</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -261,7 +216,7 @@
 				<Variable Class="StockVariable">
 					<Id>1599780399068</Id>
 					<Name><![CDATA[Lactante]]></Name>
-					<X>970</X><Y>560</Y>
+					<X>650</X><Y>760</Y>
 					<Label><X>-30</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -277,7 +232,7 @@
 				<Variable Class="StockVariable">
 					<Id>1599782511429</Id>
 					<Name><![CDATA[Contaminación_Metano]]></Name>
-					<X>520</X><Y>850</Y>
+					<X>520</X><Y>1050</Y>
 					<Label><X>-80</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -293,7 +248,7 @@
 				<Variable Class="StockVariable">
 					<Id>1600384665864</Id>
 					<Name><![CDATA[Contaminación_Amoniaco]]></Name>
-					<X>520</X><Y>1140</Y>
+					<X>520</X><Y>1340</Y>
 					<Label><X>-80</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -309,7 +264,7 @@
 				<Variable Class="StockVariable">
 					<Id>1600385580627</Id>
 					<Name><![CDATA[Consumo_Maiz]]></Name>
-					<X>1150</X><Y>1540</Y>
+					<X>1150</X><Y>1740</Y>
 					<Label><X>-60</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -325,7 +280,7 @@
 				<Variable Class="StockVariable">
 					<Id>1600517827008</Id>
 					<Name><![CDATA[Consumo_Agua]]></Name>
-					<X>1610</X><Y>1540</Y>
+					<X>1610</X><Y>1740</Y>
 					<Label><X>-50</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -338,29 +293,93 @@
 						<Color/>
 					</Properties>
 				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1602022962741</Id>
+					<Name><![CDATA[Transición]]></Name>
+					<X>1000</X><Y>760</Y>
+					<Label><X>-30</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>100</Width>
+					<Height>100</Height>
+						<InitialValue><![CDATA[1]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1602022975399</Id>
+					<Name><![CDATA[Pre_Engorde]]></Name>
+					<X>1300</X><Y>760</Y>
+					<Label><X>-50</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>100</Width>
+					<Height>100</Height>
+						<InitialValue><![CDATA[1]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1602022984034</Id>
+					<Name><![CDATA[Madre_Lactante]]></Name>
+					<X>1180</X><Y>1140</Y>
+					<Label><X>-50</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>100</Width>
+					<Height>100</Height>
+						<InitialValue><![CDATA[1]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
+				<Variable Class="StockVariable">
+					<Id>1602023105690</Id>
+					<Name><![CDATA[Madre_Gestante]]></Name>
+					<X>1500</X><Y>1140</Y>
+					<Label><X>-40</X><Y>-11</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Array="false">
+					<EquationStyle>classic</EquationStyle>
+					<Width>100</Width>
+					<Height>100</Height>
+						<InitialValue><![CDATA[1]]></InitialValue>
+						<Color/>
+					</Properties>
+				</Variable>
 				<Variable Class="Flow">
 					<Id>1599343176862</Id>
 					<Name><![CDATA[Fecundación]]></Name>
-					<X>200</X><Y>560</Y>
+					<X>40</X><Y>760</Y>
 					<Label><X>-30</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1599780028294" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Madres*Partos_Mes*Promedio_Crias_Fecundadas*Tasa_Fertilidad]]></Formula>
+						<Formula><![CDATA[Madre_Gestante*Partos_Mes*Promedio_Crias_Fecundadas]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
 							<Point><X>140</X><Y>0</Y></Point>
-							<Point><X>380</X><Y>0</Y></Point>
+							<Point><X>280</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1599343445629</Id>
 					<Name><![CDATA[Crecimiento_Cerdo]]></Name>
-					<X>1540</X><Y>560</Y>
+					<X>1740</X><Y>760</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -371,15 +390,15 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>0</X><Y>-150</Y></Point>
-							<Point><X>0</X><Y>-280</Y></Point>
+							<Point><X>0</X><Y>-160</Y></Point>
+							<Point><X>0</X><Y>-320</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1599344133291</Id>
 					<Name><![CDATA[Crecimiento_Madre]]></Name>
-					<X>1540</X><Y>560</Y>
+					<X>1740</X><Y>760</Y>
 					<Label><X>-75</X><Y>45</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -398,26 +417,26 @@
 				<Variable Class="Flow">
 					<Id>1599344960181</Id>
 					<Name><![CDATA[Muertes_Madres]]></Name>
-					<X>1539.809</X><Y>939.313</Y>
+					<X>1739.809</X><Y>1139.313</Y>
 					<Label><X>-30</X><Y>-25</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SourceId="1599342910581" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Madres*(Tasa_Muerte+Probabilidad_Muerte_Natural_Madre)]]></Formula>
+						<Formula><![CDATA[(Madres+Madre_Lactante+Madre_Gestante)*(Tasa_Muerte+Probabilidad_Muerte_Natural_Madre)]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>280</X><Y>0</Y></Point>
-							<Point><X>420</X><Y>0</Y></Point>
+							<Point><X>240</X><Y>0</Y></Point>
+							<Point><X>380</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1599780333101</Id>
 					<Name><![CDATA[Nacimientos]]></Name>
-					<X>580</X><Y>560</Y>
+					<X>320</X><Y>760</Y>
 					<Label><X>-20</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -428,34 +447,34 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>200</X><Y>0</Y></Point>
-							<Point><X>390</X><Y>0</Y></Point>
+							<Point><X>170</X><Y>0</Y></Point>
+							<Point><X>330</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1599780505714</Id>
 					<Name><![CDATA[Crecimiento_Engorde]]></Name>
-					<X>970</X><Y>560</Y>
+					<X>650</X><Y>760</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties SourceId="1599780399068" TargetId="1599343104369" External="false" Constant="false" Array="false">
+					<Properties SourceId="1599780399068" TargetId="1602022962741" External="false" Constant="false" Array="false">
 						<Formula><![CDATA[(1/Tiempo_Destete)*Lactante]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>290</X><Y>0</Y></Point>
-							<Point><X>570</X><Y>0</Y></Point>
+							<Point><X>130</X><Y>0</Y></Point>
+							<Point><X>350</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1599781515424</Id>
 					<Name><![CDATA[Muertes_Gestación]]></Name>
-					<X>580</X><Y>560</Y>
+					<X>320</X><Y>760</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -466,15 +485,15 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>-1</X><Y>-100</Y></Point>
-							<Point><X>-1</X><Y>-231</Y></Point>
+							<Point><X>0</X><Y>-160</Y></Point>
+							<Point><X>0</X><Y>-260</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1599781737162</Id>
 					<Name><![CDATA[Muertes_Lactante]]></Name>
-					<X>969.329</X><Y>559.666</Y>
+					<X>650</X><Y>760</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -485,15 +504,15 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>0</X><Y>-140</Y></Point>
-							<Point><X>10</X><Y>-280</Y></Point>
+							<Point><X>0</X><Y>-200</Y></Point>
+							<Point><X>20</X><Y>-380</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1599781835587</Id>
 					<Name><![CDATA[Muerte_Engorde]]></Name>
-					<X>1539.205</X><Y>559.561</Y>
+					<X>1739.205</X><Y>759.561</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -504,21 +523,21 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>220</X><Y>0</Y></Point>
-							<Point><X>380</X><Y>0</Y></Point>
+							<Point><X>160</X><Y>0</Y></Point>
+							<Point><X>340</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1599782850978</Id>
-					<Name><![CDATA[CH4_Lactante]]></Name>
-					<X>760</X><Y>650</Y>
+					<Name><![CDATA[CH4_LactanteTrans]]></Name>
+					<X>760</X><Y>850</Y>
 					<Label><X>0</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1599782511429" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Kg_CH4_L * Lactante]]></Formula>
+						<Formula><![CDATA[Kg_CH4_LT * (Lactante+Transición)]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -531,13 +550,13 @@
 				<Variable Class="Flow">
 					<Id>1599782868334</Id>
 					<Name><![CDATA[CH4_Engorde]]></Name>
-					<X>930</X><Y>840</Y>
+					<X>930</X><Y>1040</Y>
 					<Label><X>-60</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1599782511429" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Engorde*Kg_CH4_E]]></Formula>
+						<Formula><![CDATA[(Engorde+Pre_Engorde)*Kg_CH4_EP]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -550,7 +569,7 @@
 				<Variable Class="Flow">
 					<Id>1599782914375</Id>
 					<Name><![CDATA[CH4_Madres]]></Name>
-					<X>850</X><Y>960</Y>
+					<X>850</X><Y>1160</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -561,21 +580,21 @@
 						<ValveIndex>1</ValveIndex>
 						<Points>
 							<Point><X>0</X><Y>0</Y></Point>
-							<Point><X>-70</X><Y>-20</Y></Point>
+							<Point><X>-80</X><Y>20</Y></Point>
 							<Point><X>-330</X><Y>-110</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Flow">
 					<Id>1600384780150</Id>
-					<Name><![CDATA[NH3_Lactante]]></Name>
-					<X>700</X><Y>1040</Y>
+					<Name><![CDATA[NH3_LactanteTrans]]></Name>
+					<X>700</X><Y>1240</Y>
 					<Label><X>0</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1600384665864" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Kg_NH3_L*Lactante]]></Formula>
+						<Formula><![CDATA[Kg_NH3_LT*(Lactante+Transición)]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -588,13 +607,13 @@
 				<Variable Class="Flow">
 					<Id>1600384780160</Id>
 					<Name><![CDATA[NH3_Engorde]]></Name>
-					<X>820</X><Y>1100</Y>
+					<X>820</X><Y>1300</Y>
 					<Label><X>-60</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1600384665864" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Engorde*Kg_NH3_E]]></Formula>
+						<Formula><![CDATA[(Engorde+Pre_Engorde)*Kg_NH3_EP]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -607,7 +626,7 @@
 				<Variable Class="Flow">
 					<Id>1600384780168</Id>
 					<Name><![CDATA[NH3_Madres]]></Name>
-					<X>740</X><Y>1260</Y>
+					<X>740</X><Y>1460</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -626,7 +645,7 @@
 				<Variable Class="Flow">
 					<Id>1600385704288</Id>
 					<Name><![CDATA[Consumo_Maiz_Engorde]]></Name>
-					<X>1140</X><Y>1330</Y>
+					<X>1140</X><Y>1530</Y>
 					<Label><X>-50</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -645,7 +664,7 @@
 				<Variable Class="Flow">
 					<Id>1600385716521</Id>
 					<Name><![CDATA[Consumo_Maiz_Madres]]></Name>
-					<X>1290</X><Y>1250</Y>
+					<X>1290</X><Y>1450</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -664,13 +683,13 @@
 				<Variable Class="Flow">
 					<Id>1600517922869</Id>
 					<Name><![CDATA[Consumo_Agua_Engorde]]></Name>
-					<X>1560</X><Y>1300</Y>
+					<X>1560</X><Y>1500</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties TargetId="1600517827008" External="false" Constant="false" Array="false">
-						<Formula><![CDATA[Engorde *L_Agua_E*0.706+Engorde*L_Agua_T*0.294]]></Formula>
+						<Formula><![CDATA[L_Agua_E * Engorde]]></Formula>
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
@@ -683,7 +702,7 @@
 				<Variable Class="Flow">
 					<Id>1600517950267</Id>
 					<Name><![CDATA[Consumo_Agua_Madres]]></Name>
-					<X>1700</X><Y>1300</Y>
+					<X>1700</X><Y>1500</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -699,10 +718,314 @@
 						</Points>
 					</Properties>
 				</Variable>
+				<Variable Class="Flow">
+					<Id>1602023431794</Id>
+					<Name><![CDATA[Transicion_PreEngorde]]></Name>
+					<X>1000</X><Y>760</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1602022962741" TargetId="1602022975399" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[(1/Tiempo_Transición)*Transición]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>120</X><Y>0</Y></Point>
+							<Point><X>300</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602023466858</Id>
+					<Name><![CDATA[PreEngorde_Engorde]]></Name>
+					<X>1300</X><Y>760</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1602022975399" TargetId="1599343104369" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[(1/Tiempo_PreEngorde)*Pre_Engorde]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>210</X><Y>0</Y></Point>
+							<Point><X>440</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602024033859</Id>
+					<Name><![CDATA[Fecundacion_Madres]]></Name>
+					<X>1740</X><Y>1140</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1599342910581" TargetId="1602023105690" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Tasa_Fertilidad*Madres]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-120</X><Y>0</Y></Point>
+							<Point><X>-240</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602024566234</Id>
+					<Name><![CDATA[Parto]]></Name>
+					<X>1500</X><Y>1140</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1602023105690" TargetId="1602022984034" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Madre_Gestante/Tiempo_Gestación]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-160</X><Y>0</Y></Point>
+							<Point><X>-320</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602024793526</Id>
+					<Name><![CDATA[Lactancia]]></Name>
+					<X>1180</X><Y>1140</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SourceId="1602022984034" TargetId="1599342910581" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Madre_Lactante/Tiempo_Destete]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>270</X><Y>-140</Y></Point>
+							<Point><X>560</X><Y>0</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602025388920</Id>
+					<Name><![CDATA[CH4_MadreGestante]]></Name>
+					<X>200</X><Y>1100</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1599782511429" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Kg_CH4_MG * Madre_Gestante]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>100</X><Y>0</Y></Point>
+							<Point><X>320</X><Y>-50</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602025411432</Id>
+					<Name><![CDATA[NH3_MadreGestante]]></Name>
+					<X>200</X><Y>1360</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1600384665864" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Kg_NH3_MG * Madre_Gestante]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>100</X><Y>0</Y></Point>
+							<Point><X>320</X><Y>-20</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602025417552</Id>
+					<Name><![CDATA[NH3_MadreLactante]]></Name>
+					<X>200</X><Y>1420</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1600384665864" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Kg_NH3_ML*Madre_Lactante]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>100</X><Y>0</Y></Point>
+							<Point><X>320</X><Y>-80</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602025502038</Id>
+					<Name><![CDATA[Consumo_Maiz_Transicion]]></Name>
+					<X>870</X><Y>1910</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1600385580627" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Kg_Maiz_T *Transición]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>70</X><Y>-50</Y></Point>
+							<Point><X>280</X><Y>-170</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602025509444</Id>
+					<Name><![CDATA[Consumo_Maiz_PreEngorde]]></Name>
+					<X>1200</X><Y>1960</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1600385580627" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Pre_Engorde*Kg_Maiz_PE]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>0</X><Y>-60</Y></Point>
+							<Point><X>-50</X><Y>-220</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602025522498</Id>
+					<Name><![CDATA[Consumo_Maiz_MadreGestante]]></Name>
+					<X>1340</X><Y>1960</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1600385580627" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Madre_Gestante * Kg_Maiz_MG]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-40</X><Y>-80</Y></Point>
+							<Point><X>-190</X><Y>-220</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602025542098</Id>
+					<Name><![CDATA[Consumo_Maiz_MadreLactante]]></Name>
+					<X>1420</X><Y>1920</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1600385580627" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Kg_Maiz_ML * Madre_Lactante]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-40</X><Y>-100</Y></Point>
+							<Point><X>-270</X><Y>-180</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602025555163</Id>
+					<Name><![CDATA[Consumo_Agua_Transicion]]></Name>
+					<X>1760</X><Y>1980</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1600517827008" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[L_Agua_T *Transición]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-20</X><Y>-80</Y></Point>
+							<Point><X>-150</X><Y>-240</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602025562194</Id>
+					<Name><![CDATA[Consumo_Agua_PreEngorde]]></Name>
+					<X>1800</X><Y>2000</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1600517827008" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Pre_Engorde * L_Agua_PE]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-20</X><Y>-160</Y></Point>
+							<Point><X>-190</X><Y>-260</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602025576220</Id>
+					<Name><![CDATA[Consumo_Agua_MadreGestante]]></Name>
+					<X>1900</X><Y>1920</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1600517827008" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[Madre_Gestante * L_Agua_MG]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-60</X><Y>-120</Y></Point>
+							<Point><X>-290</X><Y>-180</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
+				<Variable Class="Flow">
+					<Id>1602025612421</Id>
+					<Name><![CDATA[Consumo_Agua_MadreLactante]]></Name>
+					<X>1960</X><Y>1720</Y>
+					<Label><X>0</X><Y>-20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TargetId="1600517827008" External="false" Constant="false" Array="false">
+						<Formula><![CDATA[L_Agua_ML * Madre_Lactante]]></Formula>
+						<Color/>
+						<ValveIndex>1</ValveIndex>
+						<Points>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>-100</X><Y>0</Y></Point>
+							<Point><X>-350</X><Y>20</Y></Point>
+						</Points>
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1599345876281</Id>
 					<Name><![CDATA[Tasa_Fertilidad]]></Name>
-					<X>260</X><Y>1380</Y>
+					<X>1420</X><Y>1320</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -726,7 +1049,7 @@
 				<Variable Class="Parameter">
 					<Id>1599345878118</Id>
 					<Name><![CDATA[Partos_Mes]]></Name>
-					<X>360</X><Y>1400</Y>
+					<X>360</X><Y>1600</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -750,7 +1073,7 @@
 				<Variable Class="Parameter">
 					<Id>1599346499616</Id>
 					<Name><![CDATA[Tiempo_Cerdo]]></Name>
-					<X>1280</X><Y>400</Y>
+					<X>1560</X><Y>380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -760,7 +1083,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[4.5]]></Code>
+							<Code><![CDATA[2.1]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1599346499614</Id>
@@ -774,7 +1097,7 @@
 				<Variable Class="Parameter">
 					<Id>1599346501083</Id>
 					<Name><![CDATA[Tiempo_Madre]]></Name>
-					<X>1651.172</X><Y>902.717</Y>
+					<X>1540</X><Y>1000</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -784,7 +1107,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[6]]></Code>
+							<Code><![CDATA[3.8]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1599346501081</Id>
@@ -798,7 +1121,7 @@
 				<Variable Class="Parameter">
 					<Id>1599347704460</Id>
 					<Name><![CDATA[Partos_Para_Morir]]></Name>
-					<X>830</X><Y>1610</Y>
+					<X>830</X><Y>1810</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -822,7 +1145,7 @@
 				<Variable Class="Parameter">
 					<Id>1599348084655</Id>
 					<Name><![CDATA[Porcentaje_Madre]]></Name>
-					<X>1300</X><Y>640</Y>
+					<X>1860</X><Y>960</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -846,7 +1169,7 @@
 				<Variable Class="Parameter">
 					<Id>1599780585216</Id>
 					<Name><![CDATA[Tiempo_Gestación]]></Name>
-					<X>779.169</X><Y>396.149</Y>
+					<X>520</X><Y>880</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -870,7 +1193,7 @@
 				<Variable Class="Parameter">
 					<Id>1599780587099</Id>
 					<Name><![CDATA[Tiempo_Destete]]></Name>
-					<X>1180.585</X><Y>507.956</Y>
+					<X>910</X><Y>870</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -894,7 +1217,7 @@
 				<Variable Class="Parameter">
 					<Id>1599781598339</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Gestación]]></Name>
-					<X>344.301</X><Y>330.245</Y>
+					<X>344.301</X><Y>530.245</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -918,7 +1241,7 @@
 				<Variable Class="Parameter">
 					<Id>1599781761408</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Lactante]]></Name>
-					<X>1120</X><Y>320</Y>
+					<X>880</X><Y>420</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -942,7 +1265,7 @@
 				<Variable Class="Parameter">
 					<Id>1599781861098</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Engorde]]></Name>
-					<X>2050.322</X><Y>626.811</Y>
+					<X>2050.322</X><Y>826.811</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -965,8 +1288,8 @@
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1599783082042</Id>
-					<Name><![CDATA[Kg_CH4_L]]></Name>
-					<X>750</X><Y>750</Y>
+					<Name><![CDATA[Kg_CH4_LT]]></Name>
+					<X>750</X><Y>950</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -989,8 +1312,8 @@
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1599783084492</Id>
-					<Name><![CDATA[Kg_CH4_E]]></Name>
-					<X>850</X><Y>870</Y>
+					<Name><![CDATA[Kg_CH4_EP]]></Name>
+					<X>850</X><Y>1070</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1014,7 +1337,7 @@
 				<Variable Class="Parameter">
 					<Id>1599783086313</Id>
 					<Name><![CDATA[Kg_CH4_M]]></Name>
-					<X>720</X><Y>980</Y>
+					<X>710</X><Y>1090</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1038,7 +1361,7 @@
 				<Variable Class="Parameter">
 					<Id>1600086301162</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Natural_Madre]]></Name>
-					<X>1780</X><Y>1140</Y>
+					<X>1780</X><Y>1340</Y>
 					<Label><X>20</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1061,8 +1384,8 @@
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1600384908111</Id>
-					<Name><![CDATA[Kg_NH3_L]]></Name>
-					<X>760</X><Y>1060</Y>
+					<Name><![CDATA[Kg_NH3_LT]]></Name>
+					<X>760</X><Y>1260</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1072,7 +1395,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.06]]></Code>
+							<Code><![CDATA[0.36]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1600384908109</Id>
@@ -1086,7 +1409,7 @@
 				<Variable Class="Parameter">
 					<Id>1600384929638</Id>
 					<Name><![CDATA[Kg_NH3_M]]></Name>
-					<X>700</X><Y>1300</Y>
+					<X>700</X><Y>1500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1096,7 +1419,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.342]]></Code>
+							<Code><![CDATA[0.25]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1600384929636</Id>
@@ -1109,8 +1432,8 @@
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1600384931468</Id>
-					<Name><![CDATA[Kg_NH3_E]]></Name>
-					<X>780</X><Y>1160</Y>
+					<Name><![CDATA[Kg_NH3_EP]]></Name>
+					<X>780</X><Y>1360</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1134,7 +1457,7 @@
 				<Variable Class="Parameter">
 					<Id>1600385795951</Id>
 					<Name><![CDATA[Kg_Maiz_E]]></Name>
-					<X>1190</X><Y>1300</Y>
+					<X>1190</X><Y>1500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1144,7 +1467,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[69]]></Code>
+							<Code><![CDATA[90]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1600385795949</Id>
@@ -1158,7 +1481,175 @@
 				<Variable Class="Parameter">
 					<Id>1600385799831</Id>
 					<Name><![CDATA[Kg_Maiz_M]]></Name>
-					<X>1360</X><Y>1340</Y>
+					<X>1360</X><Y>1540</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[75]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1600385799829</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602023516193</Id>
+					<Name><![CDATA[Tiempo_Transición]]></Name>
+					<X>1120</X><Y>560</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[1.2]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602023516191</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602023520122</Id>
+					<Name><![CDATA[Tiempo_PreEngorde]]></Name>
+					<X>1480</X><Y>540</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[1.2]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602023520120</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602026288168</Id>
+					<Name><![CDATA[Kg_CH4_MG]]></Name>
+					<X>130</X><Y>970</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[1.76]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602026288166</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602027015609</Id>
+					<Name><![CDATA[Kg_NH3_MG]]></Name>
+					<X>190</X><Y>1280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.19]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602027015607</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602027034390</Id>
+					<Name><![CDATA[Kg_NH3_ML]]></Name>
+					<X>190</X><Y>1460</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.41]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602027034388</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602027413964</Id>
+					<Name><![CDATA[Kg_Maiz_T]]></Name>
+					<X>690</X><Y>1850</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[30]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602027413962</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602027476953</Id>
+					<Name><![CDATA[Kg_Maiz_PE]]></Name>
+					<X>980</X><Y>1960</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1171,7 +1662,199 @@
 							<Code><![CDATA[67.5]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
-							<Id>1600385799829</Id>
+							<Id>1602027476951</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602027714259</Id>
+					<Name><![CDATA[Kg_Maiz_MG]]></Name>
+					<X>1270</X><Y>1990</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[45]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602027714257</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602027805107</Id>
+					<Name><![CDATA[Kg_Maiz_ML]]></Name>
+					<X>1420</X><Y>1990</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[90]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602027805105</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602027912296</Id>
+					<Name><![CDATA[L_Agua_T]]></Name>
+					<X>1620</X><Y>1940</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[60]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602027912294</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602027959683</Id>
+					<Name><![CDATA[L_Agua_PE]]></Name>
+					<X>1860</X><Y>1980</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[120]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602027959681</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602027989239</Id>
+					<Name><![CDATA[L_Agua_MG]]></Name>
+					<X>2050</X><Y>1910</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[405]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602027989237</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602028009315</Id>
+					<Name><![CDATA[L_Agua_ML]]></Name>
+					<X>2180</X><Y>1730</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[675]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602028009313</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602028028285</Id>
+					<Name><![CDATA[L_Agua_M]]></Name>
+					<X>1880</X><Y>1620</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[172.5]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602028028283</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1602028056225</Id>
+					<Name><![CDATA[L_Agua_E]]></Name>
+					<X>1450</X><Y>1650</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[172.5]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1602028056223</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1181,13 +1864,13 @@
 				</Variable>
 			</Variables>
 			<Dependences>
-				<Link SourceId="1599342910581" TargetId="1599343176862" Polarity="null">
+				<Link SourceId="1602023105690" TargetId="1599343176862" Polarity="null">
 					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-1260</X><Y>-380</Y></Direction>
+					<Direction><X>-1320</X><Y>-380</Y></Direction>
 					<Id>1599345780373</Id>
-					<Name><![CDATA[Madres - Fecundación]]></Name>
-					<X>1540</X><Y>940</Y>
+					<Name><![CDATA[Madre_Gestante - Fecundación]]></Name>
+					<X>1500</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1199,25 +1882,10 @@
 				<Link SourceId="1599777081639" TargetId="1599343176862" Polarity="null">
 					<Height>-31.923</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>65</X><Y>296</Y></Direction>
+					<Direction><X>80</X><Y>190</Y></Direction>
 					<Id>1599346359835</Id>
 					<Name><![CDATA[Promedio_Crias_Fecundadas - Fecundación]]></Name>
-					<X>310.85</X><Y>462.052</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1599345876281" TargetId="1599343176862" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>80</X><Y>-820</Y></Direction>
-					<Id>1599346395402</Id>
-					<Name><![CDATA[Tasa_Fertilidad - Fecundación]]></Name>
-					<X>260</X><Y>1380</Y>
+					<X>100</X><Y>570</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1232,7 +1900,7 @@
 					<Direction><X>-20</X><Y>-840</Y></Direction>
 					<Id>1599346422047</Id>
 					<Name><![CDATA[Partos_Mes - Fecundación]]></Name>
-					<X>360</X><Y>1400</Y>
+					<X>360</X><Y>1600</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1244,10 +1912,10 @@
 				<Link SourceId="1599346499616" TargetId="1599343445629" Polarity="null">
 					<Height>-37.129</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>260</X><Y>10</Y></Direction>
+					<Direction><X>180</X><Y>220</Y></Direction>
 					<Id>1599346686147</Id>
 					<Name><![CDATA[Tiempo_Cerdo - Crecimiento_Cerdo]]></Name>
-					<X>1280</X><Y>400</Y>
+					<X>1560</X><Y>380</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1259,10 +1927,10 @@
 				<Link SourceId="1599346501083" TargetId="1599344133291" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-107</X><Y>106</Y></Direction>
+					<Direction><X>200</X><Y>0</Y></Direction>
 					<Id>1599346693798</Id>
 					<Name><![CDATA[Tiempo_Madre - Crecimiento_Madre]]></Name>
-					<X>1650.559</X><Y>902.717</Y>
+					<X>1540</X><Y>1000</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1274,10 +1942,10 @@
 				<Link SourceId="1599345876281" TargetId="1599347665455" Polarity="null">
 					<Height>-146.613</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>610</X><Y>0</Y></Direction>
+					<Direction><X>-550</X><Y>260</Y></Direction>
 					<Id>1599347428285</Id>
 					<Name><![CDATA[Tasa_Fertilidad - Tasa_Muerte]]></Name>
-					<X>260</X><Y>1380</Y>
+					<X>1420</X><Y>1320</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1292,7 +1960,7 @@
 					<Direction><X>510</X><Y>-20</Y></Direction>
 					<Id>1599347438591</Id>
 					<Name><![CDATA[Partos_Mes - Tasa_Muerte]]></Name>
-					<X>360</X><Y>1400</Y>
+					<X>360</X><Y>1600</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1307,7 +1975,7 @@
 					<Direction><X>40</X><Y>-230</Y></Direction>
 					<Id>1599347727529</Id>
 					<Name><![CDATA[Partos_Para_Morir - Tasa_Muerte]]></Name>
-					<X>830</X><Y>1610</Y>
+					<X>830</X><Y>1810</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1322,7 +1990,7 @@
 					<Direction><X>949</X><Y>-441</Y></Direction>
 					<Id>1599347746671</Id>
 					<Name><![CDATA[Tasa_Muerte - Muertes_Madres]]></Name>
-					<X>870</X><Y>1380</Y>
+					<X>870</X><Y>1580</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1334,10 +2002,10 @@
 				<Link SourceId="1599342910581" TargetId="1599344960181" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>345</X><Y>271</Y></Direction>
+					<Direction><X>239</X><Y>-1</Y></Direction>
 					<Id>1599347946393</Id>
 					<Name><![CDATA[Madres - Muertes_Madres]]></Name>
-					<X>1540</X><Y>940</Y>
+					<X>1740</X><Y>1140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1349,10 +2017,10 @@
 				<Link SourceId="1599343104369" TargetId="1599343445629" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>-90</Y></Direction>
+					<Direction><X>-200</X><Y>-150</Y></Direction>
 					<Id>1599348036864</Id>
 					<Name><![CDATA[Engorde - Crecimiento_Cerdo]]></Name>
-					<X>1540</X><Y>560</Y>
+					<X>1740</X><Y>760</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1364,10 +2032,10 @@
 				<Link SourceId="1599348084655" TargetId="1599344133291" Polarity="null">
 					<Height>-28.863</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>240</X><Y>160</Y></Direction>
+					<Direction><X>-320</X><Y>40</Y></Direction>
 					<Id>1599348107859</Id>
 					<Name><![CDATA[Porcentaje_Madre - Crecimiento_Madre]]></Name>
-					<X>1300</X><Y>640</Y>
+					<X>1860</X><Y>960</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1379,10 +2047,10 @@
 				<Link SourceId="1599343104369" TargetId="1599344133291" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>0</X><Y>240</Y></Direction>
+					<Direction><X>-200</X><Y>240</Y></Direction>
 					<Id>1599348208975</Id>
 					<Name><![CDATA[Engorde - Crecimiento_Madre]]></Name>
-					<X>1540</X><Y>560</Y>
+					<X>1740</X><Y>760</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1394,10 +2062,10 @@
 				<Link SourceId="1599348084655" TargetId="1599343445629" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>240</X><Y>-230</Y></Direction>
+					<Direction><X>-120</X><Y>-360</Y></Direction>
 					<Id>1599348295352</Id>
 					<Name><![CDATA[Porcentaje_Madre - Crecimiento_Cerdo]]></Name>
-					<X>1300</X><Y>640</Y>
+					<X>1860</X><Y>960</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1409,10 +2077,10 @@
 				<Link SourceId="1599780585216" TargetId="1599780333101" Polarity="null">
 					<Height>-28.48</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>81</X><Y>367</Y></Direction>
+					<Direction><X>-30</X><Y>-120</Y></Direction>
 					<Id>1599780629352</Id>
 					<Name><![CDATA[Tiempo_Gestación - Nacimientos]]></Name>
-					<X>779.169</X><Y>396.149</Y>
+					<X>520</X><Y>880</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1424,10 +2092,10 @@
 				<Link SourceId="1599780587099" TargetId="1599780505714" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>167</X><Y>256</Y></Direction>
+					<Direction><X>-130</X><Y>-110</Y></Direction>
 					<Id>1599781012146</Id>
 					<Name><![CDATA[Tiempo_Destete - Crecimiento_Engorde]]></Name>
-					<X>1180</X><Y>507</Y>
+					<X>910</X><Y>870</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1439,10 +2107,10 @@
 				<Link SourceId="1599780028294" TargetId="1599780333101" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>239</X><Y>39</Y></Direction>
+					<Direction><X>460</X><Y>0</Y></Direction>
 					<Id>1599781149686</Id>
 					<Name><![CDATA[Gestación - Nacimientos]]></Name>
-					<X>580</X><Y>560</Y>
+					<X>320</X><Y>760</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1454,10 +2122,10 @@
 				<Link SourceId="1599780399068" TargetId="1599780505714" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>377</X><Y>203</Y></Direction>
+					<Direction><X>610</X><Y>0</Y></Direction>
 					<Id>1599781168589</Id>
 					<Name><![CDATA[Lactante - Crecimiento_Engorde]]></Name>
-					<X>970</X><Y>560</Y>
+					<X>650</X><Y>760</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1472,7 +2140,7 @@
 					<Direction><X>300</X><Y>230</Y></Direction>
 					<Id>1599781639068</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Gestación - Muertes_Gestación]]></Name>
-					<X>344.301</X><Y>330.245</Y>
+					<X>344.301</X><Y>530.245</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1484,10 +2152,10 @@
 				<Link SourceId="1599780028294" TargetId="1599781515424" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-1</X><Y>-100</Y></Direction>
+					<Direction><X>259</X><Y>-100</Y></Direction>
 					<Id>1599781716299</Id>
 					<Name><![CDATA[Gestación - Muertes_Gestación]]></Name>
-					<X>580</X><Y>560</Y>
+					<X>320</X><Y>760</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1499,10 +2167,10 @@
 				<Link SourceId="1599781761408" TargetId="1599781737162" Polarity="null">
 					<Height>-60.332</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-151</X><Y>99</Y></Direction>
+					<Direction><X>-221</X><Y>139</Y></Direction>
 					<Id>1599781764697</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Lactante - Muertes_Lactante]]></Name>
-					<X>1120</X><Y>320</Y>
+					<X>880</X><Y>420</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1514,10 +2182,10 @@
 				<Link SourceId="1599343104369" TargetId="1599781835587" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>229</X><Y>9</Y></Direction>
+					<Direction><X>159</X><Y>-1</Y></Direction>
 					<Id>1599781891988</Id>
 					<Name><![CDATA[Engorde - Muerte_Engorde]]></Name>
-					<X>1540</X><Y>560</Y>
+					<X>1740</X><Y>760</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1532,7 +2200,7 @@
 					<Direction><X>-236</X><Y>131</Y></Direction>
 					<Id>1599781896080</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Engorde - Muerte_Engorde]]></Name>
-					<X>2050.322</X><Y>626.811</Y>
+					<X>2050.322</X><Y>826.811</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1544,10 +2212,10 @@
 				<Link SourceId="1599780399068" TargetId="1599781737162" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>75</X><Y>0</Y></Direction>
+					<Direction><X>319</X><Y>-141</Y></Direction>
 					<Id>1599782659917</Id>
 					<Name><![CDATA[Lactante - Muertes_Lactante]]></Name>
-					<X>970</X><Y>560</Y>
+					<X>650</X><Y>760</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1561,8 +2229,8 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-90</X><Y>-30</Y></Direction>
 					<Id>1599783138191</Id>
-					<Name><![CDATA[Kg_CH4_L - CH4_Lactante]]></Name>
-					<X>750</X><Y>750</Y>
+					<Name><![CDATA[Kg_CH4_LT - CH4_LactanteTrans]]></Name>
+					<X>750</X><Y>950</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1576,8 +2244,8 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-60</X><Y>-20</Y></Direction>
 					<Id>1599783149073</Id>
-					<Name><![CDATA[Kg_CH4_E - CH4_Engorde]]></Name>
-					<X>850</X><Y>870</Y>
+					<Name><![CDATA[Kg_CH4_EP - CH4_Engorde]]></Name>
+					<X>850</X><Y>1070</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1589,10 +2257,10 @@
 				<Link SourceId="1599783086313" TargetId="1599782914375" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>60</X><Y>-40</Y></Direction>
+					<Direction><X>60</X><Y>90</Y></Direction>
 					<Id>1599783159056</Id>
 					<Name><![CDATA[Kg_CH4_M - CH4_Madres]]></Name>
-					<X>720</X><Y>980</Y>
+					<X>710</X><Y>1090</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1604,10 +2272,10 @@
 				<Link SourceId="1599780399068" TargetId="1599782850978" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-290</X><Y>380</Y></Direction>
+					<Direction><X>10</X><Y>160</Y></Direction>
 					<Id>1599783171233</Id>
-					<Name><![CDATA[Lactante - CH4_Lactante]]></Name>
-					<X>970</X><Y>560</Y>
+					<Name><![CDATA[Lactante - CH4_LactanteTrans]]></Name>
+					<X>650</X><Y>760</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1619,10 +2287,10 @@
 				<Link SourceId="1599343104369" TargetId="1599782868334" Polarity="null">
 					<Height>53.174</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-480</X><Y>520</Y></Direction>
+					<Direction><X>-950</X><Y>290</Y></Direction>
 					<Id>1599783180596</Id>
 					<Name><![CDATA[Engorde - CH4_Engorde]]></Name>
-					<X>1540</X><Y>560</Y>
+					<X>1740</X><Y>760</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1632,12 +2300,12 @@
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1599342910581" TargetId="1599782914375" Polarity="null">
-					<Height>20.0</Height>
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-285</X><Y>249</Y></Direction>
+					<Direction><X>-960</X><Y>0</Y></Direction>
 					<Id>1599783203671</Id>
 					<Name><![CDATA[Madres - CH4_Madres]]></Name>
-					<X>1540</X><Y>940</Y>
+					<X>1740</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1652,7 +2320,7 @@
 					<Direction><X>39</X><Y>-201</Y></Direction>
 					<Id>1600086609336</Id>
 					<Name><![CDATA[Probabilidad_Muerte_Natural_Madre - Muertes_Madres]]></Name>
-					<X>1780</X><Y>1140</Y>
+					<X>1780</X><Y>1340</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1667,7 +2335,7 @@
 					<Direction><X>-40</X><Y>-60</Y></Direction>
 					<Id>1600384975658</Id>
 					<Name><![CDATA[Kg_NH3_M - NH3_Madres]]></Name>
-					<X>700</X><Y>1300</Y>
+					<X>700</X><Y>1500</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1681,8 +2349,8 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-40</X><Y>-40</Y></Direction>
 					<Id>1600384983370</Id>
-					<Name><![CDATA[Kg_NH3_E - NH3_Engorde]]></Name>
-					<X>780</X><Y>1160</Y>
+					<Name><![CDATA[Kg_NH3_EP - NH3_Engorde]]></Name>
+					<X>780</X><Y>1360</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1696,8 +2364,8 @@
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-120</X><Y>0</Y></Direction>
 					<Id>1600384989852</Id>
-					<Name><![CDATA[Kg_NH3_L - NH3_Lactante]]></Name>
-					<X>760</X><Y>1060</Y>
+					<Name><![CDATA[Kg_NH3_LT - NH3_LactanteTrans]]></Name>
+					<X>760</X><Y>1260</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1709,10 +2377,10 @@
 				<Link SourceId="1599342910581" TargetId="1600384780168" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-880</X><Y>300</Y></Direction>
+					<Direction><X>-1080</X><Y>300</Y></Direction>
 					<Id>1600385024591</Id>
 					<Name><![CDATA[Madres - NH3_Madres]]></Name>
-					<X>1540</X><Y>940</Y>
+					<X>1740</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1724,10 +2392,10 @@
 				<Link SourceId="1599343104369" TargetId="1600384780160" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-800</X><Y>560</Y></Direction>
+					<Direction><X>-1000</X><Y>560</Y></Direction>
 					<Id>1600385059632</Id>
 					<Name><![CDATA[Engorde - NH3_Engorde]]></Name>
-					<X>1540</X><Y>560</Y>
+					<X>1740</X><Y>760</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1739,10 +2407,10 @@
 				<Link SourceId="1599780399068" TargetId="1600384780150" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-330</X><Y>500</Y></Direction>
+					<Direction><X>-10</X><Y>500</Y></Direction>
 					<Id>1600385071180</Id>
-					<Name><![CDATA[Lactante - NH3_Lactante]]></Name>
-					<X>970</X><Y>560</Y>
+					<Name><![CDATA[Lactante - NH3_LactanteTrans]]></Name>
+					<X>650</X><Y>760</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1757,7 +2425,7 @@
 					<Direction><X>-50</X><Y>70</Y></Direction>
 					<Id>1600385833440</Id>
 					<Name><![CDATA[Kg_Maiz_E - Consumo_Maiz_Engorde]]></Name>
-					<X>1190</X><Y>1300</Y>
+					<X>1190</X><Y>1500</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1772,22 +2440,7 @@
 					<Direction><X>-40</X><Y>-80</Y></Direction>
 					<Id>1600385838682</Id>
 					<Name><![CDATA[Kg_Maiz_M - Consumo_Maiz_Madres]]></Name>
-					<X>1360</X><Y>1340</Y>
-					<Label><X>40</X><Y>-50</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<Color/>
-					<LineWidth>1</LineWidth>
-					<Delay>false</Delay>
-				</Link>
-				<Link SourceId="1599342910581" Polarity="null">
-					<Height>20.0</Height>
-					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-140</X><Y>200</Y></Direction>
-					<Id>1600385843196</Id>
-					<Name><![CDATA[Madres - ]]></Name>
-					<X>1540</X><Y>940</Y>
+					<X>1360</X><Y>1540</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1799,10 +2452,10 @@
 				<Link SourceId="1599343104369" TargetId="1600385704288" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-280</X><Y>800</Y></Direction>
+					<Direction><X>-600</X><Y>810</Y></Direction>
 					<Id>1600385848316</Id>
 					<Name><![CDATA[Engorde - Consumo_Maiz_Engorde]]></Name>
-					<X>1540</X><Y>560</Y>
+					<X>1740</X><Y>760</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1814,10 +2467,10 @@
 				<Link SourceId="1599342910581" TargetId="1600385716521" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-140</X><Y>220</Y></Direction>
+					<Direction><X>-490</X><Y>390</Y></Direction>
 					<Id>1600385920949</Id>
 					<Name><![CDATA[Madres - Consumo_Maiz_Madres]]></Name>
-					<X>1540</X><Y>940</Y>
+					<X>1740</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1826,13 +2479,13 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1600518881793" TargetId="1600517922869" Polarity="null">
+				<Link SourceId="1602028056225" TargetId="1600517922869" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>130</X><Y>-70</Y></Direction>
 					<Id>1600518026673</Id>
 					<Name><![CDATA[L_Agua_E - Consumo_Agua_Engorde]]></Name>
-					<X>1450</X><Y>1450</Y>
+					<X>1450</X><Y>1650</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1841,13 +2494,13 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1600518884245" TargetId="1600517950267" Polarity="null">
+				<Link SourceId="1602028028285" TargetId="1600517950267" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-180</X><Y>-70</Y></Direction>
+					<Direction><X>-200</X><Y>-60</Y></Direction>
 					<Id>1600518032307</Id>
 					<Name><![CDATA[L_Agua_M - Consumo_Agua_Madres]]></Name>
-					<X>1860</X><Y>1430</Y>
+					<X>1880</X><Y>1620</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1859,10 +2512,10 @@
 				<Link SourceId="1599342910581" TargetId="1600517950267" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>140</X><Y>420</Y></Direction>
+					<Direction><X>-60</X><Y>420</Y></Direction>
 					<Id>1600518042612</Id>
 					<Name><![CDATA[Madres - Consumo_Agua_Madres]]></Name>
-					<X>1540</X><Y>940</Y>
+					<X>1740</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1874,10 +2527,10 @@
 				<Link SourceId="1599343104369" TargetId="1600517922869" Polarity="null">
 					<Height>-104.237</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>40</X><Y>820</Y></Direction>
+					<Direction><X>-160</X><Y>820</Y></Direction>
 					<Id>1600518053195</Id>
 					<Name><![CDATA[Engorde - Consumo_Agua_Engorde]]></Name>
-					<X>1540</X><Y>560</Y>
+					<X>1740</X><Y>760</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1886,13 +2539,568 @@
 					<LineWidth>1</LineWidth>
 					<Delay>false</Delay>
 				</Link>
-				<Link SourceId="1601509761810" TargetId="1600517922869" Polarity="null">
+				<Link SourceId="1602022962741" TargetId="1602023431794" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>110</X><Y>40</Y></Direction>
-					<Id>1601509772191</Id>
-					<Name><![CDATA[L_Agua_T - Consumo_Agua_Engorde]]></Name>
-					<X>1470</X><Y>1340</Y>
+					<Direction><X>120</X><Y>0</Y></Direction>
+					<Id>1602023576472</Id>
+					<Name><![CDATA[Transición - Transicion_PreEngorde]]></Name>
+					<X>1000</X><Y>760</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602023516193" TargetId="1602023431794" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>0</X><Y>200</Y></Direction>
+					<Id>1602023580581</Id>
+					<Name><![CDATA[Tiempo_Transición - Transicion_PreEngorde]]></Name>
+					<X>1120</X><Y>560</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602022975399" TargetId="1602023466858" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>210</X><Y>0</Y></Direction>
+					<Id>1602023586240</Id>
+					<Name><![CDATA[Pre_Engorde - PreEngorde_Engorde]]></Name>
+					<X>1300</X><Y>760</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602023520122" TargetId="1602023466858" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>30</X><Y>220</Y></Direction>
+					<Id>1602023636052</Id>
+					<Name><![CDATA[Tiempo_PreEngorde - PreEngorde_Engorde]]></Name>
+					<X>1480</X><Y>540</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1599342910581" TargetId="1602024033859" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-120</X><Y>0</Y></Direction>
+					<Id>1602024209445</Id>
+					<Name><![CDATA[Madres - Fecundacion_Madres]]></Name>
+					<X>1740</X><Y>1140</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1599345876281" TargetId="1602024033859" Polarity="null">
+					<Height>-146.066</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>200</X><Y>-180</Y></Direction>
+					<Id>1602024215115</Id>
+					<Name><![CDATA[Tasa_Fertilidad - Fecundacion_Madres]]></Name>
+					<X>1420</X><Y>1320</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602023105690" TargetId="1602024566234" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-160</X><Y>0</Y></Direction>
+					<Id>1602024608354</Id>
+					<Name><![CDATA[Madre_Gestante - Parto]]></Name>
+					<X>1500</X><Y>1140</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1599780585216" TargetId="1602024566234" Polarity="null">
+					<Height>175.606</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>820</X><Y>260</Y></Direction>
+					<Id>1602024615553</Id>
+					<Name><![CDATA[Tiempo_Gestación - Parto]]></Name>
+					<X>520</X><Y>880</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602022984034" TargetId="1602024793526" Polarity="null">
+					<Height>139.806</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>270</X><Y>-140</Y></Direction>
+					<Id>1602024836028</Id>
+					<Name><![CDATA[Madre_Lactante - Lactancia]]></Name>
+					<X>1180</X><Y>1140</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1599780587099" TargetId="1602024793526" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>540</X><Y>130</Y></Direction>
+					<Id>1602024844243</Id>
+					<Name><![CDATA[Tiempo_Destete - Lactancia]]></Name>
+					<X>910</X><Y>870</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602022984034" TargetId="1599344960181" Polarity="null">
+					<Height>-91.541</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>799</X><Y>-1</Y></Direction>
+					<Id>1602025200543</Id>
+					<Name><![CDATA[Madre_Lactante - Muertes_Madres]]></Name>
+					<X>1180</X><Y>1140</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602023105690" TargetId="1599344960181" Polarity="null">
+					<Height>-92.835</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>479</X><Y>-1</Y></Direction>
+					<Id>1602025210852</Id>
+					<Name><![CDATA[Madre_Gestante - Muertes_Madres]]></Name>
+					<X>1500</X><Y>1140</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602022962741" TargetId="1599782850978" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-340</X><Y>160</Y></Direction>
+					<Id>1602026101751</Id>
+					<Name><![CDATA[Transición - CH4_LactanteTrans]]></Name>
+					<X>1000</X><Y>760</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602022975399" TargetId="1599782868334" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-510</X><Y>290</Y></Direction>
+					<Id>1602026237659</Id>
+					<Name><![CDATA[Pre_Engorde - CH4_Engorde]]></Name>
+					<X>1300</X><Y>760</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602026288168" TargetId="1602025388920" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>170</X><Y>130</Y></Direction>
+					<Id>1602026330593</Id>
+					<Name><![CDATA[Kg_CH4_MG - CH4_MadreGestante]]></Name>
+					<X>130</X><Y>970</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602023105690" TargetId="1602025388920" Polarity="null">
+					<Height>-243.164</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-1200</X><Y>-40</Y></Direction>
+					<Id>1602026338942</Id>
+					<Name><![CDATA[Madre_Gestante - CH4_MadreGestante]]></Name>
+					<X>1500</X><Y>1140</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602022962741" TargetId="1600384780150" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-360</X><Y>500</Y></Direction>
+					<Id>1602026635445</Id>
+					<Name><![CDATA[Transición - NH3_LactanteTrans]]></Name>
+					<X>1000</X><Y>760</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602022975399" TargetId="1600384780160" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-560</X><Y>560</Y></Direction>
+					<Id>1602026933430</Id>
+					<Name><![CDATA[Pre_Engorde - NH3_Engorde]]></Name>
+					<X>1300</X><Y>760</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602027015609" TargetId="1602025411432" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>110</X><Y>80</Y></Direction>
+					<Id>1602027104270</Id>
+					<Name><![CDATA[Kg_NH3_MG - NH3_MadreGestante]]></Name>
+					<X>190</X><Y>1280</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602027034390" TargetId="1602025417552" Polarity="null">
+					<Height>46.543</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>110</X><Y>-40</Y></Direction>
+					<Id>1602027119925</Id>
+					<Name><![CDATA[Kg_NH3_ML - NH3_MadreLactante]]></Name>
+					<X>190</X><Y>1460</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602023105690" TargetId="1602025411432" Polarity="null">
+					<Height>255.425</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-1200</X><Y>220</Y></Direction>
+					<Id>1602027298062</Id>
+					<Name><![CDATA[Madre_Gestante - NH3_MadreGestante]]></Name>
+					<X>1500</X><Y>1140</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602022984034" TargetId="1602025417552" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-880</X><Y>280</Y></Direction>
+					<Id>1602027327392</Id>
+					<Name><![CDATA[Madre_Lactante - NH3_MadreLactante]]></Name>
+					<X>1180</X><Y>1140</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602027413964" TargetId="1602025502038" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>250</X><Y>10</Y></Direction>
+					<Id>1602027425766</Id>
+					<Name><![CDATA[Kg_Maiz_T - Consumo_Maiz_Transicion]]></Name>
+					<X>690</X><Y>1850</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602022962741" TargetId="1602025502038" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-60</X><Y>1100</Y></Direction>
+					<Id>1602027446714</Id>
+					<Name><![CDATA[Transición - Consumo_Maiz_Transicion]]></Name>
+					<X>1000</X><Y>760</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602027476953" TargetId="1602025509444" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>220</X><Y>-60</Y></Direction>
+					<Id>1602027488659</Id>
+					<Name><![CDATA[Kg_Maiz_PE - Consumo_Maiz_PreEngorde]]></Name>
+					<X>980</X><Y>1960</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602022975399" TargetId="1602025509444" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-100</X><Y>1140</Y></Direction>
+					<Id>1602027502836</Id>
+					<Name><![CDATA[Pre_Engorde - Consumo_Maiz_PreEngorde]]></Name>
+					<X>1300</X><Y>760</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602027714259" TargetId="1602025522498" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>30</X><Y>-110</Y></Direction>
+					<Id>1602027748871</Id>
+					<Name><![CDATA[Kg_Maiz_MG - Consumo_Maiz_MadreGestante]]></Name>
+					<X>1270</X><Y>1990</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602023105690" TargetId="1602025522498" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-200</X><Y>740</Y></Direction>
+					<Id>1602027782878</Id>
+					<Name><![CDATA[Madre_Gestante - Consumo_Maiz_MadreGestante]]></Name>
+					<X>1500</X><Y>1140</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602022984034" TargetId="1602025542098" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>200</X><Y>680</Y></Direction>
+					<Id>1602027791293</Id>
+					<Name><![CDATA[Madre_Lactante - Consumo_Maiz_MadreLactante]]></Name>
+					<X>1180</X><Y>1140</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602027805107" TargetId="1602025542098" Polarity="null">
+					<Height>37.414</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-40</X><Y>-170</Y></Direction>
+					<Id>1602027842285</Id>
+					<Name><![CDATA[Kg_Maiz_ML - Consumo_Maiz_MadreLactante]]></Name>
+					<X>1420</X><Y>1990</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602027912296" TargetId="1602025555163" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>120</X><Y>-40</Y></Direction>
+					<Id>1602027955400</Id>
+					<Name><![CDATA[L_Agua_T - Consumo_Agua_Transicion]]></Name>
+					<X>1620</X><Y>1940</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602027959683" TargetId="1602025562194" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-80</X><Y>-140</Y></Direction>
+					<Id>1602027981564</Id>
+					<Name><![CDATA[L_Agua_PE - Consumo_Agua_PreEngorde]]></Name>
+					<X>1860</X><Y>1980</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602027989239" TargetId="1602025576220" Polarity="null">
+					<Height>-41.636</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-210</X><Y>-110</Y></Direction>
+					<Id>1602028001526</Id>
+					<Name><![CDATA[L_Agua_MG - Consumo_Agua_MadreGestante]]></Name>
+					<X>2050</X><Y>1910</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602028009315" TargetId="1602025612421" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>-320</X><Y>-10</Y></Direction>
+					<Id>1602028018306</Id>
+					<Name><![CDATA[L_Agua_ML - Consumo_Agua_MadreLactante]]></Name>
+					<X>2180</X><Y>1730</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602022962741" TargetId="1602025555163" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>740</X><Y>1140</Y></Direction>
+					<Id>1602028070855</Id>
+					<Name><![CDATA[Transición - Consumo_Agua_Transicion]]></Name>
+					<X>1000</X><Y>760</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602022975399" TargetId="1602025562194" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>480</X><Y>1080</Y></Direction>
+					<Id>1602028100278</Id>
+					<Name><![CDATA[Pre_Engorde - Consumo_Agua_PreEngorde]]></Name>
+					<X>1300</X><Y>760</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602023105690" TargetId="1602025576220" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>340</X><Y>660</Y></Direction>
+					<Id>1602028111506</Id>
+					<Name><![CDATA[Madre_Gestante - Consumo_Agua_MadreGestante]]></Name>
+					<X>1500</X><Y>1140</Y>
+					<Label><X>40</X><Y>-50</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Color/>
+					<LineWidth>1</LineWidth>
+					<Delay>false</Delay>
+				</Link>
+				<Link SourceId="1602022984034" TargetId="1602025612421" Polarity="null">
+					<Height>20.0</Height>
+					<PolarityPosition>0.95</PolarityPosition>
+					<Direction><X>680</X><Y>580</Y></Direction>
+					<Id>1602028124103</Id>
+					<Name><![CDATA[Madre_Lactante - Consumo_Agua_MadreLactante]]></Name>
+					<X>1180</X><Y>1140</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1923,7 +3131,7 @@
 						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>true</FreezeXAxis>
-					<VerticalAxisExpression><![CDATA[Consumo_Agua_Madres+Consumo_Agua_Engorde]]></VerticalAxisExpression>
+					<VerticalAxisExpression><![CDATA[Consumo_Agua_Engorde+Consumo_Agua_Transicion+Consumo_Agua_Engorde+Consumo_Agua_Madres+Consumo_Agua_PreEngorde+Consumo_Agua_MadreGestante+Consumo_Agua_MadreLactante]]></VerticalAxisExpression>
 					<SamplesToKeep>100</SamplesToKeep>
 				</DataSet>
     			<DataSet>
@@ -1973,16 +3181,16 @@
 					<SamplesToKeep>100</SamplesToKeep>
 				</DataSet>
     			<DataSet>
-					<Id>1601504124745</Id>
-					<Name><![CDATA[DataSet_Crec_Mad]]></Name>
-					<X>980</X><Y>2240</Y>
+					<Id>1602029049227</Id>
+					<Name><![CDATA[DataSet_ConsumoMaiz]]></Name>
+					<X>1000</X><Y>2240</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<AutoUpdate>false</AutoUpdate>
 					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1601539200000</OccurrenceDate>
+					<OccurrenceDate>1602057600000</OccurrenceDate>
 					<OccurrenceTime Class="CodeUnitValue">
 						<Code><![CDATA[0]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
@@ -1992,76 +3200,7 @@
 						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>true</FreezeXAxis>
-					<VerticalAxisExpression><![CDATA[(Crecimiento_Engorde)/(Crecimiento_Madre+Muerte_Engorde+Crecimiento_Cerdo)]]></VerticalAxisExpression>
-					<SamplesToKeep>100</SamplesToKeep>
-				</DataSet>
-    			<DataSet>
-					<Id>1601504858985</Id>
-					<Name><![CDATA[DataSet_Crec_Muerte]]></Name>
-					<X>1140</X><Y>2240</Y>
-					<Label><X>15</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<AutoUpdate>false</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1601539200000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
-					</RecurrenceCode>
-					<FreezeXAxis>true</FreezeXAxis>
-					<VerticalAxisExpression><![CDATA[(Crecimiento_Engorde)/(Muerte_Engorde)]]></VerticalAxisExpression>
-					<SamplesToKeep>100</SamplesToKeep>
-				</DataSet>
-    			<DataSet>
-					<Id>1601504861367</Id>
-					<Name><![CDATA[DataSet_Crec_Cerdo]]></Name>
-					<X>1340</X><Y>2240</Y>
-					<Label><X>15</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<AutoUpdate>false</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1601539200000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
-					</RecurrenceCode>
-					<FreezeXAxis>true</FreezeXAxis>
-					<VerticalAxisExpression><![CDATA[(Crecimiento_Engorde)/(Crecimiento_Cerdo)]]></VerticalAxisExpression>
-					<SamplesToKeep>100</SamplesToKeep>
-				</DataSet>
-    			<DataSet>
-					<Id>1601505371436</Id>
-					<Name><![CDATA[dataset_crecmadrecerdo]]></Name>
-					<X>1540</X><Y>2240</Y>
-					<Label><X>15</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<AutoUpdate>false</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1601539200000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
-					</RecurrenceCode>
-					<FreezeXAxis>true</FreezeXAxis>
-					<VerticalAxisExpression><![CDATA[Crecimiento_Madre/Crecimiento_Cerdo]]></VerticalAxisExpression>
+					<VerticalAxisExpression><![CDATA[Consumo_Maiz_Engorde+Consumo_Maiz_Transicion+Consumo_Maiz_Engorde+Consumo_Maiz_Madres+Consumo_Maiz_PreEngorde+Consumo_Maiz_MadreGestante+Consumo_Maiz_MadreLactante]]></VerticalAxisExpression>
 					<SamplesToKeep>100</SamplesToKeep>
 				</DataSet>
 			</AnalysisData>
@@ -2642,147 +3781,6 @@
 					<FillAreaUnderLine>true</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
-    			<TimePlot>
-					<Id>1601504129731</Id>
-					<Name><![CDATA[plot2]]></Name>
-					<X>700</X><Y>2360</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AutoUpdate>true</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1601539200000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
-					</RecurrenceCode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>440</Width>
-					<Height>420</Height>
-					<BackgroundColor/>
-					<BorderColor/>
-					<ChartArea>
-						<XOffset>50</XOffset>
-						<YOffset>30</YOffset>
-						<Width>360</Width>
-						<Height>330</Height>
-						<BackgroundColor>-1</BackgroundColor>
-						<BorderColor>-16777216</BorderColor>
-						<GridColor>-12566464</GridColor>
-					</ChartArea>
-					<Legend>
-						<Place>SOUTH</Place>
-						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
-					</Legend>
-					<Labels>
-						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-						<TextColor>-12566464</TextColor>
-					</Labels>
-					<ShowLegend>true</ShowLegend>
-					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
-					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
-					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
-					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
-					<VerScaleType>AUTO</VerScaleType>
-					<DrawLine>true</DrawLine>
-					<Interpolation>LINEAR</Interpolation>
-					<DatasetExpression>  
-						<Title><![CDATA[Madres]]></Title>
-					<Expression><![CDATA[DataSet_Crec_Mad]]></Expression>
-					<Color>-12004916</Color>
-					<Expression2><![CDATA[0]]></Expression2>
-					<Expression2Flag>false</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<DatasetExpression>  
-						<Title><![CDATA[Cerdos]]></Title>
-					<Expression><![CDATA[DataSet_Crec_Cerdo]]></Expression>
-					<Color>-60269</Color>
-					<Expression2><![CDATA[0]]></Expression2>
-					<Expression2Flag>false</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<SamplesToKeep>100</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
-					<FillAreaUnderLine>true</FillAreaUnderLine>
-					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
-    			</TimePlot>
-    			<TimePlot>
-					<Id>1601505435125</Id>
-					<Name><![CDATA[plot3]]></Name>
-					<X>1300</X><Y>2400</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<AutoUpdate>true</AutoUpdate>
-					<OccurrenceAtTime>true</OccurrenceAtTime>
-					<OccurrenceDate>1601539200000</OccurrenceDate>
-					<OccurrenceTime Class="CodeUnitValue">
-						<Code><![CDATA[0]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
-					</OccurrenceTime>
-					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[1]]></Code>
-						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
-					</RecurrenceCode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>340</Width>
-					<Height>340</Height>
-					<BackgroundColor/>
-					<BorderColor/>
-					<ChartArea>
-						<XOffset>50</XOffset>
-						<YOffset>30</YOffset>
-						<Width>260</Width>
-						<Height>250</Height>
-						<BackgroundColor>-1</BackgroundColor>
-						<BorderColor>-16777216</BorderColor>
-						<GridColor>-12566464</GridColor>
-					</ChartArea>
-					<Legend>
-						<Place>SOUTH</Place>
-						<TextColor>-16777216</TextColor>
-						<Size>30</Size>
-					</Legend>
-					<Labels>
-						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
-						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
-						<TextColor>-12566464</TextColor>
-					</Labels>
-					<ShowLegend>true</ShowLegend>
-					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
-					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
-					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
-					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
-					<VerScaleType>AUTO</VerScaleType>
-					<DrawLine>true</DrawLine>
-					<Interpolation>LINEAR</Interpolation>
-					<DatasetExpression>  
-						<Title><![CDATA[CREC MADRE CERDITOX]]></Title>
-					<Expression><![CDATA[dataset_crecmadrecerdo]]></Expression>
-					<Color>-14774017</Color>
-					<Expression2><![CDATA[0]]></Expression2>
-					<Expression2Flag>false</Expression2Flag>
-						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
-					</DatasetExpression>
-					<SamplesToKeep>100</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
-					<FillAreaUnderLine>true</FillAreaUnderLine>
-					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
-    			</TimePlot>
 				<Control Type="Window3D">
 					<Id>1601506040195</Id>
 					<Name><![CDATA[window3d]]></Name>
@@ -2854,13 +3852,13 @@
 				<Figure3D>
 					<Id>1601508177621</Id>
 					<Name><![CDATA[cow]]></Name>
-					<X>200</X><Y>4320</Y>
+					<X>220</X><Y>4360</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<X>200</X><Y>4320</Y><Z>0</Z>
+					<X>220</X><Y>4360</Y><Z>0</Z>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<ResourceReference>
 						<PackageName><![CDATA[tpi_simulación_chanchos_china_2020]]></PackageName>
@@ -2896,6 +3894,159 @@
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
 				</Figure3D>
+    			<TimePlot>
+					<Id>1602029085275</Id>
+					<Name><![CDATA[plot2]]></Name>
+					<X>700</X><Y>2320</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1602057600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>500</Width>
+					<Height>440</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>420</Width>
+						<Height>350</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Consumo de Maiz( Kg)]]></Title>
+					<Expression><![CDATA[DataSet_ConsumoMaiz]]></Expression>
+					<Color>-10496</Color>
+					<Expression2><![CDATA[0]]></Expression2>
+					<Expression2Flag>false</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>100</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<FillAreaUnderLine>true</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
+    			<PieChart>
+					<Id>1602029304417</Id>
+					<Name><![CDATA[chart]]></Name>
+					<X>700</X><Y>2820</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1602057600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>480</Width>
+					<Height>400</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>60</XOffset>
+						<YOffset>10</YOffset>
+						<Width>360</Width>
+						<Height>330</Height>
+						<BorderColor/>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>40</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<DataItem>
+					<Expression><![CDATA[Lactante]]></Expression>
+					<Color>-1644806</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Lactantes]]></Title>
+					</DataItem>
+					<DataItem>
+					<Expression><![CDATA[Transición]]></Expression>
+					<Color>-16711936</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Transición]]></Title>
+					</DataItem>
+					<DataItem>
+					<Expression><![CDATA[Pre_Engorde]]></Expression>
+					<Color>-16744448</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Pre Engordes]]></Title>
+					</DataItem>
+					<DataItem>
+					<Expression><![CDATA[Engorde]]></Expression>
+					<Color>-2354116</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Engorde]]></Title>
+					</DataItem>
+					<DataItem>
+					<Expression><![CDATA[Madres]]></Expression>
+					<Color>-2448096</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Madres]]></Title>
+					</DataItem>
+					<DataItem>
+					<Expression><![CDATA[Madre_Gestante]]></Expression>
+					<Color>-4565549</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Madres Gestantes]]></Title>
+					</DataItem>
+					<DataItem>
+					<Expression><![CDATA[Madre_Lactante]]></Expression>
+					<Color>-16728065</Color>
+					<Expression2Flag>true</Expression2Flag>
+						<Title><![CDATA[Madres Lactantes]]></Title>
+					</DataItem>
+    			</PieChart>
 			</Presentation>
 
 				</Level>
@@ -3048,10 +4199,10 @@
 					<ParameterName><![CDATA[Probabilidad_Muerte_Engorde]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[Kg_CH4_L]]></ParameterName>
+					<ParameterName><![CDATA[Kg_CH4_LT]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[Kg_CH4_E]]></ParameterName>
+					<ParameterName><![CDATA[Kg_CH4_EP]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[Kg_CH4_M]]></ParameterName>
@@ -3060,19 +4211,64 @@
 					<ParameterName><![CDATA[Probabilidad_Muerte_Natural_Madre]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[Kg_NH3_L]]></ParameterName>
+					<ParameterName><![CDATA[Kg_NH3_LT]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[Kg_NH3_M]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[Kg_NH3_E]]></ParameterName>
+					<ParameterName><![CDATA[Kg_NH3_EP]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[Kg_Maiz_E]]></ParameterName>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[Kg_Maiz_M]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Tiempo_Transición]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Tiempo_PreEngorde]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Kg_CH4_MG]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Kg_NH3_MG]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Kg_NH3_ML]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Kg_Maiz_T]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Kg_Maiz_PE]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Kg_Maiz_MG]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[Kg_Maiz_ML]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[L_Agua_T]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[L_Agua_PE]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[L_Agua_MG]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[L_Agua_ML]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[L_Agua_M]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[L_Agua_E]]></ParameterName>
 				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
