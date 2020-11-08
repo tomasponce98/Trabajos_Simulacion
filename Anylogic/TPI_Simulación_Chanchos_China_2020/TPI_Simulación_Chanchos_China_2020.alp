@@ -9936,8 +9936,8 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
 					<VerticalRangeToExpression><![CDATA[450000000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
@@ -9966,8 +9966,8 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
 					<VerticalRangeToExpression><![CDATA[200000000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
@@ -9996,8 +9996,8 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
 					<VerticalRangeToExpression><![CDATA[18000000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
@@ -10026,8 +10026,8 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
 					<VerticalRangeToExpression><![CDATA[50000000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
@@ -10056,10 +10056,10 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
-					<VerticalRangeToExpression><![CDATA[4000000]]></VerticalRangeToExpression>
+					<VerticalRangeToExpression><![CDATA[350000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
 					<HorizontalRangeToExpression><![CDATA[48]]></HorizontalRangeToExpression>
 					<Envelope>0.25</Envelope>
@@ -10086,8 +10086,8 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
 					<VerticalRangeToExpression><![CDATA[340000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
@@ -10116,8 +10116,8 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
 					<VerticalRangeToExpression><![CDATA[305000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
@@ -10146,8 +10146,8 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
 					<VerticalRangeToExpression><![CDATA[8000000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
@@ -13294,8 +13294,8 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
 					<VerticalRangeToExpression><![CDATA[450000000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
@@ -13324,8 +13324,8 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
 					<VerticalRangeToExpression><![CDATA[200000000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
@@ -13354,8 +13354,8 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
 					<VerticalRangeToExpression><![CDATA[10000000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
@@ -13384,8 +13384,8 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
 					<VerticalRangeToExpression><![CDATA[25000000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
@@ -13414,10 +13414,10 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
-					<VerticalRangeToExpression><![CDATA[4000000]]></VerticalRangeToExpression>
+					<VerticalRangeToExpression><![CDATA[100000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
 					<HorizontalRangeToExpression><![CDATA[48]]></HorizontalRangeToExpression>
 					<Envelope>0.25</Envelope>
@@ -13444,8 +13444,8 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
 					<VerticalRangeToExpression><![CDATA[340000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
@@ -13474,8 +13474,8 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
 					<VerticalRangeToExpression><![CDATA[305000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
@@ -13504,8 +13504,8 @@ excelFile.writeDataSet(root.DataSet_Ventas,"Total Ventas",c1,1);
 						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 					</RecurrenceCode>
 					<FreezeXAxis>false</FreezeXAxis>
-					<HorizontalIntervals>5</HorizontalIntervals>
-					<VerticalIntervals>5</VerticalIntervals>
+					<HorizontalIntervals>30</HorizontalIntervals>
+					<VerticalIntervals>30</VerticalIntervals>
 					<VerticalRangeFromExpression><![CDATA[0]]></VerticalRangeFromExpression>
 					<VerticalRangeToExpression><![CDATA[8000000]]></VerticalRangeToExpression>
 					<HorizontalRangeFromExpression><![CDATA[0]]></HorizontalRangeFromExpression>
